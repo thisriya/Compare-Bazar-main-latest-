@@ -340,7 +340,7 @@ const alternatives = [
   ];
 
   const renderFeature = (feature, colorClass) => (
-    <div className="flex flex-col lg:flex-row gap-8 py-12 border-b border-gray-200 last:border-0 max-w-6xl" >
+    <div className="flex flex-col lg:flex-row gap-8 py-12 border-b border-gray-200 last:border-0">
       <div className="lg:w-1/3">
         <div className={`bg-${colorClass}-50 rounded-xl p-6 inline-block mb-4`}>
           {feature.icon}
@@ -430,8 +430,8 @@ const alternatives = [
 
       {/* introduction */}
       <div id="intro-gps"  className="max-w-6xl mx-auto p-4">
-      <div className="container mx-auto  py-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between lg:gap-12 md:gap-20">
+      <div className="container mx-auto  py-16">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="lg:w-1/2">
             <h1 className="text-4xl font-semibold text-gray-900 mb-6">
              Introduction to GPS Fleet Management
@@ -709,7 +709,7 @@ const alternatives = [
 
 {/* features of gps fleet tracking */}
 <section id="gpstracking-features" className="py-8 max-w-6xl mx-auto p-6">
-      <div className="container max-w-6xl mx-auto ">
+      <div className="container mx-auto ">
         {/* Main Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-semibold text-gray-900 mb-6">
@@ -905,7 +905,7 @@ const alternatives = [
 {/* methodology */}
 <div id="gps-methodology" className="py-10 max-w-6xl mx-auto">
       {/* Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-4xl font-semibold text-gray-900 ">
             Our GPS Fleet Management Methodology
@@ -1210,7 +1210,7 @@ const alternatives = [
         </div>
 
         {/* Step 2 */}
-        <div className="flex flex-col lg:flex-row-reverse lg:h-[350px]   items-center bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+        <div className="flex flex-col lg:flex-row-reverse lg:h-[350px] items-center bg-white rounded-xl shadow-lg overflow-hidden mb-12">
           <div className="w-full lg:w-1/2 p-8">
             <h3 className="text-xl font-semibold text-gray-800 mb-4">2. Compare Hardware Options</h3>
             <p className="text-gray-800 mb-4 text-lg">Different GPS devices offer varying capabilities:</p>
@@ -1393,7 +1393,7 @@ const alternatives = [
 
 {/* alternative */}
 <section id="gps-alternative" className="py-10 max-w-6xl mx-auto p-4 ">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-4xl font-semibold text-gray-900 mb-4">

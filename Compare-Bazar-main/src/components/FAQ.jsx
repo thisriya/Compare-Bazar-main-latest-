@@ -11,7 +11,7 @@ const FAQ = ({ faqs }) => {
 
   return (
     <div id="faq-section" className="faq-section  py-10  max-w-6xl mx-auto p-4">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+      <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
       
       <div className="space-y-4">
         {faqs.map((faq, index) => (
@@ -34,7 +34,7 @@ const FAQ = ({ faqs }) => {
             </button>
             
             {expandedIndex === index && (
-              <div className="mt-3 text-gray-600 transition-all duration-300 ease-in-out">
+              <div className="mt-3 text-gray-800 text-lg transition-all duration-300 ease-in-out">
                 {Array.isArray(faq.answer) ? (
                   <ul className="space-y-2">
                     {faq.answer.map((item, i) => (
