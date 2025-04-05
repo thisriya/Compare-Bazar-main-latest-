@@ -97,7 +97,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
   };
   
   const additionalText = " The modern fleet management landscape has evolved significantly, with real-time GPS tracking replacing traditional manual logging in many organizations. Today's fleet management systems offer advanced features like AI-powered route optimization, driver behavior analytics, fuel consumption monitoring, and comprehensive maintenance scheduling. These tools help businesses reduce operational costs, improve safety, and streamline their logistics processes. When evaluating different providers, it's important to consider factors such as scalability, real-time accuracy, integration capabilities, and total cost of ownership. Many systems now include unified platform capabilities, bringing together tracking, diagnostics, compliance tools, and analytics in a single dashboard.";
-
+  
   return (
     <>
       <Navbar />
