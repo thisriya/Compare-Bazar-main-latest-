@@ -96,47 +96,31 @@ const [isModalOpen, setIsModalOpen] = useState(false);
     setTimeout(() => ripple.remove(), 600);
   };
   
-  const additionalText = "Modern business phone systems have evolved dramatically in recent years, incorporating advanced features like artificial intelligence assistants, real-time analytics, and seamless integration with other business tools. Enterprise-level systems often include call recording, routing, and detailed reporting capabilities to improve customer service outcomes. Medium-sized businesses can benefit from scalable solutions that grow alongside their operations, while small businesses might prioritize cost-effective options with essential functionality. Many providers offer cloud-based solutions that eliminate the need for expensive on-premise hardware and allow for flexible remote work arrangements. When selecting a business phone system, it's important to consider factors such as integration capabilities, mobile functionality, security features, and ongoing support options to ensure you're making the right long-term investment for your organization's communication needs.";
-  
+  const additionalText = " The modern fleet management landscape has evolved significantly, with real-time GPS tracking replacing traditional manual logging in many organizations. Today's fleet management systems offer advanced features like AI-powered route optimization, driver behavior analytics, fuel consumption monitoring, and comprehensive maintenance scheduling. These tools help businesses reduce operational costs, improve safety, and streamline their logistics processes. When evaluating different providers, it's important to consider factors such as scalability, real-time accuracy, integration capabilities, and total cost of ownership. Many systems now include unified platform capabilities, bringing together tracking, diagnostics, compliance tools, and analytics in a single dashboard.";
+
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <div className="max-w-6xl mx-auto p-4">
         <header className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">The Best  GPS Fleet Management Software 2025</h1>
-          <p className="text-gray-700 text-sm md:text-base mb-4">
-            Modern business phone systems boast AI tools for conversation intelligence, video capabilities, detailed analytics and more.
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">The Best GPS Fleet Management Systems of 2025</h1>
+  
+          <p className="text-gray-800 text-lg md:text-lg mb-4">
+            At <span className="text-orange-500 font-semibold">Compare Bazar</span>, we understand the importance of efficient logistics for your business. That's why we recommend the <span className="text-orange-500 font-semibold">best GPS fleet management systems</span> that provide real-time visibility and control over your vehicles. The <span className="text-orange-500 font-semibold">best fleet management solutions</span> offer AI-driven route optimization, advanced telematics, and real-time tracking to help you manage your fleet more effectively. Whether you're running a small delivery service or a large transportation company, the right GPS tracking system can transform how you monitor, maintain, and optimize your fleet operations.
           </p>
-          
-          <div className="flex flex-wrap items-center mt-2">
-            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-300 mr-3"></div>
-            <div>
-              <p className="text-xs md:text-sm">
-                <span>Written by: <strong>Jessica Elliott</strong>, Senior Analyst</span>
-                <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                  ✓ Editor Verified: <strong>Chad Brooks</strong>
-                </span>
-              </p>
-              <p className="text-xs text-gray-500">Updated Mar 03, 2025</p>
-            </div>
-          </div>
-
-          <div className="text-xs md:text-sm text-gray-600 mt-4 pb-4 border-b">
-            Business.com earns commissions from some listed providers. <a href="#" className="text-blue-600 hover:underline">Editorial Guidelines</a>.
-          </div>
         </header>
-
+  
         <section className="mb-6">
-          <p className="text-gray-800 text-sm md:text-base">
-            As your business grows, ensuring you have the right communication tools is critical. Startups can often get by with a basic business phone 
-            system that doesn't include many bells and whistles. But, as your business becomes more sophisticated, it is critical that your communication 
-            tools also become more advanced.
+          <p className="text-gray-800 text-lg md:text-lg">
+            As your fleet grows, ensuring you have the right tracking tools is critical. Small operations can often manage with basic vehicle tracking, but as your business expands, it's essential that your management tools scale accordingly. Implementing the <span className="text-orange-500 font-semibold">best GPS fleet management system</span> can significantly enhance your ability to reduce costs, improve driver safety, and increase operational efficiency. At <span className="text-orange-500 font-semibold">Compare Bazar</span>, we help you find the perfect fleet solution that aligns with your business needs, offering features like real-time GPS tracking, maintenance alerts, and comprehensive reporting.
             {showMore && (
-              <span className="block mt-3">{additionalText}</span>
+              <span className="block mt-3">
+                {additionalText} Additionally, the <span className="text-orange-500 font-semibold">best GPS fleet management systems</span> provide advanced capabilities such as geofencing, ELD compliance, and predictive maintenance to optimize your fleet operations. With <span className="text-orange-500 font-semibold">Compare Bazar</span>, you can easily compare the top fleet management solutions, evaluate their features, and choose the one that best fits your growing business. Let us guide you to the tools that will take your logistics and fleet management to the next level.
+              </span>
             )}
           </p>
-          <button 
-            className="mt-2 text-blue-600 font-medium flex items-center"
+          <button
+            className="mt-2 text-[#000e54] font-medium flex items-center"
             onClick={() => setShowMore(!showMore)}
           >
             {showMore ? 'LESS -' : 'MORE +'}
