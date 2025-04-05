@@ -1607,12 +1607,12 @@ const alternatives = [
                 <img 
                   src={option.visual} 
                   alt={option.title}
-                  className=" h-w-[400px] w-[400px]"
+                  className=" h-w-[400px] w-[700px]"
                   loading="lazy"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mt-10 mb-2">{option.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mt-20 mb-2">{option.title}</h3>
                 <p className="text-gray-800 mb-4 text-lg">{option.description}</p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
