@@ -21,13 +21,16 @@ import {
     AlertCircle,
     Cpu, Settings, 
     Route,
-  Clipboard, Fuel, CreditCard, Calendar,
-  ArrowRight, CheckCircle, PhoneCall,  Bell, Wifi,ChartLine, Database,
+  Clipboard, Fuel, CreditCard, Calendar,Link,
+  ArrowRight, CheckCircle, PhoneCall,  Bell, Wifi,ChartLine, Database,Code,FileText, Server,RefreshCw, Briefcase,
     
   } from 'lucide-react';
 
+
+
 const GPSFleetContent = () => {
     const [activeTab, setActiveTab] = useState('operational');
+    
   // faq
   const gpsFleetFAQs = [
     {
@@ -340,12 +343,12 @@ const alternatives = [
   ];
 
   const renderFeature = (feature, colorClass) => (
-    <div className="flex flex-col lg:flex-row gap-8 py-12 border-b border-gray-200 last:border-0 max-w-6xl" >
+    <div className="flex flex-col lg:flex-row  py-12 border-b border-gray-200 last:border-0 max-w-6xl" >
       <div className="lg:w-1/3">
         <div className={`bg-${colorClass}-50 rounded-xl p-6 inline-block mb-4`}>
           {feature.icon}
         </div>
-        <h3 className="text-2xl font-semibold text-gray-800 mb-2">{feature.title}</h3>
+        <h3 className="text-xl font-semibold text-gray-800 mb-2">{feature.title}</h3>
         <div className={`w-16 h-1 bg-${colorClass}-600 mb-4`}></div>
       </div>
       <div className="lg:w-2/3">
@@ -356,7 +359,7 @@ const alternatives = [
           {feature.benefits.map((benefit, index) => (
             <div key={index} className="flex items-start">
               <CheckCircle className={`w-5 h-5 text-${colorClass}-600 mr-2 mt-1 flex-shrink-0`} />
-              <p className="text-sm text-gray-800">{benefit}</p>
+              <p className="text-lg text-gray-800">{benefit}</p>
             </div>
           ))}
         </div>
@@ -577,7 +580,7 @@ const alternatives = [
             What is GPS Fleet Tracking?
           </h2>
           <div className="w-24 h-1 bg-[#000e54] mx-auto mb-6"></div>
-          <p className="text-lg text-gray-800 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-800 max-w-3xl mx-auto">
             GPS fleet tracking is a sophisticated system that uses satellite technology to monitor and manage vehicles in real-time, providing businesses with valuable insights to optimize operations.
           </p>
 </div>
@@ -763,7 +766,7 @@ const alternatives = [
 </div>
 
         {/* Features Content */}
-        <div className="bg-white text-lg rounded-2xl  p-6 md:p-12">
+        <div className="bg-white text-lg rounded-2xl p-6 md:p-12">
           {featureCategories[activeTab].features.map((feature, index) => (
             renderFeature(feature, featureCategories[activeTab].color)
           ))}
@@ -773,7 +776,7 @@ const alternatives = [
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 ">
           <div className="bg-white rounded-2xl p-8 overflow-hidden relative">
             <div className="relative z-10">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">See the Difference</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-6">See the Difference</h3>
               <p className="text-gray-800 mb-8 text-lg">
                 Our GPS fleet tracking system provides comprehensive visibility across your entire operation, allowing you to:
               </p>
@@ -827,7 +830,7 @@ const alternatives = [
           
           <div className="bg-white rounded-2xl  overflow-hidden">
   <div className="">
-    <h3 className="text-2xl font-semibold text-gray-800 mb-6">Core GPS Fleet Tracking Capabilities</h3>
+    <h3 className="text-xl font-semibold text-gray-800 mb-6">Core GPS Fleet Tracking Capabilities</h3>
     
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {/* Feature 1 */}
@@ -901,6 +904,190 @@ const alternatives = [
  
       </div>
     </section>
+
+{/* how your data is protected */}
+<div className="max-w-6xl mx-auto py-12 px-4">
+      {/* Header */}
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-semibold text-gray-900 mb-6">Data Security & Privacy</h1>
+        <p className="text-xl text-gray-800 max-w-3xl mx-auto">We prioritize your data security and privacy at every step of your journey with us</p>
+      </div>
+      
+      <div className="bg-[#000e54] text-white p-8 rounded-xl mb-16 shadow-lg">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="md:w-3/4">
+            <h2 className="text-4xl font-semibold mb-4">Your Trust Is Our Priority</h2>
+            <p className="text-lg">We implement industry-leading security measures and adhere to strict privacy regulations to ensure your data remains protected, private, and under your control at all times.</p>
+          </div>
+          <div className="md:w-1/4 flex justify-center mt-6 md:mt-0">
+            <div className="bg-white bg-opacity-20 p-6 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20" fill="none" viewBox="0 0 24 24" stroke="#000e54">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Data Protection Section */}
+      <div className="mb-20">
+        <div className="flex items-center mb-8">
+          <div className="bg-[#000e54] p-2 rounded-full mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-700" fill="white" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h2 className="text-4xl font-semibold text-gray-900">How We Protect Your Data</h2>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-8 mb-10">
+          <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-[#000e54]">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">Enterprise-Grade Security</h3>
+            <p className="text-gray-800 text-lg">Our infrastructure employs multiple layers of encryption and security controls, including AES-256 encryption for data at rest and TLS 1.3 for data in transit. All systems operate behind enterprise firewalls with intrusion detection systems actively monitoring for potential threats.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-[#000e54]">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">Access Controls</h3>
+            <p className="text-gray-800 text-lg">We implement strict role-based access controls (RBAC) and follow the principle of least privilege. Multi-factor authentication is mandatory for all internal systems, and employee access to customer data is limited, logged, and regularly audited.</p>
+          </div>
+        </div>
+        
+        <div className="space-y-8">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">Regular Security Assessments</h3>
+            <p className="text-gray-800 text-lg">We conduct regular vulnerability scanning and penetration testing through independent third-party security firms. Our systems undergo comprehensive security audits quarterly to identify and remediate potential vulnerabilities before they can be exploited.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">Data Backup & Disaster Recovery</h3>
+            <p className="text-gray-800 text-lg">Your data is automatically backed up every hour with encrypted backups stored in geographically distributed locations. Our disaster recovery plan ensures minimal downtime and data loss in the event of a system failure, with regular recovery drills to test effectiveness.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">Employee Training</h3>
+            <p className="text-gray-800 text-lg">All employees undergo comprehensive security awareness training upon hiring and participate in quarterly refresher courses. We maintain a strong security culture with regular phishing simulations and security competitions to ensure vigilance at all levels of our organization.</p>
+          </div>
+        </div>
+      </div>
+      
+      {/* Regulatory Compliance Section */}
+      <div className="mb-20">
+        <div className="flex items-center mb-8">
+          <div className="bg-green-100 p-2 rounded-full mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-green-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h2 className="text-4xl font-semibold text-gray-900">Compliance with Privacy Regulations</h2>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-8 mb-10">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">GDPR Compliance</h3>
+            <p className="text-gray-800 mb-4 text-lg">We fully comply with the EU General Data Protection Regulation, ensuring that:</p>
+            <ul className="list-disc pl-5 text-gray-800 text-lg space-y-2">
+              <li>You can access, correct, or delete your personal data at any time</li>
+              <li>We collect only the minimum data necessary to provide our services</li>
+              <li>All data processing activities are documented and justified</li>
+              <li>Data protection is built into our systems by design and default</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">CCPA/CPRA Compliance</h3>
+            <p className="text-gray-700 text-lg mb-4">We honor California Consumer Privacy Act and Privacy Rights Act requirements:</p>
+            <ul className="list-disc pl-5 text-gray-800 text-lg space-y-2">
+              <li>Rights to know what personal information is collected</li>
+              <li>Options to opt-out of data sales or sharing</li>
+              <li>Deletion rights for collected personal information</li>
+              <li>Protection against discrimination for exercising privacy rights</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="bg-white p-8 rounded-lg ">
+          <h3 className="text-xl font-semibold text-gray-800 mb-6">Industry-Specific Compliance</h3>
+          <p className="text-gray-800 text-lg mb-6">We maintain compliance with industry-specific regulations to ensure your data is protected according to the highest standards:</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="bg-gray-50 p-5 rounded-lg text-center shadow-sm border border-gray-200">
+              <span className="font-semibold text-xl block mb-2 text-gray-800">HIPAA</span>
+              <p className="text-gray-800 text-lg">Healthcare data protection standards</p>
+            </div>
+            <div className="bg-gray-50 p-5 rounded-lg text-center shadow-sm border border-gray-200">
+              <span className="font-semibold text-xl block mb-2 text-gray-800">PCI DSS</span>
+              <p className="text-gray-800 text-lg">Payment card industry security standards</p>
+            </div>
+            <div className="bg-gray-50 p-5 rounded-lg text-center shadow-sm border border-gray-200">
+              <span className="font-semibold text-xl block mb-2 text-gray-800">SOC 2</span>
+              <p className="text-gray-800 text-lg">Service organization control standards</p>
+            </div>
+            <div className="bg-gray-50 p-5 rounded-lg text-center shadow-sm border border-gray-200">
+              <span className="font-semibold text-xl block mb-2 text-gray-800">ISO 27001</span>
+              <p className="text-gray-800 text-lg">Information security management</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Data Ownership Section */}
+      <div className="mb-16">
+        <div className="flex items-center mb-8">
+          <div className="bg-blue-50 p-2 rounded-full mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-yellow-700" fill="none" viewBox="0 0 24 24" stroke="#000e54">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+          </div>
+          <h2 className="text-4xl font-semibold text-gray-900">Data Ownership Policies</h2>
+        </div>
+        
+        <div className="bg-blue-50 border-l-4 border-[#000e54] p-6 rounded-r-lg mb-10 shadow-md">
+          <h3 className="text-xl font-semibold text-[#000e54] mb-3">You Own Your Data</h3>
+          <p className="text-gray-800 text-lg">We firmly believe that your data belongs to you. We never claim ownership of customer data stored in our systems and maintain this principle throughout our service relationship.</p>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-6 mb-10">
+          <div className="bg-white p-5 rounded-lg shadow-md">
+            <div className="text-[#000e54] mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </div>
+            <h4 className="text-xl font-semibold mb-3 text-gray-800">Right to Access</h4>
+            <p className="text-gray-800 text-lg">Request a comprehensive export of all your data in machine-readable formats at any time through our self-service portal.</p>
+          </div>
+          <div className="bg-white p-5 rounded-lg shadow-md">
+            <div className="text-[#000e54] mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+              </svg>
+            </div>
+            <h4 className="text-xl font-semibold mb-3 text-gray-800">Right to Delete</h4>
+            <p className="text-gray-800 text-lg">Request complete deletion of your data, which will be permanently removed from all production and backup systems within 30 days.</p>
+          </div>
+          <div className="bg-white p-5 rounded-lg shadow-md">
+            <div className="text-[#000e54] mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+              </svg>
+            </div>
+            <h4 className="text-xl font-semibold mb-3 text-gray-800">Right to Modify</h4>
+            <p className="text-gray-800 text-lg">Update your information at any time through our platform or by contacting customer support for assistance.</p>
+          </div>
+        </div>
+        
+        <div className="bg-white p-6 rounded-lg shadow-md mb-8">
+          <h3 className="text-4xl font-semibold text-gray-800 mb-4">Data Retention & Deletion</h3>
+          <p className="text-gray-800 text-xl mb-4">We maintain clear policies regarding how long we retain your data:</p>
+          <ul className="list-disc pl-5 text-gray-800 text-lg space-y-3">
+            <li><span className="font-semibold">Active Accounts:</span> Your data is retained for as long as you maintain an active account with our service.</li>
+            <li><span className="font-semibold">Account Closure:</span> Upon account closure, non-essential personal data is deleted within 30 days. Essential transaction records may be retained for legal compliance purposes (typically 7 years).</li>
+            <li><span className="font-semibold">Backups:</span> Data may persist in encrypted backups for up to 90 days after deletion from production systems.</li>
+            <li><span className="font-semibold">Anonymized Data:</span> We may retain permanently anonymized data that cannot be linked back to individuals for analytical purposes.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
 {/* methodology */}
 <div id="gps-methodology" className="py-10 max-w-6xl mx-auto">
@@ -1476,8 +1663,8 @@ const alternatives = [
         <div className="mt-16 bg-white rounded-xl shadow-lg overflow-hidden">
           <div className="md:flex">
             <div className="md:w-1/3 bg-[#000e54] text-white p-8 md:p-12">
-              <h3 className="text-2xl font-bold mb-6">Technology Comparison</h3>
-              <p className="text-gray-300 mb-6">
+              <h3 className="text-xl font-semibold mb-6">Technology Comparison</h3>
+              <p className="text-gray-300 mb-6 text-lg">
                 See how different tracking technologies stack up across key metrics
               </p>
               <ul className="space-y-4">
@@ -1489,7 +1676,7 @@ const alternatives = [
                   "Installation Complexity",
                   "Data Richness"
                 ].map((item, index) => (
-                  <li key={index} className="text-gray-300">{item}</li>
+                  <li key={index} className="text-gray-300 text-lg">{item}</li>
                 ))}
               </ul>
             </div>

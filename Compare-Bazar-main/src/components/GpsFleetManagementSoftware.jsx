@@ -155,7 +155,6 @@ const [isModalOpen, setIsModalOpen] = useState(false);
           ))}
         </div>
       </div>
-      <GPSFleetComponent/>
       <TableOfContents contents={contents} />
       <GPSFleetContent/>
       <ShopComponent/>
