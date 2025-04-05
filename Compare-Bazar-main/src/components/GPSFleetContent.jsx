@@ -718,7 +718,7 @@ const alternatives = [
           <h2 className="text-4xl font-semibold text-gray-900 mb-6">
             Comprehensive GPS Fleet Tracking Features
           </h2>
-          <p className="text-lg text-gray-800 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-800 max-w-3xl mx-auto">
             Our advanced fleet management system delivers powerful tools to transform your operations, enhance safety, extend vehicle life, and optimize your budget.
           </p>
         </div>
@@ -1097,7 +1097,7 @@ const alternatives = [
           <h2 className="text-4xl font-semibold text-gray-900 ">
             Our GPS Fleet Management Methodology
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-800">
+          <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-800">
             A comprehensive approach to tracking, monitoring, and optimizing your fleet operations.
           </p>
         </div>
@@ -1591,7 +1591,7 @@ const alternatives = [
               <path d="M0 2H200" stroke="#000e54" strokeWidth="3" strokeLinecap="round"/>
             </svg>
           </div>
-          <p className="text-lg text-gray-800 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-800 max-w-3xl mx-auto">
             Explore different technologies for monitoring your fleet beyond traditional GPS solutions
           </p>
         </div>

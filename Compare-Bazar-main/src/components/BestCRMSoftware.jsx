@@ -97,7 +97,6 @@ const BestCRMSoftware = () => {
     setTimeout(() => ripple.remove(), 600);
   };
 
-
   const additionalText = " The modern business communication landscape has evolved significantly, with VoIP (Voice over Internet Protocol) systems replacing traditional PBX setups in many organizations. Today's business phone systems offer advanced features like AI-powered voicemail transcription, intelligent call routing, CRM integration, and comprehensive analytics dashboards. These tools help businesses track performance metrics, improve customer satisfaction, and streamline their communication processes. When evaluating different providers, it's important to consider factors such as scalability, reliability, security features, and total cost of ownership. Many systems now include unified communications capabilities, bringing together voice, video, messaging, and collaboration tools in a single platform.";
  
   return (
@@ -108,21 +107,16 @@ const BestCRMSoftware = () => {
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">The Best CRM Software of 2025</h1>
 
 
-<p className="text-gray-700 text-sm md:text-base mb-4">
+          <p className="text-gray-800 text-lg md:text-lg mb-4">
           At <span className="text-orange-500 font-semibold">Compare Bazar</span>, we understand the importance of choosing the right tools for your business. That’s why we recommend the <span className="text-orange-500 font-semibold">best CRM software</span> that integrates seamlessly with modern VoIP systems. The <span className="text-orange-500 font-semibold">best CRM software</span> offers AI-driven insights, advanced automation, and real-time analytics to help you manage customer relationships more effectively. Whether you're a small business or a large enterprise, the right CRM can transform how you communicate, collaborate, and grow.
 </p>
 
-<div className="text-xs md:text-sm text-gray-600 mt-4 pb-4 border-b">
-          Explore the <span className="text-orange-500 font-semibold">best CRM software</span> options with <span className="text-orange-500 font-semibold">Compare Bazar</span>. Our platform helps you compare features, pricing, and reviews to find the perfect solution for your business needs. From AI-powered conversation intelligence to robust analytics and automation, the <span className="text-orange-500 font-semibold">best CRM software</span> ensures you stay ahead in today’s competitive market. Let <span className="text-orange-500 font-semibold">Compare Bazar</span> guide you to the tools that will elevate your business communication and customer management.
-</div>
 
-<div className="text-xs md:text-sm text-gray-600 mt-4 pb-4 border-b">
-  Discover the <span className="text-orange-500 font-semibold">best modern CRM software</span>, offering AI-driven conversation intelligence, robust video tools, deep analytics, and powerful automation to optimize business workflows. With these cutting-edge features, businesses can unlock new levels of productivity, improve customer engagement, and make data-driven decisions with ease.
-</div>
+
         </header>
 
         <section className="mb-6">
-        <p className="text-gray-800 text-sm md:text-base">
+        <p className="text-gray-800 text-lg md:text-lg ">
             As your business grows, ensuring you have the right communication tools is critical. Startups can often get by with a basic business phone
             system that doesn't include many bells and whistles. But, as your business becomes more sophisticated, it is critical that your communication
             tools also become more advanced. Integrating the <span className="text-orange-500 font-semibold">best CRM software</span> into your workflow can significantly enhance your ability to manage customer relationships, streamline operations, and drive growth. At <span className="text-orange-500 font-semibold">Compare Bazar</span>, we help you find the perfect CRM solution that aligns with your business needs, offering features like AI-powered analytics, automation, and seamless integration with modern communication tools.
@@ -138,7 +132,7 @@ const BestCRMSoftware = () => {
           >
             {showMore ? 'LESS -' : 'MORE +'}
           </button>
-        </section>
+        </section> 
 
         {/* Responsive Grid Layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-6">
