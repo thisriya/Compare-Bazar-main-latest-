@@ -268,7 +268,7 @@ const alternatives = [
         "Limited rural coverage",
         "Ongoing data plan costs"
       ],
-      visual: busimage
+      visual: "https://www.dtss.us/blog/wp-content/uploads/2020/11/AdobeStock_122704176.jpeg"
     },
     {
       title: "Satellite Tracking",
@@ -282,7 +282,7 @@ const alternatives = [
         "Higher equipment costs",
         "Potential latency issues"
       ],
-      visual: busimage
+      visual: "https://gdmissionsystems.com/-/media/CF4A8AD1DB5246FD854D156C5B82776A.ashx"
     },
     {
       title: "Bluetooth Beacons",
@@ -296,7 +296,7 @@ const alternatives = [
         "Very limited range",
         "Requires dense beacon network"
       ],
-      visual: busimage
+      visual: "https://wordpress.mapsted.com/wp-content/uploads/2022/04/Beacons-BLE-2.jpg"
     },
     {
       title: "RFID Tracking",
@@ -310,7 +310,7 @@ const alternatives = [
         "No real-time tracking",
         "Limited to checkpoint data"
       ],
-      visual: busimage
+      visual: "https://www.intellistride.com/wp-content/uploads/2020/01/RFID-is-still-offers-best-solutions-for-track-and-trace.jpg"
     },
     {
       title: "Hybrid Systems",
@@ -324,7 +324,7 @@ const alternatives = [
         "More complex setup",
         "Higher initial investment"
       ],
-      visual: busimage
+      visual: "https://tse4.mm.bing.net/th?id=OIP.8E31nJYQiL8dxec6m5jccgAAAA&pid=Api&P=0&h=180"
     },
     {
       title: "AI-Powered Video Telematics",
@@ -338,7 +338,7 @@ const alternatives = [
         "Higher bandwidth needs",
         "Privacy considerations"
       ],
-      visual: busimage
+      visual: "https://www.thegpstime.com/wp-content/uploads/2021/05/AI-powered-Video-Telematics-solution.png"
     }
   ];
 
@@ -1607,12 +1607,12 @@ const alternatives = [
                 <img 
                   src={option.visual} 
                   alt={option.title}
-                  className="object-contain h-full w-full"
+                  className=" h-w-[400px] w-[400px]"
                   loading="lazy"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">{option.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mt-10 mb-2">{option.title}</h3>
                 <p className="text-gray-800 mb-4 text-lg">{option.description}</p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
