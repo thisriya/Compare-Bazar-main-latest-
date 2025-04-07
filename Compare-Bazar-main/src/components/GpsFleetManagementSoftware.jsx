@@ -4,7 +4,6 @@ import Navbar from './Navbar';
 import WideDiv from './WideDiv';
 import Footer from './Footer';
 import Feedback from './Feedback';
-import GPSFleetComponent from './GPSFleetComponent';
 import ShopComponent from './ShopComponent';
 import GPSFleetForm from './GPSFleetForm';
 import Modal from './Modal';
