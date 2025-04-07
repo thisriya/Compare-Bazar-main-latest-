@@ -15,7 +15,6 @@ import { ChevronRight, Users,TrendingUp,DollarSign,
 
 
 const EmailMarketingContent = () => {
-    const [activeTab, setActiveTab] = useState('operational');
     
   // faq
   const emailFAQs = [
@@ -417,7 +416,6 @@ const EmailMarketingContent = () => {
       {/* what is emailmarketing*/}
       <section id="what-is-emailmarketing" className="py-12 ">
   <div className="container mx-auto max-w-6xl px-4">
-    {/* Hero Section */}
     <div className="text-center mb-16">
       <h2 className="text-4xl font-semibold text-gray-900 mb-6">Powerful Email Marketing Solutions</h2>
       <p className="text-xl text-gray-800 max-w-3xl mx-auto">

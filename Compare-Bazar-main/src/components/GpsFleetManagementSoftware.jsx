@@ -81,6 +81,25 @@ const [isModalOpen, setIsModalOpen] = useState(false);
     
 ];
 
+const homeTestimonials = [
+  {
+    avatar: "P",
+    avatarColor: "bg-purple-600",
+    name: "Riya Sinhg.",
+    date: "06/12/2024",
+    stars: 5,
+    text: "Blake and Courtney are a powerhouse if your are new to the leads world. They kept their end of the bargain lots of quality leads."
+  },
+  {
+    avatar: "E",
+    avatarColor: "bg-blue-500",
+    name: "Eric L.",
+    date: "10/31/2023",
+    stars: 5,
+    text: "I needed a few more vendors to gather information for a lease or purchase of a copier for our church. 360Connect did just that."
+  }
+];
+
   // Ripple effect for buttons
   const createRipple = (event) => {
     const button = event.currentTarget;
@@ -141,7 +160,10 @@ const [isModalOpen, setIsModalOpen] = useState(false);
       <TableOfContents contents={contents} />
       <GPSFleetContent/>
       <ShopComponent/>
-      <Feedback/>
+      <Feedback 
+        title="What Our Customers Say"
+        testimonials={homeTestimonials}
+      />
       <WideDiv/>
       <Footer/>
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
