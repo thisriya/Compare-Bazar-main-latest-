@@ -324,7 +324,62 @@ const EmailMarketingContent = () => {
         { label: "Welcome Email Open Rate", value: "82%" },
         { label: "Personalized Subject Lines", value: "+26%" },
       ];
-    
+      const features = [
+        {
+          icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 3h18a1 1 0 011 1v16a1 1 0 01-1 1H3a1 1 0 01-1-1V4a1 1 0 011-1zm9.06 8.683L5.648 6.238 4.353 7.762l7.72 6.555 7.581-6.56-1.308-1.513-6.285 5.439z"/>
+            </svg>
+          ),
+          title: "Beautiful Email Templates",
+          description: "Choose from 100+ professionally designed, mobile-responsive templates that work across all devices and email clients."
+        },
+        {
+          icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22 20H2v-2h1v-6a8 8 0 1116 0v6h1v2zm-3-2V12A5 5 0 007 12v6h12zm-5 3v1h-4v-1h4z"/>
+            </svg>
+          ),
+          title: "Advanced Segmentation",
+          description: "Send targeted messages by segmenting your audience based on behavior, demographics, purchase history, and more."
+        },
+        {
+          icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9.973 18H11v-5h2v5h1.027c.132-1.202.745-2.194 1.74-3.277.113-.122.832-.867.917-.973a6 6 0 10-9.37-.002c.086.107.807.853.918.974.996 1.084 1.609 2.076 1.741 3.278zM10 20v1h4v-1h-4zm-4.246-5a8 8 0 1112.49.002C17.624 15.774 16 17 16 18.5V21a2 2 0 01-2 2h-4a2 2 0 01-2-2v-2.5C8 17 6.375 15.774 5.754 15z"/>
+            </svg>
+          ),
+          title: "Smart Analytics",
+          description: "Track opens, clicks, conversions, and revenue with our comprehensive dashboard and detailed reporting tools."
+        },
+        {
+          icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M5.636 12.707l1.828 1.829L8.88 13.12l-1.83-1.827 1.414-1.414 1.829 1.828 1.414-1.414L9.88 8.464l1.414-1.414 1.826 1.83 1.415-1.415-1.829-1.828 1.414-1.414 1.828 1.829 1.415-1.415-1.829-1.828-1.414 1.414-1.827-1.829-1.415 1.415 1.829 1.828-1.414 1.414-1.829-1.829L6.05 6.05l-1.414 1.414 1.829 1.828-1.414 1.415-1.828-1.829-1.414 1.414 1.828 1.828 1.414-1.414zM13.12 15.536l1.829 1.828 1.414-1.414-1.828-1.829 1.414-1.414 1.829 1.828 1.414-1.414-1.828-1.829 1.414-1.414 1.829 1.829 1.414-1.415-1.829-1.828 1.414-1.414 1.828 1.829 1.415-1.415-1.829-1.828-1.414 1.414-1.829-1.829-1.414 1.415 1.828 1.828-1.414 1.414-1.829-1.829-1.414 1.415 1.829 1.828-1.414 1.414-1.828-1.829-1.415 1.415 1.829 1.828-1.414 1.414z"/>
+            </svg>
+          ),
+          title: "Automation Workflows",
+          description: "Set up automated email sequences for welcome series, abandoned carts, re-engagement campaigns, and more."
+        },
+        {
+          icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16 8 8 0 000 16zm-3.5-6H14a.5.5 0 100-1h-4a2.5 2.5 0 010-5h1V6h2v2h2.5v2H10a.5.5 0 000 1h4a2.5 2.5 0 010 5h-1v2h-2v-2H8.5v-2z"/>
+            </svg>
+          ),
+          title: "A/B Testing",
+          description: "Test subject lines, content, send times, and more to optimize your campaigns for maximum engagement."
+        },
+        {
+          icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 2a8 8 0 100 16 8 8 0 000-16zm3.833 3.337a.5.5 0 01.798.6l-4.5 6a.5.5 0 01-.729.06l-2.5-2.5a.5.5 0 01.708-.708l2.056 2.056 4.167-5.508z"/>
+            </svg>
+          ),
+          title: "List Management",
+          description: "Easily import, organize, and clean your contact lists with our powerful list management tools."
+        }
+      ];
     
 
   return (
@@ -332,10 +387,10 @@ const EmailMarketingContent = () => {
 
       {/* introduction */}
       <div id="intro-email" className="max-w-6xl mx-auto py-16 px-4">
-  <div className="relative rounded-2xl p-8 overflow-hidden">
+  <div className="relative rounded-2xl overflow-hidden">
     {/* Decorative SVG elements */}
     <div className="absolute top-0 right-0 opacity-10">
-      <svg width="200" height="200" viewBox="0 0 24 24" fill="currentColor" className="text-blue-500">
+      <svg width="200" height="200" viewBox="0 0 24 24" fill="currentColor" className="text-[#000e54]">
         <path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6ZM20 6L12 11L4 6H20ZM20 18H4V8L12 13L20 8V18Z"/>
       </svg>
     </div>
@@ -371,7 +426,7 @@ const EmailMarketingContent = () => {
           </div>
           <div className="flex items-center">
             <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
-              <svg className="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+              <svg className="h-6 w-6 text-[#000e54]" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm4.82-4.924A7 7 0 0 0 9.032 5.658l.975 1.755A5 5 0 0 1 17 12h-3l2.82 5.076z"/>
               </svg>
             </div>
@@ -414,8 +469,8 @@ const EmailMarketingContent = () => {
 </div>
 
       {/* what is emailmarketing*/}
-      <section id="what-is-emailmarketing" className="py-12 ">
-  <div className="container mx-auto max-w-6xl px-4">
+      <section id="what-is-emailmarketing" className="py-12 max-w-6xl mx-auto">
+  <div className="container mx-auto max-w-6xl">
     <div className="text-center mb-16">
       <h2 className="text-4xl font-semibold text-gray-900 mb-6">Powerful Email Marketing Solutions</h2>
       <p className="text-xl text-gray-800 max-w-3xl mx-auto">
@@ -445,43 +500,6 @@ const EmailMarketingContent = () => {
             to the right person at the right time.
           </p>
         </div>
-        {/* <div className="bg-blue-100 p-6 rounded-xl">
-          <h4 className="text-2xl font-semibold text-blue-800 mb-4">Email Marketing Statistics</h4>
-          <ul className="space-y-3">
-            <li className="flex items-start">
-              <div className="bg-blue-500 p-1 rounded-full mt-1 mr-3">
-                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-              <span className="text-gray-700">4.3 billion global email users in 2024</span>
-            </li>
-            <li className="flex items-start">
-              <div className="bg-blue-500 p-1 rounded-full mt-1 mr-3">
-                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-              <span className="text-gray-700">Average open rate of 21.33% across industries</span>
-            </li>
-            <li className="flex items-start">
-              <div className="bg-blue-500 p-1 rounded-full mt-1 mr-3">
-                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-              <span className="text-gray-700">59% of consumers say marketing emails influence their purchase decisions</span>
-            </li>
-            <li className="flex items-start">
-              <div className="bg-blue-500 p-1 rounded-full mt-1 mr-3">
-                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-              <span className="text-gray-700">Personalized email subject lines increase open rates by 26%</span>
-            </li>
-          </ul>
-        </div> */}
         <div>
             <img src="https://ileads.com/wp-content/uploads/sites/2/2016/03/email2b.jpg" alt="" />
         </div>
@@ -489,12 +507,12 @@ const EmailMarketingContent = () => {
     </div>
 
     {/* Key Components Grid */}
-    <div className="mb-20">
+    <div className="mb-20 max-w-6xl mx-auto p-8">
       <h3 className="text-4xl font-semibold text-gray-900 text-center mb-10">Key Components of Email Marketing</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-lg">
         {[
           {
-            icon: <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            icon: <svg className="w-10 h-10 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
             </svg>,
             title: "List Building & Segmentation",
@@ -534,7 +552,7 @@ const EmailMarketingContent = () => {
     </div>
 
     {/* Types of Email Campaigns */}
-    <div className="mb-20">
+    <div className="mb-20 max-w-6xl mx-auto p-8">
       <h3 className="text-4xl font-semibold text-gray-900 text-center mb-10">Types of Email Marketing Campaigns</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -543,7 +561,7 @@ const EmailMarketingContent = () => {
             icon: <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
             </svg>,
-            color: "bg-blue-600",
+            color: "bg-[#000e54]",
             description: "First impressions matter. Welcome new subscribers with a warm introduction and clear next steps to build engagement from day one."
           },
           {
@@ -609,7 +627,7 @@ const EmailMarketingContent = () => {
             icon: <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
             </svg>,
-            color: "bg-blue-600",
+            color: "bg-[#000e54]",
             description: "Establish clear objectives, identify target audiences, and determine key performance indicators for your email campaigns."
           },
           {
@@ -731,8 +749,8 @@ const EmailMarketingContent = () => {
 </section>
 
 {/* working of emailmarkeing */}
-<div id="emailmarketing-working" className="  rounded-lg  max-w-6xl mx-auto">
-      <div className="text-center mb-12">
+<div id="emailmarketing-working" className="  rounded-lg  max-w-6xl mx-auto p-4">
+      <div className="text-center mb-12 max-w-6xl mx-auto p-4">
         <h1 className="text-4xl font-semibold text-gray-900 mb-4">The Email Marketing Process</h1>
         <p className="text-xl text-gray-800 max-w-3xl mx-auto">
           A comprehensive guide to planning, executing, and optimizing email marketing campaigns for maximum engagement and ROI.
@@ -740,7 +758,7 @@ const EmailMarketingContent = () => {
       </div>
       <div className="mb-16">
         
-        <div className="grid gap-8">
+        <div className="grid gap-8 max-w-6xl mx-auto p-4">
           {steps.map((step, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row items-start md:items-center gap-6">
               <div className="bg-blue-50 p-4 rounded-full">
@@ -772,7 +790,7 @@ const EmailMarketingContent = () => {
       </div>
 
       {/* Stats section */}
-      <div className="mb-16">
+      <div className="mb-16 p-4 max-w-6xl mx-auto">
         <h2 className="text-4xl font-semibold text-gray-900 mb-8 text-center">Email Marketing Performance Metrics</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -790,7 +808,7 @@ const EmailMarketingContent = () => {
       <div>
         <h2 className="text-4xl font-semibold text-gray-900 mb-8 text-center">Email Marketing Best Practices</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
           <div className="bg-white p-6 rounded-lg shadow-md">
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-blue-50 p-2 rounded-full">
@@ -827,7 +845,7 @@ const EmailMarketingContent = () => {
 
 
  {/* Benefits of email marketing Section */}
- <div className="bg-gradient-to-br from-white to-gray-100 min-h-screen p-8">
+ <div id="emailmarketing-benefits" className=" max-w-6xl mx-auto min-h-screen p-8">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -1003,8 +1021,360 @@ const EmailMarketingContent = () => {
       </div>
     </div>
 
-{/* features of gps fleet tracking */}
+{/* features of email marketing section */}
+<div id="email-features" className=" py-16 px-4 sm:px-6  max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center">
+          <h2 className="text-4xl font-semibold text-gray-900 sm:text-4xl sm:tracking-tight lg:text-4xl">
+            Powerful Email Marketing Features
+          </h2>
+          <p className="mt-5 max-w-xl mx-auto text-xl text-gray-800">
+            Everything you need to create, send, and analyze effective email campaigns
+          </p>
+        </div>
 
+        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature, index) => (
+            <div 
+              key={index}
+              className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+            >
+              <div className="p-8">
+                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-[#000e54] text-white">
+                  {feature.icon}
+                </div>
+                <h3 className="mt-4 text-xl font-semibold text-gray-800">{feature.title}</h3>
+                <p className="mt-2 text-lg text-gray-800">
+                  {feature.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+{/* how to choose the service */}
+    <div id="email-howchoose" className="min-h-screen p-4 md:p-8 max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto bg-white rounded-xl  overflow-hidden">
+        <div className="bg-[#000e54] p-6 md:p-8">
+          <h1 className="text-4xl md:text-3xl font-semibold text-white">Choosing the Right Email Marketing Service</h1>
+          <p className="text-blue-100 mt-2 text-lg">A comprehensive guide to making the best decision for your business</p>
+        </div>
+        
+        <div className="py-10 max-w-6xl mx-auto">
+          <div className="mb-8 bg-blue-50 p-4 rounded-lg border-l-4 border-[#000e54]">
+            <h2 className="text-xl font-semibold text-[#000e54]">Why Your Choice Matters</h2>
+            <p className="text-gray-800 text-lg mt-2">The right email marketing platform can significantly impact your open rates, conversions, and ROI. This guide will help you navigate the complex landscape of email marketing services.</p>
+          </div>
+          
+          <section className="mb-8">
+            <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+              <span className="bg-[#000e54] text-white rounded-full w-8 h-8 inline-flex items-center justify-center mr-2">1</span>
+              List Size and Growth Projections
+            </h2>
+            <div className="pl-10">
+              <ul className="space-y-3">
+                <li className="flex items-start text-lg">
+                  <div className="bg-blue-100 p-1 rounded-full mr-2 mt-1">
+                    <div className="w-2 h-2 bg-[#000e54] rounded-full"></div>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-gray-800 text-lg">Current subscriber count:</span> Different platforms have different pricing tiers based on subscriber numbers. Analyze your current needs to avoid overpaying.
+                  </div>
+                </li>
+                <li className="flex items-start text-lg">
+                  <div className="bg-blue-100 p-1 rounded-full mr-2 mt-1">
+                    <div className="w-2 h-2 bg-[#000e54] rounded-full"></div>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-gray-800 text-lg">Growth rate:</span> Choose a service that can scale with your business without dramatic price increases. If you expect rapid growth, prioritize services with graduated pricing.
+                  </div>
+                </li>
+                <li className="flex items-start text-lg">
+                  <div className="bg-blue-100 p-1 rounded-full mr-2 mt-1">
+                    <div className="w-2 h-2 bg-[#000e54] rounded-full"></div>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-lg text-gray-800">List segmentation needs:</span> Consider how granular you need your segmentation capabilities to be—more advanced segmentation usually comes at a premium.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          
+          <section className="mb-8">
+            <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+              <span className="bg-[#000e54] text-white rounded-full w-8 h-8 inline-flex items-center justify-center mr-2">2</span>
+              Budget Considerations
+            </h2>
+            <div className="pl-10">
+              <ul className="space-y-3">
+                <li className="flex items-start text-lg">
+                  <div className="bg-blue-100 p-1 rounded-full mr-2 mt-1">
+                    <div className="w-2 h-2 bg-[#000e54] rounded-full"></div>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-lg text-gray-800">Monthly/annual costs:</span> Most services charge based on subscriber count and features. Annual plans often offer significant discounts compared to monthly billing.
+                  </div>
+                </li>
+                <li className="flex items-start text-lg">
+                  <div className="bg-blue-100 p-1 rounded-full mr-2 mt-1">
+                    <div className="w-2 h-2 bg-[#000e54] rounded-full"></div>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-lg text-gray-800">Free tier availability:</span> Some platforms offer free plans with limited features and subscriber counts—ideal for startups or testing purposes.
+                  </div>
+                </li>
+                <li className="flex items-start text-lg">
+                  <div className="bg-blue-100 p-1 rounded-full mr-2 mt-1">
+                    <div className="w-2 h-2 bg-[#000e54] rounded-full"></div>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-lg text-gray-800">Pay-as-you-go options:</span> Consider services that offer pay-per-email options if your sending volume is irregular or seasonal.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          
+          <section className="mb-8">
+            <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+              <span className="bg-[#000e54] text-white rounded-full w-8 h-8 inline-flex items-center justify-center mr-2">3</span>
+              Feature Requirements
+            </h2>
+            <div className="pl-10">
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                  <h3 className="font-semibold text-gray-800 text-lg mb-2">Essential Features</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-center text-gray-800 text-lg">
+                      <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      Drag-and-drop editor
+                    </li>
+                    <li className="flex items-center text-gray-800 text-lg">
+                      <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      Responsive templates
+                    </li>
+                    <li className="flex items-center text-gray-800 text-lg">
+                      <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      List management
+                    </li>
+                    <li className="flex items-center text-gray-800 text-lg">
+                      <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      Basic analytics
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                  <h3 className="font-semibold text-lg text-gray-800 mb-2">Advanced Features</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-center text-gray-800 text-lg">
+                      <svg className="w-4 h-4 text-[#000e54] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      A/B testing capabilities
+                    </li>
+                    <li className="flex items-center text-gray-800 text-lg">
+                      <svg className="w-4 h-4 text-[#000e54] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      Marketing automation
+                    </li>
+                    <li className="flex items-center text-gray-800 text-lg">
+                      <svg className="w-4 h-4 text-[#000e54] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      Advanced segmentation
+                    </li>
+                    <li className="flex items-center text-gray-800 text-lg">
+                      <svg className="w-4 h-4 text-[#000e54] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      Predictive analytics
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <section className="mb-8">
+            <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+              <span className="bg-[#000e54] text-white rounded-full w-8 h-8 inline-flex items-center justify-center mr-2">4</span>
+              Deliverability Rates
+            </h2>
+            <div className="pl-10">
+              <p className="text-gray-800 text-lg mb-4">Deliverability is crucial—your emails must actually reach recipients' inboxes to be effective. Research the provider's reputation and spam filtering capabilities.</p>
+              <div className="bg-blue-50 border-l-4 border-[#000e54] p-4 rounded-r">
+                <div className="flex">
+                  <div className="flex-shrink-0">
+                    <svg className="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="ml-3">
+                    <p className="text-lg text-[#000e54]">
+                      <strong>Pro Tip:</strong> Some services publish their deliverability rates. Look for providers with rates above 95% for best results.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <section className="mb-8">
+            <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+              <span className="bg-[#000e54] text-white rounded-full w-8 h-8 inline-flex items-center justify-center mr-2">5</span>
+              Integration Capabilities
+            </h2>
+            <div className="pl-10">
+              <p className="text-gray-800 text-lg mb-4">Your email marketing service should connect seamlessly with your existing tech stack.</p>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-4">
+                <div className="bg-gray-100 p-3 rounded-lg text-center">
+                  <p className="font-semibold text-lg text-gray-800">CRM Systems</p>
+                </div>
+                <div className="bg-gray-100 p-3 rounded-lg text-center">
+                  <p className="font-semibold text-lg text-gray-800">E-commerce Platforms</p>
+                </div>
+                <div className="bg-gray-100 p-3 rounded-lg text-center">
+                  <p className="font-semibold text-lg text-gray-800">CMS Solutions</p>
+                </div>
+                <div className="bg-gray-100 p-3 rounded-lg text-center">
+                  <p className="font-semibold text-lg text-gray-800">Analytics Tools</p>
+                </div>
+                <div className="bg-gray-100 p-3 rounded-lg text-center">
+                  <p className="font-semibold text-lg text-gray-800">Social Media</p>
+                </div>
+                <div className="bg-gray-100 p-3 rounded-lg text-center">
+                  <p className="font-semibold text-lg text-gray-800">Payment Processors</p>
+                </div>
+              </div>
+              <p className="text-gray-800 text-lg">Consider both native integrations and API flexibility to ensure your marketing efforts remain coordinated across all channels.</p>
+            </div>
+          </section>
+          
+          <section className="mb-8">
+            <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+              <span className="bg-[#000e54] text-white rounded-full w-8 h-8 inline-flex items-center justify-center mr-2">6</span>
+              Ease of Use and Support
+            </h2>
+            <div className="pl-10">
+              <div className="bg-gray-50 p-5 rounded-lg border border-gray-200">
+                <h3 className="font-semibold text-lg text-gray-800 mb-3">Questions to Consider:</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-[#000e54] mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4.002 3 0 1.4-1.274 2.657-3.004 2.878.6.078.12.156.174.236.243.37.487 1.126-.012 1.886m-4.13-.735c-.792-.523-1.033-.936-1.033-1.384v-.01c0-1.173 1.274-2.204 3.003-2.204" />
+                    </svg>
+                    <span className="text-gray-800 text-lg">Is the interface intuitive or will you need extensive training?</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-[#000e54] mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4.002 3 0 1.4-1.274 2.657-3.004 2.878.6.078.12.156.174.236.243.37.487 1.126-.012 1.886m-4.13-.735c-.792-.523-1.033-.936-1.033-1.384v-.01c0-1.173 1.274-2.204 3.003-2.204" />
+                    </svg>
+                    <span className="text-gray-800 text-lg">What support channels are available (chat, phone, email) and during what hours?</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-[#000e54] mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4.002 3 0 1.4-1.274 2.657-3.004 2.878.6.078.12.156.174.236.243.37.487 1.126-.012 1.886m-4.13-.735c-.792-.523-1.033-.936-1.033-1.384v-.01c0-1.173 1.274-2.204 3.003-2.204" />
+                    </svg>
+                    <span className="text-gray-800 text-lg">Is there a knowledge base, tutorials, or community forum?</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-[#000e54] mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4.002 3 0 1.4-1.274 2.657-3.004 2.878.6.078.12.156.174.236.243.37.487 1.126-.012 1.886m-4.13-.735c-.792-.523-1.033-.936-1.033-1.384v-.01c0-1.173 1.274-2.204 3.003-2.204" />
+                    </svg>
+                    <span className="text-gray-800 text-lg">Is onboarding assistance or dedicated account management available?</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          
+          <section className="mb-8">
+            <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+              <span className="bg-[#000e54] text-white rounded-full w-8 h-8 inline-flex items-center justify-center mr-2">7</span>
+              Compliance and Security
+            </h2>
+            <div className="pl-10">
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex-1 bg-gray-50 p-4 rounded-lg border-l-4 border-[#000e54]">
+                  <h3 className="font-semibold text-gray-800 mb-2 text-lg">Legal Compliance</h3>
+                  <p className="text-gray-800 text-lg">Ensure the service helps you comply with:</p>
+                  <ul className="mt-2 space-y-1">
+                    <li className="flex items-center text-gray-700 text-lg">
+                      <svg className="w-4 h-4 text-[#000e54] mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      GDPR (Europe)
+                    </li>
+                    <li className="flex items-center text-gray-700 text-lg">
+                      <svg className="w-4 h-4 text-[#000e54] mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      CAN-SPAM (US)
+                    </li>
+                    <li className="flex items-center text-gray-700 text-lg">
+                      <svg className="w-4 h-4 text-[#000e54] mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      CASL (Canada)
+                    </li>
+                    <li className="flex items-center text-gray-700 text-lg">
+                      <svg className="w-4 h-4 text-[#000e54] mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      Local regulations
+                    </li>
+                  </ul>
+                </div>
+                <div className="flex-1 bg-gray-50 p-4 rounded-lg border-l-4 border-orange-500">
+                  <h3 className="font-semibold text-gray-800 mb-2 text-lg">Security Features</h3>
+                  <p className="text-gray-800 text-lg">Look for providers that offer:</p>
+                  <ul className="mt-2 space-y-1">
+                    <li className="flex items-center text-gray-700 text-lg">
+                      <svg className="w-4 h-4 text-orange-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      Two-factor authentication
+                    </li>
+                    <li className="flex items-center text-gray-700 text-lg">
+                      <svg className="w-4 h-4 text-orange-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      Data encryption
+                    </li>
+                    <li className="flex items-center text-gray-700 text-lg">
+                      <svg className="w-4 h-4 text-orange-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      HTTPS protection
+                    </li>
+                    <li className="flex items-center text-gray-700 text-lg">
+                      <svg className="w-4 h-4 text-orange-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      Regular security audits
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+  </div>
+  </div>
+  </div>
+         
 
 {/* how your data is protected */}
 
@@ -1012,7 +1382,7 @@ const EmailMarketingContent = () => {
 {/* methodology */}
 
 
-{/* how to choose the service */}
+
 
 
 {/* alternative */}
