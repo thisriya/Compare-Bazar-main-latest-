@@ -1445,78 +1445,7 @@ const EmailMarketingContent = () => {
     </div>
 
   {/* is email worthit */}
-  {/* <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-16 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            Is Email Marketing Still Worth It in 2024?
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Despite the rise of social media and new marketing channels, email remains one of the most effective ways to reach your audience.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <div className="flex items-center mb-6">
-              <div className="bg-indigo-100 p-3 rounded-full mr-4">
-                <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-800">Unmatched Reach</h3>
-            </div>
-            <p className="text-gray-600 mb-4">
-              With over 4 billion daily email users worldwide, you're reaching people where they already are. Unlike social media algorithms that limit your visibility, emails go directly to your audience's inbox.
-            </p>
-            <p className="text-gray-600">
-              Nearly everyone checks their email daily, making it one of the most consistent communication channels available to businesses.
-            </p>
-          </div>
-
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <div className="flex items-center mb-6">
-              <div className="bg-green-100 p-3 rounded-full mr-4">
-                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-800">Proven Effectiveness</h3>
-            </div>
-            <p className="text-gray-600 mb-4">
-              Email marketing delivers an average return of $42 for every $1 spent, outperforming most other marketing channels. This incredible ROI comes from email's ability to drive both customer acquisition and retention.
-            </p>
-            <p className="text-gray-600">
-              Personalized email campaigns can increase transaction rates by up to 6 times compared to generic campaigns, making it perfect for targeted messaging.
-            </p>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-indigo-600 text-white p-8 rounded-xl shadow-lg">
-            <h3 className="text-xl font-semibold mb-4">Complete Control</h3>
-            <p>
-              Unlike social platforms where algorithms decide who sees your content, email puts you in control of your audience relationships. You own your email list and can communicate directly without intermediaries.
-            </p>
-          </div>
-
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Highly Measurable</h3>
-            <p className="text-gray-600">
-              Every aspect of email marketing can be tracked and analyzed. From open rates to click-through rates, you get clear insights into what works and what doesn't, allowing for continuous optimization.
-            </p>
-          </div>
-
-          <div className="bg-indigo-100 p-8 rounded-xl shadow-lg">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Cost Effective</h3>
-            <p className="text-gray-600">
-              With minimal overhead costs compared to other marketing channels, email provides exceptional value. Even small businesses can implement professional campaigns without large budgets.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> */}
-   <div className=" py-16 px-4 sm:px-6 lg:px-8 rounded-xl">
+   <div id="email-worthit" className=" py-16 px-4 sm:px-6 lg:px-8 rounded-xl">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
