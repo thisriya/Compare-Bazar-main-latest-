@@ -235,8 +235,8 @@ const EmployeeSection = () => {
           <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
             <Users className="w-8 h-8 text-blue-600" />
           </div>
-          <h3 className="text-xl font-bold text-gray-800 mb-3">Centralized Employee Data</h3>
-          <p className="text-gray-600">
+          <h3 className="text-xl font-semibold text-gray-800 mb-3">Centralized Employee Data</h3>
+          <p className="text-gray-800 text-lg">
             Maintain all employee information in one secure, accessible location with advanced search and reporting capabilities.
           </p>
         </div>
@@ -246,8 +246,8 @@ const EmployeeSection = () => {
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
             <Clock className="w-8 h-8 text-green-600" />
           </div>
-          <h3 className="text-xl font-bold text-gray-800 mb-3">Time & Attendance</h3>
-          <p className="text-gray-600">
+          <h3 className="text-xl font-semibold text-gray-800 mb-3">Time & Attendance</h3>
+          <p className="text-gray-800 text-lg">
             Automated tracking with biometric integration, leave management, and real-time reporting.
           </p>
         </div>
@@ -257,8 +257,8 @@ const EmployeeSection = () => {
           <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
             <Shield className="w-8 h-8 text-purple-600" />
           </div>
-          <h3 className="text-xl font-bold text-gray-800 mb-3">Compliance Management</h3>
-          <p className="text-gray-600">
+          <h3 className="text-xl font-semibold text-gray-800 mb-3">Compliance Management</h3>
+          <p className="text-gray-800 text-lg">
             Stay compliant with labor regulations through automated documentation and audit trails.
           </p>
         </div>
@@ -268,8 +268,8 @@ const EmployeeSection = () => {
           <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
             <BarChart2 className="w-8 h-8 text-orange-600" />
           </div>
-          <h3 className="text-xl font-bold text-gray-800 mb-3">Advanced Analytics</h3>
-          <p className="text-gray-600">
+          <h3 className="text-xl font-semibold text-gray-800 mb-3">Advanced Analytics</h3>
+          <p className="text-gray-800 text-lg">
             Data-driven insights with customizable dashboards and workforce reporting.
           </p>
         </div>
@@ -279,8 +279,8 @@ const EmployeeSection = () => {
           <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
             <Settings className="w-8 h-8 text-red-600" />
           </div>
-          <h3 className="text-xl font-bold text-gray-800 mb-3">Automated Workflows</h3>
-          <p className="text-gray-600">
+          <h3 className="text-xl font-semibold text-gray-800 mb-3">Automated Workflows</h3>
+          <p className="text-gray-800 text-lg">
             Streamline approvals, notifications, and HR processes with customizable automation.
           </p>
         </div>
@@ -290,8 +290,8 @@ const EmployeeSection = () => {
           <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
             <CheckCircle className="w-8 h-8 text-indigo-600" />
           </div>
-          <h3 className="text-xl font-bold text-gray-800 mb-3">Performance Management</h3>
-          <p className="text-gray-600">
+          <h3 className="text-xl font-semibold text-gray-800 mb-3">Performance Management</h3>
+          <p className="text-gray-800 text-lg">
             360° feedback, goal tracking, and continuous performance evaluation tools.
           </p>
         </div>
@@ -301,8 +301,8 @@ const EmployeeSection = () => {
       <div className="bg-white rounded-xl shadow-md overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Experience the Difference</h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <h2 className="text-xl font-semibold text-gray-900 mb-6">Experience the Difference</h2>
+            <p className="text-lg text-gray-800 mb-8">
               Our intuitive dashboard provides managers and HR professionals with all the tools they need in one place.
             </p>
             
@@ -312,8 +312,8 @@ const EmployeeSection = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
                 <div>
-                  <h4 className="font-semibold text-gray-800">Real-time employee data</h4>
-                  <p className="text-gray-600 text-sm">Access up-to-date information anytime, anywhere</p>
+                  <h4 className="font-semibold text-xl text-gray-800">Real-time employee data</h4>
+                  <p className="text-gray-800 text-lg">Access up-to-date information anytime, anywhere</p>
                 </div>
               </div>
               
@@ -322,8 +322,8 @@ const EmployeeSection = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
                 <div>
-                  <h4 className="font-semibold text-gray-800">Mobile-friendly interface</h4>
-                  <p className="text-gray-600 text-sm">Manage your workforce on the go</p>
+                  <h4 className="font-semibold text-xl text-gray-800">Mobile-friendly interface</h4>
+                  <p className="text-gray-600 text-lg">Manage your workforce on the go</p>
                 </div>
               </div>
               
@@ -332,8 +332,8 @@ const EmployeeSection = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
                 <div>
-                  <h4 className="font-semibold text-gray-800">Customizable reports</h4>
-                  <p className="text-gray-600 text-sm">Generate insights tailored to your needs</p>
+                  <h4 className="font-semibold text-gray-800 text-xl">Customizable reports</h4>
+                  <p className="text-gray-600 text-lg">Generate insights tailored to your needs</p>
                 </div>
               </div>
             </div>
@@ -401,7 +401,7 @@ const EmployeeSection = () => {
 
             {/* Features Section */}
             <div className="py-16 px-4 max-w-6xl mx-auto">
-                <h2 className="text-3xl font-bold text-center mb-12">Our Comprehensive Solution</h2>
+                <h2 className="text-3xl font-semibold text-center mb-12">Our Comprehensive Solution</h2>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <div className="col-span-1">
@@ -428,7 +428,7 @@ const EmployeeSection = () => {
                     <div className="col-span-2 bg-gray-50 p-8 rounded-lg">
                         <div className="mb-4">
                             <span className="text-5xl mb-4 block">{features[activeFeature].icon}</span>
-                            <h3 className="text-2xl font-bold mb-4">{features[activeFeature].title}</h3>
+                            <h3 className="text-2xl font-semibold mb-4">{features[activeFeature].title}</h3>
                         </div>
                         <p className="text-gray-700 mb-6">
                             {showFullDescription ? (
@@ -467,7 +467,7 @@ const EmployeeSection = () => {
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-12">
                         <span className="text-[#000e54] font-semibold">STAY INFORMED</span>
-                        <h2 className="text-3xl font-bold mt-2">Important Notices for Our Customers</h2>
+                        <h2 className="text-3xl font-semibold mt-2">Important Notices for Our Customers</h2>
                         <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
                             We're committed to keeping you updated about changes to our service, new features, and important information that may affect your employment management system.
                         </p>
@@ -485,7 +485,7 @@ const EmployeeSection = () => {
                                             Important
                                         </span>
                                     )}
-                                    <h3 className="font-bold text-xl">{notice.title}</h3>
+                                    <h3 className="font-semibold text-xl">{notice.title}</h3>
                                 </div>
                                 <p className="text-gray-700 mb-4">{notice.description}</p>
                                 <div className="flex justify-end">
