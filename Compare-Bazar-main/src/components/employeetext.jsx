@@ -63,7 +63,6 @@ const EmployeeManagementWebpage = () => {
   const [animationProgress, setAnimationProgress] = useState(0);
   const [showAlert, setShowAlert] = useState(true);
   const [screenSize, setScreenSize] = useState('lg');
-  const [hasAnimated, setHasAnimated] = useState(false);
 
   // Update screen size state based on window width
   const updateScreenSize = () => {
@@ -192,12 +191,6 @@ const EmployeeManagementWebpage = () => {
     fetchData();
     updateScreenSize();
 
-    // Check if animations should play (only on page load)
-    if (!sessionStorage.getItem('hasAnimated')) {
-      setHasAnimated(true);
-      sessionStorage.setItem('hasAnimated', 'true');
-    }
-
     // Add window resize listener
     window.addEventListener('resize', updateScreenSize);
 
@@ -229,7 +222,7 @@ const EmployeeManagementWebpage = () => {
 
   // Animation progress effect
   useEffect(() => {
-    if (isVisible && hasAnimated) {
+    if (isVisible) {
       let progress = 0;
       const interval = setInterval(() => {
         progress += 5;
@@ -240,11 +233,8 @@ const EmployeeManagementWebpage = () => {
       }, 50);
 
       return () => clearInterval(interval);
-    } else {
-      // If animations shouldn't play, set progress to 100% immediately
-      setAnimationProgress(100);
     }
-  }, [isVisible, loading, hasAnimated]);
+  }, [isVisible, loading]);
 
   // Helper function to get chart height based on screen size
   const getChartHeight = () => {
@@ -257,27 +247,12 @@ const EmployeeManagementWebpage = () => {
     }
   };
 
-  // Helper function to get animation styles
-  const getAnimationStyles = (delay = 0) => {
-    if (!hasAnimated) {
-      return {
-        transform: 'translateY(0) scale(1)',
-        opacity: 1
-      };
-    }
-    
-    return {
-      transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(50px) scale(0.95)',
-      opacity: isVisible ? 1 : 0,
-      transition: `transform 700ms ease-out ${delay}ms, opacity 700ms ease-out ${delay}ms`
-    };
-  };
-
   return (
-    <div id="employee-dashboard" className="bg-gray-50 p-2 sm:p-4 md:p-6 w-full min-h-screen font-sans" style={{ opacity: 1 }}>
+    <div id="employee-dashboard" className="bg-gray-50 p-2 sm:p-4 md:p-6 w-full min-h-screen font-sans transition-opacity duration-1000 ease-in-out" style={{ opacity: isVisible ? 1 : 0 }}>
       {/* Top Navigation Bar */}
       <div className="bg-white shadow-md rounded-lg p-3 sm:p-4 mb-4 sm:mb-6">
         <div className="flex justify-between items-center">
+
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
@@ -406,14 +381,11 @@ const EmployeeManagementWebpage = () => {
           ].map((stat, index) => (
             <div
               key={index}
-              className={`bg-white border-l-4 border-${stat.color}-500 p-3 sm:p-4 rounded-lg shadow-md`}
-              style={hasAnimated ? {
+              className={`bg-white border-l-4 border-${stat.color}-500 p-3 sm:p-4 rounded-lg shadow-md transform transition-all duration-700 ease-in-out`}
+              style={{
                 transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
                 opacity: isVisible ? 1 : 0,
                 transition: `transform 500ms ease-out ${200 + index * 100}ms, opacity 500ms ease-out ${200 + index * 100}ms`
-              } : {
-                transform: 'translateY(0)',
-                opacity: 1
               }}
             >
               <div className="flex justify-between items-center">
@@ -438,8 +410,12 @@ const EmployeeManagementWebpage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 mb-4 sm:mb-8">
           {/* Card 1: Employee Performance */}
           <div
-            className="bg-white p-3 sm:p-6 rounded-lg shadow-md hover:shadow-lg"
-            style={getAnimationStyles()}
+            className="bg-white p-3 sm:p-6 rounded-lg shadow-md transform transition-all duration-700 ease-in-out hover:shadow-lg"
+            style={{
+              transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(50px) scale(0.95)',
+              opacity: isVisible ? 1 : 0,
+              transition: 'transform 700ms ease-out, opacity 700ms ease-out'
+            }}
           >
             <div className="flex justify-between items-center mb-3 sm:mb-4">
               <h2 className="text-base sm:text-lg font-semibold text-gray-800">Employee Performance</h2>
@@ -464,71 +440,80 @@ const EmployeeManagementWebpage = () => {
 
           {/* Card 2: Department Distribution */}
           <div
-            className="bg-white p-3 sm:p-6 rounded-lg shadow-md hover:shadow-lg"
-            style={getAnimationStyles(200)}
-          >
-            <div className="flex justify-between items-center mb-3 sm:mb-4">
-              <h2 className="text-base sm:text-lg font-semibold text-gray-800">Department Distribution</h2>
-              <Filter className="text-[#ff8633]" size={screenSize === 'sm' ? 8 : 10} />
-            </div>
-            <ResponsiveContainer width="100%" height={getChartHeight()}>
-              <PieChart>
-                <Pie
-                  data={departmentDistribution}
-                  cx="50%"
-                  cy="50%"
-                  labelLine={false}
-                  outerRadius={(screenSize === 'sm' ? 60 : 80) * (animationProgress / 100)}
-                  fill="#ff8633"
-                  dataKey="value"
-                  animationDuration={1500}
-                  animationBegin={300}
-                  label={({
-                    cx,
-                    cy,
-                    midAngle,
-                    innerRadius,
-                    outerRadius,
-                    percent,
-                    name,
-                    index
-                  }) => {
-                    const radius = innerRadius + (outerRadius - innerRadius) * (screenSize === 'sm' ? 1.5 : 1.4);
-                    const x = cx + radius * Math.cos(-midAngle * (Math.PI / 180));
-                    const y = cy + radius * Math.sin(-midAngle * (Math.PI / 180));
+  className="bg-white p-3 sm:p-6 rounded-lg shadow-md transform transition-all duration-700 ease-in-out hover:shadow-lg"
+  style={{
+    transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(50px) scale(0.95)',
+    opacity: isVisible ? 1 : 0,
+    transition: 'transform 700ms ease-out 200ms, opacity 700ms ease-out 200ms'
+  }}
+>
+  <div className="flex justify-between items-center mb-3 sm:mb-4">
+    <h2 className="text-base sm:text-lg font-semibold text-gray-800">Department Distribution</h2>
+    <Filter className="text-[#ff8633]" size={screenSize === 'sm' ? 8 : 10} />
+  </div>
+  <ResponsiveContainer width="100%" height={getChartHeight()}>
+    <PieChart>
+      <Pie
+        data={departmentDistribution}
+        cx="50%"
+        cy="50%"
+        labelLine={false}
+        outerRadius={(screenSize === 'sm' ? 60 : 80) * (animationProgress / 100)}
+        fill="#ff8633"
+        dataKey="value"
+        animationDuration={1500}
+        animationBegin={300}
+        label={({
+          cx,
+          cy,
+          midAngle,
+          innerRadius,
+          outerRadius,
+          percent,
+          name,
+          index
+        }) => {
+          // Adjust radius for smaller screens to bring labels closer
+          const radius = innerRadius + (outerRadius - innerRadius) * (screenSize === 'sm' ? 1.5 : 1.4);
+          const x = cx + radius * Math.cos(-midAngle * (Math.PI / 180));
+          const y = cy + radius * Math.sin(-midAngle * (Math.PI / 180));
 
-                    return (
-                      <text
-                        x={x}
-                        y={y}
-                        textAnchor="middle"
-                        fill={departmentDistribution[index].color}
-                        fontSize={screenSize === 'sm' ? 8 : screenSize === 'md' ? 10 : 7}
-                        dominantBaseline="central"
-                      >
-                        {screenSize === 'sm' 
-                          ?` ${name} (${(percent * 100).toFixed(0)}%)`
-                          : `${name} ${(percent * 100).toFixed(0)}%`}
-                      </text>
-                    );
-                  }}
-                >
-                  {departmentDistribution.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={entry.color} />
-                  ))}
-                </Pie>
-                <Tooltip
-                  contentStyle={{ backgroundColor: '#fff', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', border: 'none', fontSize: screenSize === 'sm' ? 10 : 12 }}
-                  labelStyle={{ fontWeight: 'bold', color: '#ff8633' }}
-                />
-              </PieChart>
-            </ResponsiveContainer>
-          </div>
+          return (
+            <text
+              x={x}
+              y={y}
+              textAnchor="middle"
+              fill={departmentDistribution[index].color}
+              fontSize={screenSize === 'sm' ? 8 : screenSize === 'md' ? 10 : 7} // Smaller font size for small screens
+              dominantBaseline="central"
+            >
+              {screenSize === 'sm' 
+                ?` ${name} (${(percent * 100).toFixed(0)}%)` // Include both name and percentage for small screens
+                : `${name} ${(percent * 100).toFixed(0)}%`}
+            </text>
+          );
+        }}
+      >
+        {departmentDistribution.map((entry, index) => (
+          <Cell key={`cell-${index}`} fill={entry.color} />
+        ))}
+      </Pie>
+      <Tooltip
+        contentStyle={{ backgroundColor: '#fff', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', border: 'none', fontSize: screenSize === 'sm' ? 10 : 12 }}
+        labelStyle={{ fontWeight: 'bold', color: '#ff8633' }}
+      />
+    </PieChart>
+  </ResponsiveContainer>
+</div>
 
           {/* Card 3: Employee Growth */}
           <div
-            className="bg-white p-3 sm:p-6 rounded-lg shadow-md hover:shadow-lg"
-            style={getAnimationStyles(400)}
+            className="bg-white p-3 sm:p-6 rounded-lg shadow-md transform transition-all duration-700 ease-in-out hover:shadow-lg"
+            style={{
+              transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(50px) scale(0.95)',
+              opacity: isVisible ? 1 : 0,
+              transition: 'transform 700ms ease-out 400ms, opacity 700ms ease-out 400ms'
+            }}
           >
             <div className="flex justify-between items-center mb-3 sm:mb-4">
               <h2 className="text-base sm:text-lg font-semibold text-gray-800">Employee Growth</h2>
@@ -552,6 +537,8 @@ const EmployeeManagementWebpage = () => {
                   animationBegin={500}
                   radius={[screenSize === 'sm' ? 2 : 4, screenSize === 'sm' ? 2 : 4, 0, 0]}
                 />
+
+                
                 <Bar
                   dataKey="terminations"
                   fill="#000e54"
@@ -571,8 +558,12 @@ const EmployeeManagementWebpage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-6 mb-4 sm:mb-8">
           {/* Training Completion - Vertical Bar Chart */}
           <div
-            className="bg-white p-3 sm:p-6 rounded-lg shadow-md hover:shadow-lg"
-            style={getAnimationStyles(600)}
+            className="bg-white p-3 sm:p-6 rounded-lg shadow-md transform transition-all duration-700 ease-in-out hover:shadow-lg"
+            style={{
+              transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(50px) scale(0.95)',
+              opacity: isVisible ? 1 : 0,
+              transition: 'transform 700ms ease-out 600ms, opacity 700ms ease-out 600ms'
+            }}
           >
             <div className="flex justify-between items-center mb-3 sm:mb-4">
               <h2 className="text-base sm:text-lg font-semibold text-gray-800">Training Completion</h2>
@@ -613,8 +604,12 @@ const EmployeeManagementWebpage = () => {
 
           {/* Skill Radar Chart */}
           <div
-            className="bg-white p-3 sm:p-6 rounded-lg shadow-md hover:shadow-lg"
-            style={getAnimationStyles(800)}
+            className="bg-white p-3 sm:p-6 rounded-lg shadow-md transform transition-all duration-700 ease-in-out hover:shadow-lg"
+            style={{
+              transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(50px) scale(0.95)',
+              opacity: isVisible ? 1 : 0,
+              transition: 'transform 700ms ease-out 800ms, opacity 700ms ease-out 800ms'
+            }}
           >
             <div className="flex justify-between items-center mb-3 sm:mb-4">
               <h2 className="text-base sm:text-lg font-semibold text-gray-800">Skill Assessment</h2>
