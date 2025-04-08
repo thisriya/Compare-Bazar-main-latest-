@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import PhoneSystemCardCommon from './PhoneSystemCardCommon';
 import PhoneSystemContent from './PhoneSystemContent';
 import Navbar from './Navbar';
@@ -95,6 +95,28 @@ const PhoneSystemsPage = () => {
     setTimeout(() => ripple.remove(), 600);
   };
 
+  useEffect(() => {
+    // Check if the script is already loaded to prevent duplicates
+    if (document.querySelector('script[src*="bzWidget.min.js"]')) return;
+
+    const script1 = document.createElement('script');
+    script1.src = "https://cdn.buyerzone.com/apps/widget/bzWidget.min.js";
+    script1.async = true;
+    script1.setAttribute('data-bzwidget-pub-id', '59578');
+    script1.setAttribute('data-bzwidget-color-palette-name', 'default');
+    script1.setAttribute('data-bzwidget-category-id', '10144');
+
+    const script2 = document.createElement('script');
+    script2.text = "bzWidget.init();";
+
+    document.body.appendChild(script1);
+    document.body.appendChild(script2);
+
+    return () => {
+      document.body.removeChild(script1);
+      document.body.removeChild(script2);
+    };
+  }, []);
   const additionalText = "The modern business communication landscape has evolved significantly, with VoIP (Voice over Internet Protocol) systems replacing traditional PBX setups in many organizations. Today's business phone systems offer advanced features like AI-powered voicemail transcription, intelligent call routing, CRM integration, and comprehensive analytics dashboards. These tools help businesses track performance metrics, improve customer satisfaction, and streamline their communication processes. When evaluating different providers, it's important to consider factors such as scalability, reliability, security features, and total cost of ownership. Many systems now include unified communications capabilities, bringing together voice, video, messaging, and collaboration tools in a single platform.";
 
   return (
@@ -158,6 +180,7 @@ const PhoneSystemsPage = () => {
       {/* Added Business component */}
       <PhoneSystemContent />
     </div>
+    <div id="buyerzone-widget-container" className="my-8"></div>
     <WideDiv/>
     <Footer/>
     <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
