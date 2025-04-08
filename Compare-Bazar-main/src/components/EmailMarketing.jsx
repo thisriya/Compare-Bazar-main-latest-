@@ -15,8 +15,7 @@ const EmailMarketing = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const systems = [
-  
-    {
+   {
       name: "Ooma Office",
       logo: "/images/ooma.png",
       bestFor: "Best for Ease of Use",
