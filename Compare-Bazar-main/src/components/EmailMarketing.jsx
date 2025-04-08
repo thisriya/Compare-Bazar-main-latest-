@@ -75,8 +75,8 @@ const EmailMarketing = () => {
     { id: 4, title: "Benefits of Email Marketing", slug: "emailmarketing-benefits" },
     { id: 5, title: "Key Features For Email Marketing services", slug: "email-features" },
     { id: 6, title: "How to Choose Email Marketing Service?", slug: "email-howchoose" },
-    { id: 7, title: "Methodology", slug: "gps-methodology" },
-    { id: 8, title: "What Are Some Alternative Fleet Tracking Options?", slug: "gps-alternative" },
+    { id: 7, title: "Is Email Marketing Worthit?", slug: "email-worthit" },
+    { id: 8, title: "What Are Some Alternative Email Marketing Services?", slug: "email-alternative" },
     { id: 9, title: "Related Articles", slug: "email-articles" },
     { id: 10, title: "FAQs", slug: "email-faq" } ,
   ];

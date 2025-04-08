@@ -380,7 +380,40 @@ const EmailMarketingContent = () => {
           description: "Easily import, organize, and clean your contact lists with our powerful list management tools."
         }
       ];
+
+      const alternatives = [
+        {
+          name: "Mailchimp Alternative",
+          description: "More affordable email marketing with similar features but better pricing tiers.",
+          features: ["User-friendly interface", "Advanced automation", "Better pricing for growing businesses"],
+          bestFor: "Small to medium businesses looking for cost-effective solutions"
+        },
+        {
+          name: "Constant Contact Alternative",
+          description: "Modern email marketing platform with superior analytics and integration capabilities.",
+          features: ["Detailed performance metrics", "Better template designs", "Seamless CRM integration"],
+          bestFor: "Businesses focused on data-driven marketing decisions"
+        },
+        {
+          name: "SendinBlue Alternative",
+          description: "All-in-one marketing solution with enhanced deliverability rates.",
+          features: ["SMS marketing included", "Transactional email options", "Advanced segmentation tools"],
+          bestFor: "Companies needing multi-channel marketing capabilities"
+        },
+        {
+          name: "Campaign Monitor Alternative",
+          description: "Simplified workflow with robust personalization options.",
+          features: ["Drag-and-drop editor", "Dynamic content", "Automated customer journeys"],
+          bestFor: "Marketing teams wanting to create highly personalized campaigns"
+        }
+      ];
     
+      const worthStats = [
+        { value: '4200%', label: 'Average ROI' },
+        { value: '$42', label: 'Return per $1 spent' },
+        { value: '81%', label: 'SMBs rely on email' },
+        { value: '59%', label: 'Influence on purchases' }
+      ];
 
   return (
     <>
@@ -797,7 +830,7 @@ const EmailMarketingContent = () => {
           {stats.map((stat, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
               <h3 className="text-gray-800 text-xl mb-2">{stat.label}</h3>
-              <p className="text-[#000e54] text-4xl font-bold mb-1">{stat.value}</p>
+              <p className="text-[#000e54] text-4xl font-semibold mb-1">{stat.value}</p>
               <p className="text-gray-800 text-lg">{stat.subtext}</p>
             </div>
           ))}
@@ -1149,25 +1182,25 @@ const EmailMarketingContent = () => {
                   <h3 className="font-semibold text-gray-800 text-lg mb-2">Essential Features</h3>
                   <ul className="space-y-2">
                     <li className="flex items-center text-gray-800 text-lg">
-                      <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-4 h-4 text-[#000e54] mr-2" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       Drag-and-drop editor
                     </li>
                     <li className="flex items-center text-gray-800 text-lg">
-                      <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-4 h-4 text-[#000e54] mr-2" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       Responsive templates
                     </li>
                     <li className="flex items-center text-gray-800 text-lg">
-                      <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-4 h-4 text-[#000e54] mr-2" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       List management
                     </li>
                     <li className="flex items-center text-gray-800 text-lg">
-                      <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-4 h-4 text-[#000e54] mr-2" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       Basic analytics
@@ -1376,17 +1409,318 @@ const EmailMarketingContent = () => {
   </div>
          
 
-{/* how your data is protected */}
-
-
-{/* methodology */}
-
-
-
-
-
 {/* alternative */}
+<div id="email-alternative" className="max-w-6xl mx-auto p-6  rounded-xl ">
+      <div className="mb-8 text-center">
+        <h1 className="text-4xl font-semibold text-gray-900 mb-4">Email Marketing Service Alternatives</h1>
+        <p className="text-xl text-gray-800">Discover better options for your email marketing needs</p>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {alternatives.map((alt, index) => (
+          <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border-t-4 border-[#000e54]">
+            <h2 className="text-xl font-bold text-hray-800 mb-3">{alt.name}</h2>
+            <p className="text-gray-800 text-lg mb-4">{alt.description}</p>
+            
+            <div className="mb-4">
+              <h3 className="font-semibold text-gray-800 text-lg mb-2">Key Features:</h3>
+              <ul className="space-y-1">
+                {alt.features.map((feature, i) => (
+                  <li key={i} className="flex items-start">
+                    <svg className="h-5 w-5 text-[#000e54] mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-800 text-lg">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="mt-4 pt-4 border-t border-gray-200">
+              <p className="text-lg font-semibold text-gray-800">Best for: <span className="text-[#000e54]">{alt.bestFor}</span></p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
 
+  {/* is email worthit */}
+  {/* <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-16 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            Is Email Marketing Still Worth It in 2024?
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Despite the rise of social media and new marketing channels, email remains one of the most effective ways to reach your audience.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="flex items-center mb-6">
+              <div className="bg-indigo-100 p-3 rounded-full mr-4">
+                <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-semibold text-gray-800">Unmatched Reach</h3>
+            </div>
+            <p className="text-gray-600 mb-4">
+              With over 4 billion daily email users worldwide, you're reaching people where they already are. Unlike social media algorithms that limit your visibility, emails go directly to your audience's inbox.
+            </p>
+            <p className="text-gray-600">
+              Nearly everyone checks their email daily, making it one of the most consistent communication channels available to businesses.
+            </p>
+          </div>
+
+          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="flex items-center mb-6">
+              <div className="bg-green-100 p-3 rounded-full mr-4">
+                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-semibold text-gray-800">Proven Effectiveness</h3>
+            </div>
+            <p className="text-gray-600 mb-4">
+              Email marketing delivers an average return of $42 for every $1 spent, outperforming most other marketing channels. This incredible ROI comes from email's ability to drive both customer acquisition and retention.
+            </p>
+            <p className="text-gray-600">
+              Personalized email campaigns can increase transaction rates by up to 6 times compared to generic campaigns, making it perfect for targeted messaging.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-indigo-600 text-white p-8 rounded-xl shadow-lg">
+            <h3 className="text-xl font-semibold mb-4">Complete Control</h3>
+            <p>
+              Unlike social platforms where algorithms decide who sees your content, email puts you in control of your audience relationships. You own your email list and can communicate directly without intermediaries.
+            </p>
+          </div>
+
+          <div className="bg-white p-8 rounded-xl shadow-lg">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">Highly Measurable</h3>
+            <p className="text-gray-600">
+              Every aspect of email marketing can be tracked and analyzed. From open rates to click-through rates, you get clear insights into what works and what doesn't, allowing for continuous optimization.
+            </p>
+          </div>
+
+          <div className="bg-indigo-100 p-8 rounded-xl shadow-lg">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">Cost Effective</h3>
+            <p className="text-gray-600">
+              With minimal overhead costs compared to other marketing channels, email provides exceptional value. Even small businesses can implement professional campaigns without large budgets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section> */}
+   <div className=" py-16 px-4 sm:px-6 lg:px-8 rounded-xl">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-4xl font-semibold text-gray-900 mb-4 leading-tight">
+            Is Email Marketing <span className="text-[#000e54]">Worth It?</span>
+          </h2>
+          <p className="text-xl text-gray-800 max-w-3xl mx-auto">
+            Despite the rise of new marketing channels, email marketing remains one of the most effective strategies for businesses of all sizes.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+          {worthStats.map((stat, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-md p-6 text-center transform hover:-translate-y-1 transition-transform duration-300">
+              <div className="text-4xl md:text-4xl font-semibold text-[#000e54] mb-2">{stat.value}</div>
+              <div className="text-gray-800 text-lg font-semibold">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+        
+        <div className="bg-white rounded-xl shadow-xl overflow-hidden mb-10">
+          <div className="p-6 md:p-8 border-b border-gray-100">
+            <div className="flex items-center mb-4">
+              <div className="bg-[#000e54] h-8 w-8 rounded-full flex items-center justify-center mr-3">
+                <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800">Return on Investment</h3>
+            </div>
+            <p className="mb-4 text-lg">Email marketing consistently delivers the highest ROI of any digital marketing channel, making it one of the most cost-effective strategies available to businesses of all sizes.</p>
+            <p className="mb-4 text-lg">Unlike paid advertising where costs continue to rise, email marketing allows you to communicate with your audience at a fraction of the cost. The average return of $42 for every $1 spent far outperforms social media, PPC, and content marketing efforts.</p>
+            <p className="mb-4 text-lg">This exceptional return comes from email's direct nature - you're reaching people who have already expressed interest in your brand, creating warmer leads and higher conversion rates.</p>
+            <div className="bg-blue-50 p-4 rounded-lg">
+              <p className="font-semibold text-[#000e54] text-xl">ROI Breakdown:</p>
+              <ul className="mt-2 space-y-2">
+                <li className="flex items-center text-lg">
+                  <div className="bg-indigo-200 rounded-full p-1 mr-2">
+                    <svg className="h-4 w-4 text-[#000e54]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span>Lower customer acquisition costs</span>
+                </li>
+                <li className="flex items-center text-lg">
+                  <div className="bg-indigo-200 rounded-full p-1 mr-2">
+                    <svg className="h-4 w-4 text-[#000e54]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span>Higher conversion rates from targeted messaging</span>
+                </li>
+                <li className="flex items-center text-lg">
+                  <div className="bg-indigo-200 rounded-full p-1 mr-2">
+                    <svg className="h-4 w-4 text-[#000e54]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span>Increased customer lifetime value through retention</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div className="bg-white rounded-xl shadow-xl overflow-hidden mb-10">
+          <div className="p-6 md:p-8 border-b border-gray-100">
+            <div className="flex items-center mb-4">
+              <div className="bg-[#000e54] h-8 w-8 rounded-full flex items-center justify-center mr-3">
+                <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900">Building Relationships</h3>
+            </div>
+            <p className="mb-4 text-lg">Email marketing creates a direct line of communication with your audience, fostering strong, long-term customer relationships that drive loyalty and retention.</p>
+            <p className="mb-4 text-lg">Unlike social media where algorithm changes can reduce your visibility, email gives you ownership of the communication channel. Your messages land directly in subscribers' inboxes, allowing consistent touchpoints throughout the customer journey.</p>
+            <p className="mb-4 text-lg">Through personalized content and segmentation, you can demonstrate that you understand your customers' needs and preferences, building trust that translates into brand advocacy and word-of-mouth referrals.</p>
+            <div className="bg-indigo-50 p-4 rounded-lg">
+              <p className="font-semibold text-[#000e54] text-xl">Relationship Metrics:</p>
+              <ul className="mt-2 space-y-2">
+                <li className="flex items-center text-lg">
+                  <div className="bg-indigo-200 rounded-full p-1 mr-2">
+                    <svg className="h-4 w-4 text-[#000e54]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span>44% of email recipients made at least one purchase based on promotional emails</span>
+                </li>
+                <li className="flex items-center text-lg">
+                  <div className="bg-indigo-200 rounded-full p-1 mr-2">
+                    <svg className="h-4 w-4 text-[#000e54]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span>Segmented campaigns can increase revenue by up to 760%</span>
+                </li>
+                <li className="flex items-center text-lg">
+                  <div className="bg-indigo-200 rounded-full p-1 mr-2">
+                    <svg className="h-4 w-4 text-[#000e54]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span>Birthday emails generate 342% higher revenue per email</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        {/* Targeting Section */}
+        <div className="bg-white rounded-xl shadow-xl overflow-hidden mb-10">
+          <div className="p-6 md:p-8 border-b border-gray-100">
+            <div className="flex items-center mb-4">
+              <div className="bg-[#000e54] h-8 w-8 rounded-full flex items-center justify-center mr-3">
+                <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900">Targeted Messaging</h3>
+            </div>
+            <p className="mb-4 text-lg">Email marketing enables precise targeting and personalization that other marketing channels simply cannot match, dramatically improving engagement and conversion rates.</p>
+            <p className="mb-4 text-lg">Modern email platforms allow you to segment your audience based on demographics, behavior, purchase history, and engagement levels. This granular targeting ensures you deliver the right message to the right person at the right time.</p>
+            <p className="mb-4 text-lg">Personalized emails deliver 6x higher transaction rates, while segmented campaigns can drive up to 760% increase in revenue. This level of customization creates highly relevant experiences that resonate with recipients.</p>
+            <div className="bg-indigo-50 p-4 rounded-lg">
+              <p className="font-semibold text-xl text-[#000e54]">Targeting Capabilities:</p>
+              <ul className="mt-2 space-y-2">
+                <li className="flex items-center text-lg">
+                  <div className="bg-indigo-200 rounded-full p-1 mr-2">
+                    <svg className="h-4 w-4 text-[#000e54]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span>Behavioral triggers based on website activity</span>
+                </li>
+                <li className="flex items-center text-lg">
+                  <div className="bg-indigo-200 rounded-full p-1 mr-2">
+                    <svg className="h-4 w-4 text-[#000e54]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span>Purchase history segmentation for relevant recommendations</span>
+                </li>
+                <li className="flex items-center text-lg">
+                  <div className="bg-indigo-200 rounded-full p-1 mr-2">
+                    <svg className="h-4 w-4 text-[#000e54]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span>Geographic and time-based targeting for optimal engagement</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        {/* Analytics Section */}
+        <div className="bg-white rounded-xl shadow-xl overflow-hidden mb-12">
+          <div className="p-6 md:p-8">
+            <div className="flex items-center mb-4">
+              <div className="bg-[#000e54] h-8 w-8 rounded-full flex items-center justify-center mr-3">
+                <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900">Measurable Results</h3>
+            </div>
+            <p className="mb-4 text-lg">Email marketing provides unmatched analytics and insights, allowing you to measure performance and continuously optimize your campaigns for better results.</p>
+            <p className="mb-4 text-lg">Every aspect of your email campaigns can be tracked and analyzed - from open rates and click-throughs to conversion and revenue attribution. This data provides a clear picture of what's working and what needs improvement.</p>
+            <p className="mb-4 text-lg">With A/B testing capabilities, you can experiment with different subject lines, content formats, CTAs, and sending times to identify the most effective approach for your audience. This continuous optimization leads to ever-improving performance over time.</p>
+            <div className="bg-indigo-50 p-4 rounded-lg">
+              <p className="font-semibold text-[#000e54] text-xl">Key Metrics to Track:</p>
+              <ul className="mt-2 space-y-2">
+                <li className="flex items-center text-lg">
+                  <div className="bg-indigo-200 rounded-full p-1 mr-2">
+                    <svg className="h-4 w-4 text-[#000e54]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span>Open rate, click-through rate, and conversion rate</span>
+                </li>
+                <li className="flex items-center text-lg">
+                  <div className="bg-indigo-200 rounded-full p-1 mr-2">
+                    <svg className="h-4 w-4 text-[#000e54]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span>List growth rate and unsubscribe rate</span>
+                </li>
+                <li className="flex items-center text-lg">
+                  <div className="bg-indigo-200 rounded-full p-1 mr-2">
+                    <svg className="h-4 w-4 text-[#000e54]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span>Revenue per email and overall ROI</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 {/* related articles */}
