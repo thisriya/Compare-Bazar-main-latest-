@@ -66,13 +66,14 @@ const  BestEmployeeMangementSoftware= () => {
     { id: 1, title: "Introduction to Best Employee Management System", slug: "intro-employee" },
     { id: 2, title: "What Is Employee Management System?", slug: "what-is-employeemanagement" },
     { id: 3, title: "What Makes the Best Employee Management System?", slug: "whatmakesbest-ems" },
-    { id: 4, title: "Key Features For Best Employee Manegement System", slug: "employee-features" },
-    { id: 5, title: "Benefits of Best Employee Manegemt System", slug: "employeemanagement-benefits" },
-    { id: 6, title: "Integration Capabilities", slug: "employee-integration" },
-    { id: 7, title: "Choosing the Right EMS for Your Company Size?", slug: "employee-choose" },
-    { id: 8, title: "Notice", slug: "employee-notice" },
-    { id: 9, title: "Related Articles", slug: "employee-articles" },
-    { id: 10, title: "FAQs", slug: "employee-faq" } ,
+    { id: 4, title: "Implementation & Usage?", slug: "implementation-ems" },
+    { id: 5, title: "Key Features For Best Employee Manegement System", slug: "employee-features" },
+    { id: 6, title: "Benefits of Best Employee Manegemt System", slug: "employeemanagement-benefits" },
+    { id: 7, title: "Integration Capabilities", slug: "employee-integration" },
+    { id: 8, title: "Choosing the Right EMS for Your Company Size?", slug: "employee-choose" },
+    { id: 9, title: "Notice", slug: "employee-notice" },
+    { id: 10, title: "Related Articles", slug: "employee-articles" },
+    { id: 11, title: "FAQs", slug: "employee-faq" } ,
   ];
 
   // Ripple effect for buttons

@@ -311,6 +311,185 @@ const EmployeeSection = () => {
       }
     ];
 
+    const implementationSteps = [
+      {
+        step: 1,
+        title: "Needs Assessment & Planning",
+        description: "Conduct a thorough analysis of your current HR processes, identify pain points, and define clear objectives for the EMS implementation. Establish a cross-functional implementation team and create a detailed project plan with timelines and milestones.",
+        icon: "📋",
+        duration: "2-4 weeks"
+      },
+      {
+        step: 2,
+        title: "System Configuration",
+        description: "Customize the EMS to match your organizational structure, workflows, and policies. Set up employee data fields, approval hierarchies, and compliance requirements. Configure role-based access controls and security settings.",
+        icon: "⚙️",
+        duration: "3-6 weeks"
+      },
+      {
+        step: 3,
+        title: "Data Migration",
+        description: "Clean and prepare existing employee data for migration. Map data fields from legacy systems to the new EMS. Conduct test migrations and validate data accuracy before final transfer.",
+        icon: "📊",
+        duration: "4-8 weeks"
+      },
+      {
+        step: 4,
+        title: "Integration Setup",
+        description: "Connect the EMS with other business systems (payroll, accounting, ERP). Configure APIs and ensure seamless data flow between systems. Test integration points thoroughly.",
+        icon: "🔗",
+        duration: "2-5 weeks"
+      },
+      {
+        step: 5,
+        title: "Testing & Validation",
+        description: "Conduct comprehensive system testing including unit testing, integration testing, and user acceptance testing (UAT). Validate all workflows and fix any issues before go-live.",
+        icon: "🧪",
+        duration: "3-5 weeks"
+      },
+      {
+        step: 6,
+        title: "Training & Change Management",
+        description: "Develop training programs for different user groups (HR, managers, employees). Conduct hands-on workshops and create support materials. Implement change management strategies to drive adoption.",
+        icon: "👩‍🏫",
+        duration: "4-6 weeks"
+      },
+      {
+        step: 7,
+        title: "Phased Rollout",
+        description: "Launch the system in phases, starting with a pilot group. Monitor system performance and user feedback. Gradually expand to the entire organization while providing ongoing support.",
+        icon: "🚀",
+        duration: "2-8 weeks"
+      },
+      {
+        step: 8,
+        title: "Ongoing Optimization",
+        description: "Continuously gather user feedback and analyze system usage. Make adjustments to workflows and configurations. Schedule regular reviews to ensure the system evolves with your business needs.",
+        icon: "🔄",
+        duration: "Ongoing"
+      }
+    ];
+  
+    const selfServiceFeatures = [
+      {
+        title: "Personal Information Management",
+        benefits: [
+          "Reduces HR administrative workload by 40-60%",
+          "Improves data accuracy with employee self-verification",
+          "24/7 access to update personal details"
+        ],
+        icon: "👤"
+      },
+      {
+        title: "Time & Attendance Tracking",
+        benefits: [
+          "Mobile clock-in/out with geofencing",
+          "Real-time visibility into attendance patterns",
+          "Automated leave balance calculations"
+        ],
+        icon: "⏱️"
+      },
+      {
+        title: "Benefits Enrollment",
+        benefits: [
+          "Guided selection during open enrollment",
+          "Life event change management",
+          "Integrated cost calculators"
+        ],
+        icon: "🏥"
+      },
+      {
+        title: "Payroll Access",
+        benefits: [
+          "Digital pay stubs and tax documents",
+          "Year-end tax statement generation",
+          "Direct deposit management"
+        ],
+        icon: "💰"
+      },
+      {
+        title: "Performance Management",
+        benefits: [
+          "Goal setting and tracking",
+          "360-degree feedback collection",
+          "Development plan creation"
+        ],
+        icon: "📈"
+      },
+      {
+        title: "Learning Portal",
+        benefits: [
+          "Personalized training recommendations",
+          "Micro-learning modules",
+          "Certification tracking"
+        ],
+        icon: "🎓"
+      }
+    ];
+  
+    const industryCustomizations = [
+      {
+        industry: "Healthcare",
+        features: [
+          "Shift scheduling for 24/7 operations",
+          "Credential and license tracking",
+          "HIPAA-compliant document management",
+          "On-call and overtime rules"
+        ],
+        icon: "🏥"
+      },
+      {
+        industry: "Retail",
+        features: [
+          "Seasonal workforce management",
+          "POS system integration",
+          "Labor law compliance for hourly workers",
+          "Multi-location support"
+        ],
+        icon: "🛍️"
+      },
+      {
+        industry: "Manufacturing",
+        features: [
+          "Shop floor attendance tracking",
+          "Safety training compliance",
+          "Union contract rules engine",
+          "Equipment certification tracking"
+        ],
+        icon: "🏭"
+      },
+      {
+        industry: "Professional Services",
+        features: [
+          "Project-based workforce allocation",
+          "Utilization rate tracking",
+          "Client billing integration",
+          "Skills inventory database"
+        ],
+        icon: "💼"
+      },
+      {
+        industry: "Education",
+        features: [
+          "Academic year planning",
+          "Adjunct faculty management",
+          "Grant-funded position tracking",
+          "Student worker modules"
+        ],
+        icon: "🎓"
+      },
+      {
+        industry: "Non-Profit",
+        features: [
+          "Volunteer management",
+          "Grant compliance reporting",
+          "Donor-restricted position tracking",
+          "Board member portals"
+        ],
+        icon: "❤️"
+      }
+    ];
+
 
     return (
         <>
@@ -623,7 +802,7 @@ const EmployeeSection = () => {
                     <p className="text-gray-600 mb-8">Join thousands of companies that have streamlined their HR processes and improved employee satisfaction.</p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <button
-                            className="bg-[#ff8633] border border-gray-300 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-[#000e54] hover:text-white hover:border-[#ff8633] transition duration-300"
+                            className="bg-[#ff8633] border border-gray-300 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-[#000e54] hover:text-white hover:border-[#000e54] transition duration-300"
                             onClick={handleContactSales}
                         >
                             Contact Sales
@@ -781,7 +960,120 @@ const EmployeeSection = () => {
       </div>
     </section>
 
+{/* implmentation and usage */}
+<section id="implementation-ems" className="py-10 max-w-6xl mx-auto ">
+      <div className="container mx-auto">
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl sm:text-4xl font-semibold text-gray-900 mb-4">
+              Implementing an EMS: <span className="text-[#000e54]">Step-by-Step Guide</span>
+            </h2>
+            <p className="text-xl text-gray-800 max-w-3xl mx-auto">
+              A successful EMS implementation requires careful planning and execution. Follow these best practices to ensure smooth deployment.
+            </p>
+          </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+            {implementationSteps.map((step) => (
+              <div 
+                key={step.step}
+                className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border-l-4 border-[#000e54]"
+              >
+                <div className="p-6 h-full flex flex-col">
+                  <div className="flex items-center mb-4">
+                    <div className="bg-blue-100 text-[#000e54] w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mr-4">
+                      {step.step}
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-800">{step.title}</h3>
+                  </div>
+                  <p className="text-gray-800 text-lg mb-4 flex-grow">{step.description}</p>
+                  <div className="flex items-center justify-between">
+                    <div className="text-lg font-msemibold text-[#000e54]">{step.duration}</div>
+                    <div className="text-2xl">{step.icon}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Self-Service Portals */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl sm:text-4xl font-semibold text-gray-900 mb-4">
+              Employee <span className="text-[#000e54]">Self-Service Portals</span>
+            </h2>
+            <p className="text-xl text-gray-800 max-w-3xl mx-auto">
+              Modern EMS platforms empower employees with self-service capabilities that reduce HR workload while improving employee experience.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {selfServiceFeatures.map((feature, index) => (
+              <div 
+                key={index}
+                className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+              >
+                <div className="p-6 h-full flex flex-col">
+                  <div className="flex items-center mb-4">
+                    <div className="text-2xl mr-4">{feature.icon}</div>
+                    <h3 className="text-xl font-semibold text-gray-800">{feature.title}</h3>
+                  </div>
+                  <ul className="space-y-3 flex-grow">
+                    {feature.benefits.map((benefit, i) => (
+                      <li key={i} className="flex items-start text-lg">
+                        <svg className="h-5 w-5 text-[#000e54] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        <span className="text-gray-700">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Industry Customizations */}
+        <div>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl sm:text-4xl font-semibold text-gray-800 mb-4">
+              Customizing Your EMS for <span className="text-[#000e54]">Different Industries</span>
+            </h2>
+            <p className="text-xl text-gray-800 max-w-3xl mx-auto">
+              Industry-specific requirements demand tailored EMS configurations. Here's how leading sectors customize their systems.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {industryCustomizations.map((industry, index) => (
+              <div 
+                key={index}
+                className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+              >
+                <div className="p-6 h-full flex flex-col">
+                  <div className="flex items-center mb-4">
+                    <div className="text-3xl mr-4">{industry.icon}</div>
+                    <h3 className="text-xl font-semibold text-gray-800">{industry.industry}</h3>
+                  </div>
+                  <ul className="space-y-3 flex-grow">
+                    {industry.features.map((feature, i) => (
+                      <li key={i} className="flex items-start text-lg">
+                        <svg className="h-5 w-5 text-[#000e54] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
 
 {/* features */}
 <div id="employee-features">
@@ -808,7 +1100,7 @@ const EmployeeSection = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
       {/* Benefit Card 1 */}
       <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-        <div className="h-3 bg-[#ff8633]"></div>
+        <div className="h-3 bg-[#000e54]"></div>
         <div className="p-8">
           <div className="w-16 h-16 bg-[#000e54] rounded-lg flex items-center justify-center text-white mb-6  transition-colors duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -839,7 +1131,7 @@ const EmployeeSection = () => {
       
       {/* Benefit Card 2 */}
       <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-        <div className="h-3 bg-[#ff8633]"></div>
+        <div className="h-3 bg-[#000e54]"></div>
         <div className="p-8">
           <div className="w-16 h-16 bg-[#000e54] rounded-lg flex items-center justify-center text-white mb-6 transition-colors duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -870,7 +1162,7 @@ const EmployeeSection = () => {
       
       {/* Benefit Card 3 */}
       <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-        <div className="h-3 bg-[#ff8633]"></div>
+        <div className="h-3 bg-[#000e54]"></div>
         <div className="p-8">
           <div className="w-16 h-16 bg-[#000e54] rounded-lg flex items-center justify-center text-white mb-6  transition-colors duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -901,7 +1193,7 @@ const EmployeeSection = () => {
       
       {/* Benefit Card 4 */}
       <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-        <div className="h-3 bg-[#ff8633]"></div>
+        <div className="h-3 bg-[#000e54]"></div>
         <div className="p-8">
           <div className="w-16 h-16 bg-[#000e54] rounded-lg flex items-center justify-center text-white mb-6 transition-colors duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -932,7 +1224,7 @@ const EmployeeSection = () => {
       
       {/* Benefit Card 5 */}
       <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-        <div className="h-3 bg-[#ff8633]"></div>
+        <div className="h-3 bg-[#000e54]"></div>
         <div className="p-8">
           <div className="w-16 h-16 bg-[#000e54] rounded-lg flex items-center justify-center text-white mb-6  transition-colors duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -963,7 +1255,7 @@ const EmployeeSection = () => {
       
       {/* Benefit Card 6 */}
       <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-        <div className="h-3 bg-[#ff8633]"></div>
+        <div className="h-3 bg-[#000e54]"></div>
         <div className="p-8">
           <div className="w-16 h-16 bg-[#000e54] rounded-lg flex items-center justify-center text-white mb-6  transition-colors duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1372,7 +1664,7 @@ const EmployeeSection = () => {
     </div>
 
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div className="bg-white p-6 rounded-lg shadow-sm border-t-4 border-[#ff8633]">
+      <div className="bg-white p-6 rounded-lg shadow-sm border-t-4 border-[#000e54]">
         <h4 className="font-semibold text-xl mb-4">Single Sign-On Solutions</h4>
         <p className="text-gray-800 text-lg mb-4">
           Simplify access management with SSO support for SAML 2.0, OAuth, and OpenID Connect. Compatible with popular identity 
@@ -1383,7 +1675,7 @@ const EmployeeSection = () => {
         </p>
       </div>
 
-      <div className="bg-white p-6 rounded-lg shadow-sm border-t-4 border-[#ff8633]">
+      <div className="bg-white p-6 rounded-lg shadow-sm border-t-4 border-[#000e54]">
         <h4 className="font-semibold text-xl mb-4">Data Import/Export Tools</h4>
         <p className="text-gray-800 text-lg mb-4">
           Our intuitive data management tools make it easy to move information in and out of the system. Support for CSV, Excel, 
@@ -1394,7 +1686,7 @@ const EmployeeSection = () => {
         </p>
       </div>
 
-      <div className="bg-white p-6 rounded-lg shadow-sm border-t-4 border-[#ff8633]">
+      <div className="bg-white p-6 rounded-lg shadow-sm border-t-4 border-[#000e54]">
         <h4 className="font-semibold text-xl mb-4">Legacy System Compatibility</h4>
         <p className="text-gray-800 text-lg mb-4">
           We understand the challenges of modernizing while maintaining operations. Our platform offers specialized connectors 
