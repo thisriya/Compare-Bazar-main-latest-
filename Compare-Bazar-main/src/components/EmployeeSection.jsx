@@ -486,7 +486,7 @@ const EmployeeSection = () => {
             </div>
 
             {/* notice section */}
-            <section id="employee-notice" className="bg-gray-50 py-16">
+            <section id="employee-notice" className="py-16">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-12">
                         <span className="text-[#000e54] font-semibold">STAY INFORMED</span>
