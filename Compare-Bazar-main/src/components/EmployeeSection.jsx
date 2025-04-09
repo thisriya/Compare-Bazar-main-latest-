@@ -682,6 +682,8 @@ const EmployeeSection = () => {
       </div>
     </section>
 
+
+
 {/* features */}
 <div id="employee-features">
 <h1 className="text-4xl md:text-4xl font-semibold text-gray-900 mb-6 text-center">
@@ -689,6 +691,239 @@ const EmployeeSection = () => {
 </h1>
  <EmployeeManagementWebpage/>
  </div>
+
+{/* benefits */}
+<div className=" py-10">
+  <div className="max-w-6xl mx-auto">
+    {/* Section Header */}
+    <div className="text-center mb-16">
+      <span className="bg-[#000e54] text-white text-lg font-semibold px-4 py-1 rounded-full uppercase">Why Choose Us</span>
+      <h2 className="text-4xl font-semibold mt-4 mb-6 text-gray-900">Benefits of the Right Employee Management System</h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        Implementing the optimal employee management solution delivers transformative advantages across your entire organization,
+        from the C-suite to frontline employees.
+      </p>
+    </div>
+    
+    {/* Main Benefits Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      {/* Benefit Card 1 */}
+      <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+        <div className="h-3 bg-[#ff8633]"></div>
+        <div className="p-8">
+          <div className="w-16 h-16 bg-[#000e54] rounded-lg flex items-center justify-center text-white mb-6  transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-semibold mb-4 text-gray-900">Cost Efficiency</h3>
+          <p className="text-gray-800 text-lg mb-6">
+            Reduce operational costs by automating routine tasks and eliminating redundant processes.
+            Our customers typically see a 27% reduction in administrative overhead within the first year.
+          </p>
+          <ul className="space-y-2">
+            <li className="flex items-start">
+              <span className="text-[#000e54] mr-2">✓</span>
+              <span className="text-gray-800 text-lg">Decreased payroll processing time by up to 80%</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-[#000e54] mr-2">✓</span>
+              <span className="text-gray-800 text-lg">Reduced compliance-related penalties by 92%</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-[#000e54] mr-2">✓</span>
+              <span className="text-gray-800 text-lg">Lower paper and storage costs through digitization</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      {/* Benefit Card 2 */}
+      <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+        <div className="h-3 bg-[#ff8633]"></div>
+        <div className="p-8">
+          <div className="w-16 h-16 bg-[#000e54] rounded-lg flex items-center justify-center text-white mb-6 transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-semibold mb-4 text-gray-900">Enhanced Productivity</h3>
+          <p className="text-gray-800 text-lg mb-6">
+            Streamline workflows and eliminate bottlenecks with intelligent automation and 
+            self-service capabilities that empower employees at every level.
+          </p>
+          <ul className="space-y-2">
+            <li className="flex items-start">
+              <span className="text-[#000e54] mr-2">✓</span>
+              <span className="text-gray-800 text-lg">Save 5+ hours per week for HR personnel</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-[#000e54] mr-2">✓</span>
+              <span className="text-gray-800 text-lg">Reduce approval cycles by 65% with automated workflows</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-[#000e54] mr-2">✓</span>
+              <span className="text-gray-800 text-lg">Enable managers to handle 40% more direct reports</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      {/* Benefit Card 3 */}
+      <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+        <div className="h-3 bg-[#ff8633]"></div>
+        <div className="p-8">
+          <div className="w-16 h-16 bg-[#000e54] rounded-lg flex items-center justify-center text-white mb-6  transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-semibold mb-4 text-gray-900">Compliance Assurance</h3>
+          <p className="text-gray-800 text-lg mb-6">
+            Stay ahead of complex regulatory requirements with automatic updates
+            and built-in compliance safeguards across federal, state, and local regulations.
+          </p>
+          <ul className="space-y-2">
+            <li className="flex items-start">
+              <span className="text-[#000e54] mr-2">✓</span>
+              <span className="text-gray-800 text-lg">Automatic regulatory updates across 50+ jurisdictions</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-[#000e54] mr-2">✓</span>
+              <span className="text-gray-800 text-lg">Compliant record keeping with audit trails</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-[#000e54] mr-2">✓</span>
+              <span className="text-gray-800 text-lg">Simplified ACA, FLSA, and FMLA compliance</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      {/* Benefit Card 4 */}
+      <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+        <div className="h-3 bg-[#ff8633]"></div>
+        <div className="p-8">
+          <div className="w-16 h-16 bg-[#000e54] rounded-lg flex items-center justify-center text-white mb-6 transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-semibold mb-4 text-gray-900">Employee Engagement</h3>
+          <p className="text-gray-800 text-lg mb-6">
+            Foster a culture of engagement and satisfaction with tools that recognize contributions,
+            support development, and provide transparency across the organization.
+          </p>
+          <ul className="space-y-2">
+            <li className="flex items-start">
+              <span className="text-[#000e54] mr-2">✓</span>
+              <span className="text-gray-800 text-lg">Increase retention rates by up to 31%</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-[#000e54] mr-2">✓</span>
+              <span className="text-gray-800 text-lg">Facilitate continuous feedback and recognition</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-[#000e54] mr-2">✓</span>
+              <span className="text-gray-800 text-lg">Improve employee satisfaction scores by 43%</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      {/* Benefit Card 5 */}
+      <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+        <div className="h-3 bg-[#ff8633]"></div>
+        <div className="p-8">
+          <div className="w-16 h-16 bg-[#000e54] rounded-lg flex items-center justify-center text-white mb-6  transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-semibold mb-4 text-gray-900">Data-Driven Decisions</h3>
+          <p className="text-gray-800 text-lg mb-6">
+            Transform workforce data into actionable insights with powerful analytics
+            tools that help predict trends, identify opportunities, and mitigate risks.
+          </p>
+          <ul className="space-y-2">
+            <li className="flex items-start">
+              <span className="text-[#000e54] mr-2">✓</span>
+              <span className="text-gray-800 text-lg">Interactive dashboards with 50+ pre-built reports</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-[#000e54] mr-2">✓</span>
+              <span className="text-gray-800 text-lg">AI-powered predictive workforce analytics</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-[#000e54] mr-2">✓</span>
+              <span className="text-gray-800 text-lg">Custom reporting engine with drag-and-drop interface</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      {/* Benefit Card 6 */}
+      <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+        <div className="h-3 bg-[#ff8633]"></div>
+        <div className="p-8">
+          <div className="w-16 h-16 bg-[#000e54] rounded-lg flex items-center justify-center text-white mb-6  transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-semibold mb-4 text-gray-900">Scalable Growth</h3>
+          <p className="text-gray-800 text-lg mb-6">
+            Adapt to changing business needs with a flexible platform that grows
+            with your organization, from startup to enterprise level operations.
+          </p>
+          <ul className="space-y-2">
+            <li className="flex items-start">
+              <span className="text-[#000e54] mr-2">✓</span>
+              <span className="text-gray-800 text-lg">Support for companies from 10 to 100,000+ employees</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-[#000e54] mr-2">✓</span>
+              <span className="text-gray-800 text-lg">Flexible configuration as business needs evolve</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-[#000e54] mr-2">✓</span>
+              <span className="text-gray-800 text-lg">99.9% uptime with enterprise-grade reliability</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    {/* ROI Metrics Section */}
+    <div className="bg-[#000e54] text-white rounded-2xl p-8 mb-16">
+      <div className="text-center mb-10">
+        <h3 className="text-4xl font-semibold mb-4">Measurable Return on Investment</h3>
+        <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+          Companies implementing our employee management system see significant, measurable returns within the first year.
+        </p>
+      </div>
+      
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="text-center">
+          <div className="text-4xl font-semibold text-[#ff8633] mb-2">27%</div>
+          <p className="text-lg">Reduction in HR Administrative Costs</p>
+        </div>
+        <div className="text-center">
+          <div className="text-4xl font-semibold text-[#ff8633] mb-2">3.2x</div>
+          <p className="text-lg">Faster Employee Onboarding</p>
+        </div>
+        <div className="text-center">
+          <div className="text-4xl font-aemibold text-[#ff8633] mb-2">89%</div>
+          <p className="text-lg">Paperwork Elimination</p>
+        </div>
+        <div className="text-center">
+          <div className="text-4xl font-aemibold text-[#ff8633] mb-2">19%</div>
+          <p className="text-lg">Increase in Talent Retention</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
  {/* integration capability */}
  <div id="employee-integration" className="max-w-6xl mx-auto py-16">
