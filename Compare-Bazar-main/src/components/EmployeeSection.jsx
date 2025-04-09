@@ -693,7 +693,7 @@ const EmployeeSection = () => {
  </div>
 
 {/* benefits */}
-<div className=" py-10">
+<div id="employeemanagement-benefits" className=" py-10">
   <div className="max-w-6xl mx-auto">
     {/* Section Header */}
     <div className="text-center mb-16">
