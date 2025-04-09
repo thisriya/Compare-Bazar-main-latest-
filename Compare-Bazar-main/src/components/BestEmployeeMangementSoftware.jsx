@@ -69,7 +69,7 @@ const  BestEmployeeMangementSoftware= () => {
     { id: 4, title: "Key Features For Best Employee Manegement System", slug: "employee-features" },
     { id: 5, title: "Benefits of Best Employee Manegemt System", slug: "employeemanagement-benefits" },
     { id: 6, title: "Integration Capabilities", slug: "employee-integration" },
-    { id: 7, title: "Is Email Marketing Worthit?", slug: "email-worthit" },
+    { id: 7, title: "Choosing the Right EMS for Your Company Size?", slug: "employee-choose" },
     { id: 8, title: "Notice", slug: "employee-notice" },
     { id: 9, title: "Related Articles", slug: "employee-articles" },
     { id: 10, title: "FAQs", slug: "employee-faq" } ,
@@ -95,7 +95,7 @@ const  BestEmployeeMangementSoftware= () => {
       <Navbar />
       <div className="max-w-6xl mx-auto p-4">
         <header className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">The Best Business Email Marketing Platforms of 2025</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">The Best Employee Management System of 2025</h1>
   
           <p className="text-gray-800 text-lg md:text-lg mb-4">
             At <span className="text-orange-500 font-semibold">Compare Bazar</span>, we understand the importance of effective communication for your business. That's why we recommend the <span className="text-orange-500 font-semibold">best email marketing platforms</span> that provide powerful campaign tools and customer insights. The <span className="text-orange-500 font-semibold">best email marketing solutions</span> offer personalized automation, intelligent segmentation, and comprehensive analytics to help you connect with your audience more effectively. Whether you're running a small online store or a large e-commerce company, the right email marketing system can transform how you engage, convert, and retain your customers.

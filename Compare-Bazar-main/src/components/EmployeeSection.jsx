@@ -212,6 +212,104 @@ const EmployeeSection = () => {
         }
     };
     
+    const selectionCriteria = [
+      {
+        category: "Core Functionality",
+        items: [
+          "Comprehensive HR management (employee records, org charts)",
+          "Payroll processing and tax compliance",
+          "Time and attendance tracking",
+          "Benefits administration",
+          "Performance management tools"
+        ],
+        icon: (
+          <svg className="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+          </svg>
+        ),
+        color: "blue"
+      },
+      {
+        category: "Technical Requirements",
+        items: [
+          "Cloud-based vs on-premise options",
+          "Mobile accessibility (iOS/Android apps)",
+          "API availability and documentation",
+          "Data migration support",
+          "Single Sign-On (SSO) capabilities"
+        ],
+        icon: (
+          <svg className="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+          </svg>
+        ),
+        color: "purple"
+      },
+      {
+        category: "Implementation & Support",
+        items: [
+          "Implementation timeline and process",
+          "Training resources and materials",
+          "Customer support availability (24/7?)",
+          "Average response times for issues",
+          "User community and knowledge base"
+        ],
+        icon: (
+          <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+        ),
+        color: "green"
+      },
+      {
+        category: "Security & Compliance",
+        items: [
+          "SOC 2 Type II certification",
+          "GDPR and regional compliance",
+          "Data encryption standards",
+          "Access controls and permissions",
+          "Audit trail capabilities"
+        ],
+        icon: (
+          <svg className="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+          </svg>
+        ),
+        color: "red"
+      },
+      {
+        category: "Vendor Evaluation",
+        items: [
+          "Company financial stability",
+          "Customer references and case studies",
+          "Product roadmap and innovation",
+          "Implementation partner network",
+          "Contract terms and exit clauses"
+        ],
+        icon: (
+          <svg className="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+        ),
+        color: "yellow"
+      },
+      {
+        category: "Cost Considerations",
+        items: [
+          "Pricing model (per employee/module?)",
+          "Implementation costs",
+          "Ongoing maintenance fees",
+          "Upgrade/expansion costs",
+          "Total cost of ownership (3-5 year view)"
+        ],
+        icon: (
+          <svg className="w-8 h-8 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        ),
+        color: "indigo"
+      }
+    ];
 
 
     return (
@@ -419,8 +517,7 @@ const EmployeeSection = () => {
           </p>
         </div>
       </div>
-    </div>
-        <div className="bg-white max-w-6xl mx-auto">
+      <div className="bg-white max-w-6xl mx-auto">
 
             {/* Features Section */}
             <div className="py-16 px-4 max-w-6xl mx-auto">
@@ -535,6 +632,8 @@ const EmployeeSection = () => {
                 </div>
             </div>
         </div>
+    </div>
+        
 
        {/* what make best employee management system */}
        <section id="whatmakesbest-ems" className="py-10 max-w-6xl mx-auto">
@@ -925,8 +1024,271 @@ const EmployeeSection = () => {
   </div>
 </div>
 
+{/* choosing right ems */}
+<section id="employee-choose" className="py-16 max-w-6xl mx-auto">
+      <div className="container mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl sm:text-4xl font-semibold text-gray-900 mb-4">
+            Choosing the Right EMS for Your <span className="text-[#000e54]">Company Size</span>
+          </h2>
+          <p className="text-xl text-gray-800 max-w-3xl mx-auto">
+            Employee Management Systems vary significantly based on organizational needs. 
+            Select the perfect solution tailored to your business scale and growth trajectory.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          {/* SMB Card */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border-l-4 border-[#000e54]">
+            <div className="p-8">
+              <div className="flex items-center mb-6">
+                <div className="bg-blue-100 p-3 rounded-full mr-4">
+                  <svg className="w-8 h-8 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800">Small & Medium Businesses</h3>
+              </div>
+              
+              <div className="space-y-4">
+                <p className="text-gray-800 text-lg">
+                  For companies with <strong>5-250 employees</strong>, focus on systems that offer simplicity, 
+                  affordability, and quick implementation without extensive IT support.
+                </p>
+                
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-xl text-[#000e54] mb-2">Ideal Features:</h4>
+                  <ul className="space-y-2 text-gray-800">
+                    <li className="flex items-start text-lg">
+                      <svg className="h-5 w-5 text-[#000e54] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>All-in-one solutions with core HR, payroll, and time tracking</span>
+                    </li>
+                    <li className="flex items-start text-lg">
+                      <svg className="h-5 w-5 text-[#000e54] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>Cloud-based with mobile accessibility</span>
+                    </li>
+                    <li className="flex items-start text-lg">
+                      <svg className="h-5 w-5 text-[#000e54] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>Pre-built compliance templates for local regulations</span>
+                    </li>
+                    <li className="flex items-start text-lg">
+                      <svg className="h-5 w-5 text-[#000e54] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>Simple pricing with no per-module charges</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="pt-4">
+                  <h4 className="font-semibold text-xl text-gray-800 mb-2">Top Considerations:</h4>
+                  <ul className="list-disc list-inside text-gray-600 space-y-1 pl-2 text-lg">
+                    <li>Implementation time under 2 weeks</li>
+                    <li>Minimal training requirements</li>
+                    <li>Scalability for planned growth</li>
+                    <li>Integration with accounting software</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Enterprise Card */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border-l-4 border-[#000e54]">
+            <div className="p-8">
+              <div className="flex items-center mb-6">
+                <div className="bg-blue-100 p-3 rounded-full mr-4">
+                  <svg className="w-8 h-8 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800">Large Enterprises</h3>
+              </div>
+              
+              <div className="space-y-4">
+                <p className="text-gray-800 text-lg">
+                  For organizations with <strong>250+ employees</strong>, prioritize systems with deep customization, 
+                  global capabilities, and advanced workforce analytics.
+                </p>
+                
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-[#000e54] text-xl mb-2">Critical Capabilities:</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start text-lg">
+                      <svg className="h-5 w-5 text-[#000e54] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>Multi-country compliance and localization</span>
+                    </li>
+                    <li className="flex items-start text-lg">
+                      <svg className="h-5 w-5 text-[#000e54] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>Advanced workforce planning and predictive analytics</span>
+                    </li>
+                    <li className="flex items-start text-lg">
+                      <svg className="h-5 w-5 text-[#000e54] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>Custom workflow automation and approval chains</span>
+                    </li>
+                    <li className="flex items-start text-lg">
+                      <svg className="h-5 w-5 text-[#000e54] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>Enterprise-grade security and access controls</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="pt-4">
+                  <h4 className="font-semibold text-gray-800 text-xl mb-2">Implementation Factors:</h4>
+                  <ul className="list-disc list-inside text-gray-800 text-lg space-y-1 pl-2">
+                    <li>Phased rollout capabilities</li>
+                    <li>Dedicated account management</li>
+                    <li>Custom reporting and dashboard creation</li>
+                    <li>Legacy system migration support</li>
+                    <li>API-first architecture for custom integrations</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Decision Guide */}
+        <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div className="md:flex">
+            <div className="md:w-1/3 bg-[#000e54] p-8 flex flex-col justify-center">
+              <div className="text-white">
+                <h3 className="text-xl font-semibold mb-4">Still Unsure?</h3>
+                <p className="mb-6 text-lg">Use our decision matrix to identify the perfect EMS based on:</p>
+                <ul className="space-y-3">
+                  <li className="flex items-start text-lg">
+                    <svg className="h-5 w-5 text-white mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span>Employee count and growth rate</span>
+                  </li>
+                  <li className="flex items-start text-lg">
+                    <svg className="h-5 w-5 text-white mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span>Geographic distribution</span>
+                  </li>
+                  <li className="flex items-start text-lg">
+                    <svg className="h-5 w-5 text-white mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span>Industry-specific requirements</span>
+                  </li>
+                  <li className="flex items-start text-lg">
+                    <svg className="h-5 w-5 text-white mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span>IT infrastructure maturity</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="md:w-2/3 p-8">
+              <h3 className="text-xl font-semibold text-gray-800 mb-6">EMS Selection Decision Matrix</h3>
+              
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-200">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th scope="col" className="px-6 py-3 text-left text-lg font-semibold text-gray-800 uppercase tracking-wider">Criteria</th>
+                      <th scope="col" className="px-6 py-3 text-left text-lg font-semibold text-gray-800 uppercase tracking-wider">SMB Solution</th>
+                      <th scope="col" className="px-6 py-3 text-left text-lg font-semibold text-gray-800 uppercase tracking-wider">Enterprise Solution</th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white divide-y divide-gray-200">
+                    <tr>
+                      <td className="px-6 py-4 whitespace-nowrap text-lg font-semibold text-gray-800">Implementation Time</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-lg text-gray-800">1-4 weeks</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-lg text-gray-800">3-12 months</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 whitespace-nowrap text-lg font-semibold text-gray-800">Customization Level</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-lg text-gray-800">Limited configuration</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-lg text-gray-800">Full customization</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-800">Pricing Model</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-lg text-gray-800">Monthly subscription</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-lg text-gray-800">Annual contract + professional services</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 whitespace-nowrap text-lg font-semibold text-gray-800">Support Level</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-lg text-gray-800">Community/email support</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-lg text-gray-800">Dedicated account manager + 24/7 support</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 whitespace-nowrap text-lg font-semibold text-gray-800">Scalability</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-lg text-gray-800">Up to 500 employees</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-lg text-gray-800">Unlimited with global capabilities</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section className="mt-10">
+      <div className="container mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl sm:text-4xl font-semibold text-gray-900 mb-4">
+            EMS Vendor <span className="text-[#000e54]">Selection Criteria</span>
+          </h2>
+          <p className="text-lg text-gray-800 max-w-3xl mx-auto">
+            Choosing the right Employee Management System vendor requires careful evaluation across multiple dimensions. 
+            Use this comprehensive checklist to compare potential solutions.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {selectionCriteria.map((criteria, index) => (
+            <div 
+              key={index}
+              className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-${criteria.color}-500`}
+            >
+              <div className="p-6 h-full flex flex-col">
+                <div className="flex items-center mb-4">
+                  <div className={`bg-${criteria.color}-100 p-2 rounded-lg mr-4`}>
+                    {criteria.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-800">{criteria.category}</h3>
+                </div>
+                
+                <ul className="space-y-3 flex-grow">
+                  {criteria.items.map((item, itemIndex) => (
+                    <li key={itemIndex} className="flex items-start">
+                      <svg className={`h-5 w-5 text-${criteria.color}-500 mr-2 mt-0.5 flex-shrink-0`} fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-gray-800 text-lg">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    </section>
+
+
  {/* integration capability */}
- <div id="employee-integration" className="max-w-6xl mx-auto py-16">
+ <div id="employee-integration" className="max-w-6xl mx-auto">
   <div className="max-w-6xl mx-auto">
     <div className="text-center mb-12">
       <span className="text-greay-900  font-semibold text-4xl">SEAMLESS CONNECTIONS</span>
