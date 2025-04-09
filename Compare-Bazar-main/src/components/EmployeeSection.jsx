@@ -576,7 +576,7 @@ const EmployeeSection = () => {
       {/* Visual Demo */}
       <div className="bg-white rounded-xl overflow-hidden max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 max-w-6xl mx-auto">
-          <div className="md:p-12 lg:p-0">
+          <div className="max-w-6xl mx-aut0 lg:p-0">
             <h2 className="text-xl font-semibold text-gray-900 mb-6">Experience the Difference</h2>
             <p className="text-lg text-gray-800 mb-8">
               Our intuitive dashboard provides managers and HR professionals with all the tools they need in one place.
@@ -796,8 +796,8 @@ const EmployeeSection = () => {
             </section>
 
             {/* CTA Section */}
-            <div className="py-16 px-4 text-center">
-                <div className="max-w-4xl mx-auto">
+            <div className="py-16 text-center">
+                <div className="max-w-6xl mx-auto">
                     <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Employment Management?</h2>
                     <p className="text-gray-600 mb-8">Join thousands of companies that have streamlined their HR processes and improved employee satisfaction.</p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -816,7 +816,7 @@ const EmployeeSection = () => {
 
        {/* what make best employee management system */}
        <section id="whatmakesbest-ems" className="py-10 max-w-6xl mx-auto">
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-4xl font-semibold text-gray-900 mb-4">
             What Makes the <span className="text-[#000e54]">Best</span> Employee Management System?
@@ -962,7 +962,7 @@ const EmployeeSection = () => {
 
 {/* implmentation and usage */}
 <section id="implementation-ems" className="py-10 max-w-6xl mx-auto ">
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-6xl">
         <div className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl sm:text-4xl font-semibold text-gray-900 mb-4">
@@ -1318,7 +1318,7 @@ const EmployeeSection = () => {
 
 {/* choosing right ems */}
 <section id="employee-choose" className="py-16 max-w-6xl mx-auto">
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-4xl font-semibold text-gray-900 mb-4">
             Choosing the Right EMS for Your <span className="text-[#000e54]">Company Size</span>
@@ -1535,7 +1535,7 @@ const EmployeeSection = () => {
         </div>
       </div>
       <section className="mt-10">
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-4xl font-semibold text-gray-900 mb-4">
             EMS Vendor <span className="text-[#000e54]">Selection Criteria</span>
@@ -1546,7 +1546,7 @@ const EmployeeSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 mx-auto max-w-6xl">
           {selectionCriteria.map((criteria, index) => (
             <div 
               key={index}
