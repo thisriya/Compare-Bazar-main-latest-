@@ -274,7 +274,7 @@ const EmployeeManagementWebpage = () => {
   };
 
   return (
-    <div id="employee-dashboard" className="bg-gray-50 p-2 sm:p-4 md:p-6 w-full min-h-screen font-sans" style={{ opacity: 1 }}>
+    <div id="employee-dashboard" className="bg-gray-50 p-2 sm:p-4 md:p-6 lg:p-0 w-full min-h-screen font-sans" style={{ opacity: 1 }}>
       {/* Top Navigation Bar */}
       <div className="bg-white shadow-md rounded-lg p-3 sm:p-4 mb-4 sm:mb-6">
         <div className="flex justify-between items-center">

@@ -217,7 +217,7 @@ const EmployeeSection = () => {
     return (
         <>
 {/* introduction */}
- <div  id="intro-employee" className="max-w-6xl mx-auto sm:px-6 lg:px-8 py-12 md:py-20">
+ <div  id="intro-employee" className="max-w-6xl mx-auto sm:px-6 lg:px-0 py-12 md:py-20">
       <div className="text-center mb-16 max-w-6xl mx-auto">
         <h1 className="text-4xl md:text-4xl font-semibold text-gray-900 mb-6">
           <span className="text-gray-900">Empower Your Workforce</span> with Our Management System
@@ -299,7 +299,7 @@ const EmployeeSection = () => {
       {/* Visual Demo */}
       <div className="bg-white rounded-xl overflow-hidden max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 max-w-6xl mx-auto">
-          <div className="md:p-12">
+          <div className="md:p-12 lg:p-0">
             <h2 className="text-xl font-semibold text-gray-900 mb-6">Experience the Difference</h2>
             <p className="text-lg text-gray-800 mb-8">
               Our intuitive dashboard provides managers and HR professionals with all the tools they need in one place.
@@ -338,7 +338,7 @@ const EmployeeSection = () => {
             </div>
           </div>
           
-          <div className="bg-gray-50 p-8 flex items-center justify-center">
+          <div className="bg-gray-50 flex items-center justify-center">
             <svg className="w-full max-w-md" viewBox="0 0 500 360" xmlns="http://www.w3.org/2000/svg">
               {/* Dashboard Background */}
               <rect x="50" y="30" width="400" height="300" rx="10" fill="white" stroke="#e5e7eb" strokeWidth="2"/>
@@ -396,7 +396,7 @@ const EmployeeSection = () => {
 </div>
 
         {/* what is employee menagemtn system */}
-        <div  id="what-is-employeemanagement" className="max-w-6xl mx-auto p-6 bg-white rounded-lg">
+        <div  id="what-is-employeemanagement" className="max-w-6xl mx-auto rounded-lg">
       <div className="flex flex-col md:flex-row gap-8 items-center">
         <div className="w-full md:w-1/2">
           <img 
@@ -486,7 +486,7 @@ const EmployeeSection = () => {
             </div>
 
             {/* notice section */}
-            <section id="employee-notice" className="bg-gray-50 py-16 px-4">
+            <section id="employee-notice" className="bg-gray-50 py-16">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-12">
                         <span className="text-[#000e54] font-semibold">STAY INFORMED</span>
@@ -538,7 +538,7 @@ const EmployeeSection = () => {
 
        {/* what make best employee management system */}
        <section id="whatmakesbest-ems" className="py-10 max-w-6xl mx-auto">
-      <div className="container mx-auto sm:px-6 lg:px-8">
+      <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-4xl font-semibold text-gray-900 mb-4">
             What Makes the <span className="text-[#000e54]">Best</span> Employee Management System?
@@ -691,7 +691,7 @@ const EmployeeSection = () => {
  </div>
 
  {/* integration capability */}
- <div id="employee-integration" className="max-w-6xl mx-auto py-16 px-4">
+ <div id="employee-integration" className="max-w-6xl mx-auto py-16">
   <div className="max-w-6xl mx-auto">
     <div className="text-center mb-12">
       <span className="text-greay-900  font-semibold text-4xl">SEAMLESS CONNECTIONS</span>
