@@ -1086,7 +1086,6 @@ const EmployeeSection = () => {
 {/* benefits */}
 <div id="employeemanagement-benefits" className=" py-10">
   <div className="max-w-6xl mx-auto">
-    {/* Section Header */}
     <div className="text-center mb-16">
       <span className="bg-[#000e54] text-white text-lg font-semibold px-4 py-1 rounded-full uppercase">Why Choose Us</span>
       <h2 className="text-4xl font-semibold mt-4 mb-6 text-gray-900">Benefits of the Right Employee Management System</h2>
