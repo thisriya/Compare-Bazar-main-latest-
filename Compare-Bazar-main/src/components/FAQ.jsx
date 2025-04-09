@@ -11,7 +11,7 @@ const FAQ = ({ faqs }) => {
 
   return (
     <div id="faq-section" className="faq-section  py-10  max-w-6xl mx-auto p-4">
-      <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+      <h2 className="text-4xl font-semibold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
       
       <div className="space-y-4">
         {faqs.map((faq, index) => (
@@ -21,10 +21,10 @@ const FAQ = ({ faqs }) => {
               className="w-full text-left flex justify-between items-center focus:outline-none group"
               aria-expanded={expandedIndex === index}
             >
-              <h3 className="text-xl font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">
+              <h3 className="text-lg font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">
                 {faq.question}
               </h3>
-              <span className="text-gray-500">
+              <span className="text-gray-800">
                 {expandedIndex === index ? (
                   <ChevronUp className="w-5 h-5" />
                 ) : (
@@ -38,14 +38,14 @@ const FAQ = ({ faqs }) => {
                 {Array.isArray(faq.answer) ? (
                   <ul className="space-y-2">
                     {faq.answer.map((item, i) => (
-                      <li key={i} className="flex items-start">
+                      <li key={i} className="flex items-start text-lg">
                         <span className="inline-block h-1.5 w-1.5 rounded-full bg-gray-400 mt-2 mr-2"></span>
                         <span>{item}</span>
                       </li>
                     ))}
                   </ul>
                 ) : (
-                  <p className="leading-relaxed">{faq.answer}</p>
+                  <p className="leading-relaxed text-lg">{faq.answer}</p>
                 )}
               </div>
             )}
