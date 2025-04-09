@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import PhoneSystemCardCommon from './PhoneSystemCardCommon';
-import EmployeeManagementWebpage from './EmployeeManagementWebpage';
 import Navbar from './Navbar';
 import WideDiv from './WideDiv';
 import Footer from './Footer';
-import Feedback from './Feedback';
 import EmployeeSection from './EmployeeSection';
 import TableOfContents from './TableOfContents';
 
@@ -66,13 +64,13 @@ const  BestEmployeeMangementSoftware= () => {
 
   const contents = [
     { id: 1, title: "Introduction to Best Employee Management System", slug: "intro-employee" },
-    { id: 2, title: "What Is Email Marketing?", slug: "what-is-emailmarketing" },
-    { id: 3, title: "How Does Email Marketing Works", slug: "emailmarketing-working" },
-    { id: 4, title: "Benefits of Email Marketing", slug: "emailmarketing-benefits" },
-    { id: 5, title: "Key Features For Email Marketing services", slug: "email-features" },
-    { id: 6, title: "How to Choose Email Marketing Service?", slug: "email-howchoose" },
+    { id: 2, title: "What Is Employee Management System?", slug: "what-is-employeemanagement" },
+    { id: 3, title: "What Makes the Best Employee Management System?", slug: "whatmakesbest-ems" },
+    { id: 4, title: "Benefits of Best Employee Manegemt System", slug: "employeemanagement-benefits" },
+    { id: 5, title: "Key Features For Best Employee Manegement System", slug: "employee-features" },
+    { id: 6, title: "Integration Capabilities", slug: "employee-integration" },
     { id: 7, title: "Is Email Marketing Worthit?", slug: "email-worthit" },
-    { id: 8, title: "What Are Some Alternative Email Marketing Services?", slug: "email-alternative" },
+    { id: 8, title: "Notice", slug: "employee-notice" },
     { id: 9, title: "Related Articles", slug: "employee-articles" },
     { id: 10, title: "FAQs", slug: "employee-faq" } ,
   ];
@@ -135,7 +133,7 @@ const  BestEmployeeMangementSoftware= () => {
       <TableOfContents contents={contents} />
       
       <EmployeeSection/>
-      <EmployeeManagementWebpage/>
+     
       
     </div>
     <WideDiv/>

@@ -5,6 +5,7 @@ import Article from './ArticleLayoutCommon';
 import Feedback from './Feedback';
 import busimage from '/images/bg2.webp';
 import { Users, Clock, Shield, BarChart2, Settings, CheckCircle } from 'lucide-react';
+import EmployeeManagementWebpage from './EmployeeManagementWebpage';
 
 const EmployeeSection = () => {
     const [activeFeature, setActiveFeature] = useState(0);
@@ -19,27 +20,27 @@ const EmployeeSection = () => {
     const features = [
         {
             title: "Streamlined Recruitment",
-            description: "Simplify your hiring process with our AI-powered recruitment tools. Screen candidates efficiently, schedule interviews automatically, and track applicant progress in one centralized dashboard.",
+            description: "Revolutionize your hiring process with our advanced AI-powered recruitment tools that go beyond basic screening. Our system analyzes candidate resumes using natural language processing to identify the best matches for your open positions. Automated interview scheduling eliminates back-and-forth emails, while collaborative scorecards help your team evaluate candidates consistently. The integrated talent pipeline feature keeps promising candidates engaged even when you don't have immediate openings, building your talent community for future needs. Real-time analytics provide insights into your recruitment funnel efficiency and time-to-hire metrics.",
             icon: "👥"
         },
         {
             title: "Employee Onboarding",
-            description: "Automate paperwork, training schedules, and resource allocation for new hires. Our digital onboarding process reduces administrative overhead by 75% and gets new employees productive faster.",
+            description: "Transform new hire experiences with our comprehensive digital onboarding platform that guides employees from offer acceptance through their first 90 days. Automated workflows handle all paperwork including tax forms, direct deposit setup, and policy acknowledgments with e-signature capabilities. Customizable onboarding checklists ensure consistent experiences across departments while allowing for role-specific adaptations. New hires receive personalized learning paths with micro-learning modules, video introductions to team members, and interactive organizational charts. Managers get reminders for key onboarding milestones and automated surveys measure new employee engagement throughout the process.",
             icon: "🚀"
         },
         {
             title: "Performance Analytics",
-            description: "Track employee performance with customizable KPIs and intuitive dashboards. Generate insights that help managers make data-driven decisions and identify top performers.",
+            description: "Drive organizational success with our sophisticated performance analytics suite that provides multi-dimensional insights into workforce productivity. Track individual and team performance against customizable OKRs and KPIs with visual dashboards that highlight trends and outliers. Our 360-degree feedback system gathers input from peers, managers, and direct reports to provide balanced performance assessments. Predictive analytics identify flight risks and high-potential employees, while skills gap analysis helps target training investments. Automated reporting generates ready-to-present summaries for leadership reviews, and integration with compensation systems ensures performance directly impacts rewards.",
             icon: "📊"
         },
         {
             title: "Benefits Management",
-            description: "Simplify benefits administration with our comprehensive management system. Employees can self-service their benefits, reducing HR workload while increasing workforce satisfaction.",
+            description: "Modernize your benefits administration with our all-in-one platform that simplifies complex benefits programs for both HR teams and employees. During open enrollment, our guided selection process helps employees choose optimal plans with cost comparison tools and personalized recommendations. Life event management automatically triggers qualifying changes when employees experience marriages, births, or other status changes. Integration with insurance carriers enables real-time eligibility verification and automated enrollment feeds. Employees enjoy self-service access to view coverage details, claim status, and dependent information, while HR teams benefit from consolidated billing and compliance reporting across all benefit providers.",
             icon: "🏥"
         },
         {
             title: "Compliance Assurance",
-            description: "Stay updated with changing labor laws and regulations. Our system automatically flags compliance issues and generates required documentation to keep your business protected.",
+            description: "Mitigate organizational risk with our comprehensive compliance management system that stays current with constantly evolving labor regulations. Automated alerts notify you of upcoming filing deadlines, required postings, and policy update requirements based on your locations and workforce composition. Our document generator produces legally-reviewed templates for employee handbooks, termination notices, and other sensitive communications. Built-in audit trails maintain complete records of policy acknowledgments and training completions. The system includes specialized modules for industry-specific regulations like healthcare HIPAA requirements or financial services privacy rules, with regular updates from our legal compliance team.",
             icon: "⚖"
         }
     ];
@@ -215,11 +216,9 @@ const EmployeeSection = () => {
 
     return (
         <>
-
-         {/* introduction */}
-         <div id="intro-employee" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
-      {/* Hero Section */}
-      <div className="text-center mb-16">
+{/* introduction */}
+ <div  id="intro-employee" className="max-w-6xl mx-auto sm:px-6 lg:px-8 py-12 md:py-20">
+      <div className="text-center mb-16 max-w-6xl mx-auto">
         <h1 className="text-4xl md:text-4xl font-semibold text-gray-900 mb-6">
           <span className="text-gray-900">Empower Your Workforce</span> with Our Management System
         </h1>
@@ -229,7 +228,7 @@ const EmployeeSection = () => {
       </div>
 
       {/* Core Features */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 max-w-6xl mx-auto">
         {/* Feature 1 */}
         <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100">
           <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
@@ -298,9 +297,9 @@ const EmployeeSection = () => {
       </div>
 
       {/* Visual Demo */}
-      <div className="bg-white rounded-xl shadow-md overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="p-8 md:p-12">
+      <div className="bg-white rounded-xl overflow-hidden max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 max-w-6xl mx-auto">
+          <div className="md:p-12">
             <h2 className="text-xl font-semibold text-gray-900 mb-6">Experience the Difference</h2>
             <p className="text-lg text-gray-800 mb-8">
               Our intuitive dashboard provides managers and HR professionals with all the tools they need in one place.
@@ -394,10 +393,34 @@ const EmployeeSection = () => {
           </div>
         </div>
       </div>
+</div>
+
+        {/* what is employee menagemtn system */}
+        <div  id="what-is-employeemanagement" className="max-w-6xl mx-auto p-6 bg-white rounded-lg">
+      <div className="flex flex-col md:flex-row gap-8 items-center">
+        <div className="w-full md:w-1/2">
+          <img 
+            src="https://shiftin.app/wp-content/uploads/2021/10/what-are-employee-management-systems.jpg" 
+            alt="Employee Management System"
+            className="w-full h-auto rounded-lg object-cover"
+          />
+        </div>
+        <div className="w-full md:w-1/2">
+          <h2 className="text-4xl font-semibold text-gray-900 mb-4">
+            What is Best Employee Management System?
+          </h2>
+          <p className="text-gray-800 text-lg">
+            The best employee management system is a comprehensive digital solution that 
+            streamlines HR processes, enhances productivity, and improves workforce 
+            engagement. It combines tools for attendance tracking, performance evaluation, 
+            payroll processing, and communication in one unified platform. Key features 
+            include automation of routine tasks, data-driven insights, employee self-service 
+            portals, and seamless integration with other business systems.
+          </p>
+        </div>
+      </div>
     </div>
-
-
-        <div className="bg-white font-sans">
+        <div className="bg-white max-w-6xl mx-auto">
 
             {/* Features Section */}
             <div className="py-16 px-4 max-w-6xl mx-auto">
@@ -463,7 +486,7 @@ const EmployeeSection = () => {
             </div>
 
             {/* notice section */}
-            <section className="bg-gray-50 py-16 px-4">
+            <section id="employee-notice" className="bg-gray-50 py-16 px-4">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-12">
                         <span className="text-[#000e54] font-semibold">STAY INFORMED</span>
@@ -513,7 +536,280 @@ const EmployeeSection = () => {
             </div>
         </div>
 
-       
+       {/* what make best employee management system */}
+       <section id="whatmakesbest-ems" className="py-10 max-w-6xl mx-auto">
+      <div className="container mx-auto sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl sm:text-4xl font-semibold text-gray-900 mb-4">
+            What Makes the <span className="text-[#000e54]">Best</span> Employee Management System?
+          </h2>
+          <p className="text-lg text-gray-800 max-w-3xl mx-auto">
+            A modern employee management system goes beyond basic HR functions to empower your workforce and streamline operations.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Feature 1 */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div className="p-6">
+              <div className="flex justify-center mb-4">
+                <svg className="w-16 h-16 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">Comprehensive Employee Profiles</h3>
+              <p className="text-gray-800 text-lg">
+                Centralized records with personal details, skills, certifications, and performance history in one accessible location.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 2 */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div className="p-6">
+              <div className="flex justify-center mb-4">
+                <svg className="w-16 h-16 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">Automated Workflows</h3>
+              <p className="text-gray-800 text-lg">
+                Streamline onboarding, offboarding, approvals, and other HR processes with customizable automation rules.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 3 */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div className="p-6">
+              <div className="flex justify-center mb-4">
+                <svg className="w-16 h-16 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">Real-time Analytics</h3>
+              <p className="text-gray-800 text-lg">
+                Data-driven insights on workforce trends, productivity, turnover, and other key HR metrics with interactive dashboards.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 4 */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div className="p-6">
+              <div className="flex justify-center mb-4">
+                <svg className="w-16 h-16 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">Time & Attendance Tracking</h3>
+              <p className="text-gray-800 text-lg">
+                Accurate tracking of work hours, leaves, and overtime with geofencing and biometric integration options.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 5 */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div className="p-6">
+              <div className="flex justify-center mb-4">
+                <svg className="w-16 h-16 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">Employee Engagement Tools</h3>
+              <p className="text-gray-800 text-lg">
+                Surveys, recognition programs, and feedback mechanisms to boost morale and retention.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 6 */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div className="p-6">
+              <div className="flex justify-center mb-4">
+                <svg className="w-16 h-16 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">Security & Compliance</h3>
+              <p className="text-gray-800 text-lg">
+                Role-based access controls, audit trails, and compliance with labor laws and data protection regulations.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-16 bg-white rounded-xl shadow-lg overflow-hidden">
+          <div className="md:flex">
+            <div className="md:flex-shrink-0 md:w-1/2">
+              <img
+                className="h-full w-full object-cover"
+                src="https://businessfirstfamily.com/wp-content/uploads/2019/02/employee-management-software.jpg"
+                alt="Team collaboration"
+              />
+            </div>
+            <div className="p-8 md:p-12">
+              <div className="uppercase tracking-wide text-xl text-[#000e54] font-semibold">Why It Matters</div>
+              <h2 className="mt-2 text-xl font-semibold text-gray-800">The Impact of a Great EMS</h2>
+              <p className="mt-4 text-gray-800 text-lg leading-relaxed">
+                The best employee management systems create a seamless bridge between HR needs and employee experience. 
+                They reduce administrative burdens while providing employees with self-service tools for their needs.
+              </p>
+              <div className="mt-6">
+                <div className="flex items-center">
+                  <svg className="h-5 w-5 text-[#000e54]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="ml-2 text-gray-800 text-lg">Increase productivity by 20-30%</span>
+                </div>
+                <div className="flex items-center mt-2">
+                  <svg className="h-5 w-5 text-[#000e54]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="ml-2 text-gray-800 text-lg">Reduce HR administrative time by 40%</span>
+                </div>
+                <div className="flex items-center mt-2">
+                  <svg className="h-5 w-5 text-[#000e54]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="ml-2 text-gray-800 text-lg">Improve employee satisfaction scores</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+{/* features */}
+<div id="employee-features">
+<h1 className="text-4xl md:text-4xl font-semibold text-gray-900 mb-6 text-center">
+          <span className="text-gray-900">Features of Best Employee Management System</span>
+</h1>
+ <EmployeeManagementWebpage/>
+ </div>
+
+ {/* integration capability */}
+ <div id="employee-integration" className="max-w-6xl mx-auto py-16 px-4">
+  <div className="max-w-6xl mx-auto">
+    <div className="text-center mb-12">
+      <span className="text-greay-900  font-semibold text-4xl">SEAMLESS CONNECTIONS</span>
+      <h2 className="text-4xl font-semibold text-gray-900 mt-2 mb-6">Integration Capabilities</h2>
+      <p className="text-gray-800 max-w-3xl text-xl mx-auto">
+        A truly effective employee management system doesn't exist in isolation. Our solution offers comprehensive 
+        integration capabilities that connect your entire business ecosystem, eliminating data silos and streamlining workflows.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+      <div className="bg-white p-8 rounded-lg shadow-md">
+        <div className="flex items-center mb-6">
+          <div className="bg-[#000e54] p-3 rounded-full text-white mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-semibold">Robust API Architecture</h3>
+        </div>
+        <p className="text-gray-800 text-lg mb-6">
+          Our RESTful and GraphQL APIs provide secure, reliable connections between your employee management system and other 
+          business applications. With comprehensive documentation and developer support, your team can build custom integrations or 
+          leverage our pre-built connectors.
+        </p>
+        <ul className="space-y-3 text-gray-800">
+          <li className="flex items-start text-lg">
+            <span className="text-[#000e54] mr-2">✓</span>
+            <span>Over 200 API endpoints covering all system functionality</span>
+          </li>
+          <li className="flex items-start text-lg">
+            <span className="text-[#000e54] mr-2">✓</span>
+            <span>Webhook support for real-time event notifications</span>
+          </li>
+          <li className="flex items-start text-lg">
+            <span className="text-[#000e54] mr-2">✓</span>
+            <span>OAuth 2.0 authentication and granular permission controls</span>
+          </li>
+          <li className="flex items-start text-lg">
+            <span className="text-[#000e54] mr-2">✓</span>
+            <span>99.9% API uptime guarantee with real-time status monitoring</span>
+          </li>
+        </ul>
+      </div>
+
+      <div className="bg-white p-8 rounded-lg shadow-md">
+        <div className="flex items-center mb-6">
+          <div className="bg-[#000e54] p-3 rounded-full text-white mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-semibold">Third-Party App Ecosystem</h3>
+        </div>
+        <p className="text-gray-800 text-lg mb-6">
+          Connect with over 150+ pre-built integrations to popular business software across HR, accounting, productivity, 
+          communication, and project management categories. Our marketplace continues to grow with new partners joining monthly.
+        </p>
+        <div className="grid grid-cols-3 gap-4 mb-6">
+          <div className="bg-gray-100 p-3 rounded flex items-center justify-center">
+            <span className="font-semibold text-gray-800 text-lg">Slack</span>
+          </div>
+          <div className="bg-gray-100 p-3 rounded flex items-center justify-center">
+            <span className="font-semibold text-gray-800 text-lg">QuickBooks</span>
+          </div>
+          <div className="bg-gray-100 p-3 rounded flex items-center justify-center">
+            <span className="font-semibold text-gray-800 text-lg">Salesforce</span>
+          </div>
+          <div className="bg-gray-100 p-3 rounded flex items-center justify-center">
+            <span className="font-semibold text-gray-800 text-lg">Zoom</span>
+          </div>
+          <div className="bg-gray-100 p-3 rounded flex items-center justify-center">
+            <span className="font-semibold text-gray-800 text-lg">Microsoft 365</span>
+          </div>
+          <div className="bg-gray-100 p-3 rounded flex items-center justify-center">
+            <span className="font-semibold text-gray-800 text-lg">Google Workspace</span>
+          </div>
+        </div>
+        <p className="text-lg text-gray-800 italic">And 140+ more integrations available in our marketplace</p>
+      </div>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="bg-white p-6 rounded-lg shadow-sm border-t-4 border-[#ff8633]">
+        <h4 className="font-semibold text-xl mb-4">Single Sign-On Solutions</h4>
+        <p className="text-gray-800 text-lg mb-4">
+          Simplify access management with SSO support for SAML 2.0, OAuth, and OpenID Connect. Compatible with popular identity 
+          providers including Okta, Azure AD, Google, and OneLogin.
+        </p>
+        <p className="text-gray-800 text-lg">
+          Reduce password fatigue and strengthen security while providing seamless access to all your HR tools with a single login.
+        </p>
+      </div>
+
+      <div className="bg-white p-6 rounded-lg shadow-sm border-t-4 border-[#ff8633]">
+        <h4 className="font-semibold text-xl mb-4">Data Import/Export Tools</h4>
+        <p className="text-gray-800 text-lg mb-4">
+          Our intuitive data management tools make it easy to move information in and out of the system. Support for CSV, Excel, 
+          XML, and JSON formats ensures compatibility with your existing data structures.
+        </p>
+        <p className="text-gray-800 text-lg">
+          Includes intelligent data mapping, validation rules, and scheduled automated imports/exports to keep systems in sync.
+        </p>
+      </div>
+
+      <div className="bg-white p-6 rounded-lg shadow-sm border-t-4 border-[#ff8633]">
+        <h4 className="font-semibold text-xl mb-4">Legacy System Compatibility</h4>
+        <p className="text-gray-800 text-lg mb-4">
+          We understand the challenges of modernizing while maintaining operations. Our platform offers specialized connectors 
+          for legacy HRIS, payroll, and time-tracking systems.
+        </p>
+        <p className="text-gray-800 text-lg">
+          Our migration specialists can build custom data bridges to ensure smooth transitions from systems as old as 20+ years.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
        {/* article */}
         <div id="employee-articles">
