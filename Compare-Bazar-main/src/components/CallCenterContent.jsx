@@ -349,15 +349,163 @@ const CallCenterContent = () => {
     return (
         <>
 {/* introduction */}
-
-        {/* what is employee menagemtn system */}
+<div className="max-w-6xl mx-auto py-12">
+<h1 className="text-4xl font-semibold text-gray-900 text-center mb-6">
+            Revolutionize Your Call Center Operations
+          </h1>
+      <div className="flex flex-col md:flex-row items-center gap-12">
+        <div className="md:w-1/2">
+          <p className="text-lg text-gray-800 mb-8 leading-relaxed">
+          In today's competitive customer service landscape, OmniCall Pro stands out as the premier call center 
+          management solution, combining enterprise-grade technology with unparalleled ease of use. 
+          Designed by industry veterans with decades of contact center experience, our platform redefines what businesses can expect from their customer service operations. Unlike basic call center software that merely routes calls, OmniCall Pro delivers a complete ecosystem featuring AI-driven call distributioncoomit that analyzes caller intent,predictive behavioral routing that matches customers with ideal agents, and real-time 
+          speech analytics that detects customer sentiment during conversations.
+            Our advanced call management software empowers your team to deliver exceptional customer 
+            service with intelligent call routing, real-time analytics, and seamless CRM integration. 
+            Boost efficiency by 40% while improving customer satisfaction scores.
+            
+          </p>
+          
+          <div className="mt-8 flex items-center">
+            <div className="flex -space-x-2">
+              {[1, 2, 3].map((item) => (
+                <img 
+                  key={item}
+                  className="w-10 h-10 rounded-full border-2 border-white"
+                  src={`https://i.pravatar.cc/150?img=${item}`}
+                  alt={`User ${item}`}
+                />
+              ))}
+            </div>
+            <p className="ml-4 text-gray-600">
+              Trusted by <span className="font-semibold">850+</span> call centers worldwide
+            </p>
+          </div>
+        </div>
         
+        {/* Image */}
+        <div className="md:w-1/2">
+          <img 
+            src="https://tse1.mm.bing.net/th?id=OIP.DwSKSI4_0aCq6j6-O1_ybwHaEK&pid=Api&P=0&h=180"
+            alt="Call center dashboard interface" 
+            className="rounded-xl shadow-xl w-full h-auto"
+          />
+        </div>
+      </div>
+    </div>
 
-       {/* what make best employee management system */}
+{/* what is employee menagement system */}
+<div className="max-w-6xl mx-auto rounded-xl">
+      {/* Main Heading */}
+      <div className="text-left mb-10">
+        <h1 className="text-4xl font-semibold text-gray-800 mb-4">What is Call Center Management?</h1>
+        <p className="text-lg text-gray-800 leading-relaxed">
+  Call center management software is a comprehensive technology solution that enables businesses to efficiently 
+  handle high volumes of customer interactions across multiple channels (phone, email, chat, social media). 
+  It combines communication tools with workforce optimization features to streamline operations, improve agent 
+  productivity, and enhance customer satisfaction.
+  
+  <br /><br />
+  
+  Modern call center management systems typically include:
+  <ul className="list-disc pl-5 mt-2 space-y-1">
+    <li>Automatic Call Distribution (ACD) to route calls intelligently</li>
+    <li>Interactive Voice Response (IVR) systems for self-service options</li>
+    <li>Real-time monitoring and analytics dashboards</li>
+    <li>Customer relationship management (CRM) integration</li>
+    <li>Workforce management for scheduling and forecasting</li>
+    <li>Quality monitoring and call recording capabilities</li>
+    <li>Omnichannel routing for consistent cross-channel experiences</li>
+  </ul>
+  
+  <br />
+  
+  These systems help organizations maintain service level agreements (SLAs), reduce operational costs, 
+  and gain valuable insights from customer interactions. Cloud-based solutions have become particularly 
+  popular as they offer scalability, remote work capabilities, and regular feature updates without 
+  requiring expensive hardware installations.
+</p>
+      </div>
+
+      {/* Features Grid */}
+      <div className="grid md:grid-cols-2 gap-8">
+        {/* Feature 1 */}
+        <div className="flex items-start space-x-4 bg-white p-5 rounded-lg shadow-sm">
+          <div className="flex-shrink-0 mt-1">
+            <svg className="w-12 h-12 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-gray-800">Team Management</h3>
+            <p className="text-gray-800 text-lg mt-2">
+              Managing agents' schedules, performance, and training to ensure optimal customer service delivery across all channels.
+            </p>
+          </div>
+        </div>
+
+        {/* Feature 2 */}
+        <div className="flex items-start space-x-4 bg-white p-5 rounded-lg shadow-sm">
+          <div className="flex-shrink-0 mt-1">
+            <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-gray-800">Call Routing</h3>
+            <p className="text-gray-800 text-lg mt-2">
+              Intelligent distribution of incoming calls to the most appropriate agents based on skills, availability, or customer priority.
+            </p>
+          </div>
+        </div>
+
+        {/* Feature 3 */}
+        <div className="flex items-start space-x-4 bg-white p-5 rounded-lg shadow-sm">
+          <div className="flex-shrink-0 mt-1">
+            <svg className="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-gray-800">Analytics & Reporting</h3>
+            <p className="text-gray-800 text-lg mt-2">
+              Tracking key metrics like call volume, wait times, resolution rates, and customer satisfaction to improve operations.
+            </p>
+          </div>
+        </div>
+
+        {/* Feature 4 */}
+        <div className="flex items-start space-x-4 bg-white p-5 rounded-lg shadow-sm">
+          <div className="flex-shrink-0 mt-1">
+            <svg className="w-12 h-12 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-gray-800">Workforce Optimization</h3>
+            <p className="text-gray-800 text-lg mt-2">
+              Forecasting call volumes and scheduling staff accordingly to maintain service levels while controlling costs.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Summary */}
+      <div className="mt-10 bg-blue-50 p-6 rounded-lg">
+        <div className="flex items-center">
+          <svg className="w-10 h-10 text-[#000e54] mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          <p className="text-gray-800 text-lg">
+            <strong>Effective call center management</strong> combines technology, processes, and people management to deliver exceptional customer experiences while maintaining operational efficiency and meeting business objectives.
+          </p>
+        </div>
+      </div>
+</div>
 
 
-        {/* how does call center works */}
-        <div className="max-w-6xl mx-auto py-12">
+{/* how does call center works */}
+<div className="max-w-6xl mx-auto py-12">
   <div className="text-center mb-16">
     <h1 className="text-4xl md:text-4xl font-semibold text-gray-900 mb-4">
       How <span className="text-[#000e54]">Modern Call Centers</span> Work
@@ -1452,7 +1600,7 @@ const CallCenterContent = () => {
       </section>
 
       
-    </div>
+</div>
 
  {/* alternatives */}
  <div className="max-w-6xl mx-auto py-16">
