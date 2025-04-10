@@ -461,8 +461,8 @@ const BestCallCenterManagement = () => {
 
         
         {/* BuyerZone Widget Integration - Method 1: Custom container */}
-        <div className="widget-container bg-gray-100 p-6 rounded-lg shadow-md my-10">
-          <h2 className="widget-title text-2xl font-bold text-center mb-6 text-gray-800">Compare Phone System Providers</h2>
+        <div className="widget-container p-6 rounded-lg my-10">
+          <h2 className="widget-title text-2xl font-bold text-left mb-6 px-50 text-gray-800">Compare Phone System Providers</h2>
           <div id="buyerzone-widget-container" className="min-h-96 w-full">
             {/* Widget will be loaded here by useEffect */}
           </div>
