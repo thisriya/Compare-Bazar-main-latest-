@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect,useRef } from 'react';
 import PhoneSystemCardCommon from './PhoneSystemCardCommon';
 import PhoneSystemContent from './PhoneSystemContent';
 import Navbar from './Navbar';
@@ -11,6 +11,8 @@ import TableOfContents from './TableOfContents';
 const PhoneSystemsPage = () => {
   const [showMore, setShowMore] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+   const [widgetLoaded, setWidgetLoaded] = useState(false);
+    const widgetRef = useRef(null);
 
   const systems = [
   
@@ -117,6 +119,115 @@ const PhoneSystemsPage = () => {
       document.body.removeChild(script2);
     };
   }, []);
+
+   useEffect(() => {
+      // Create and set up an iframe to embed the form
+      const iframe = document.createElement('iframe');
+      iframe.src = 'about:blank'; // Start with empty src
+      iframe.style.width = '100%';
+      iframe.style.height = '650px'; // Adjust height as needed
+      iframe.style.border = 'none';
+      iframe.style.overflow = 'hidden';
+      
+      // Reference to widget container
+      const widgetContainer = document.getElementById('buyerzone-widget-container');
+      
+      if (widgetContainer) {
+        // Clear any existing content
+        widgetContainer.innerHTML = '';
+        widgetContainer.appendChild(iframe);
+        
+        // Set iframe content with the embedded form
+        setTimeout(() => {
+          const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+          iframeDoc.open();
+          iframeDoc.write(`
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Phone Systems Comparison</title>
+              <style>
+                body {
+                  font-family: Arial, sans-serif;
+                  margin: 0;
+                  padding: 0;
+                }
+                .loading {
+                  text-align: center;
+                  padding: 30px;
+                }
+                .spinner {
+                  border: 5px solid #f3f3f3;
+                  border-top: 5px solid #3498db;
+                  border-radius: 50%;
+                  width: 50px;
+                  height: 50px;
+                  animation: spin 1s linear infinite;
+                  margin: 20px auto;
+                }
+                @keyframes spin {
+                  0% { transform: rotate(0deg); }
+                  100% { transform: rotate(360deg); }
+                }
+              </style>
+            </head>
+            <body>
+              <div id="bzWidgetContainer">
+                <div class="loading">
+                  <div class="spinner"></div>
+                  <p>Loading comparison tool...</p>
+                </div>
+              </div>
+              
+              <!-- BuyerZone Widget Script -->
+              <script data-bzwidget
+                src="https://cdn.buyerzone.com/apps/widget/bzWidget.min.js"
+                data-bzwidget-pub-id="59578"
+                data-bzwidget-color-palette-name="default"
+                data-bzwidget-category-id="10144">
+              </script>
+              
+              <script>
+                // Initialize widget after it loads
+                function initBzWidget() {
+                  if (typeof bzWidget !== 'undefined') {
+                    bzWidget.init();
+                    document.getElementById('bzWidgetContainer').querySelector('.loading').style.display = 'none';
+                  } else {
+                    setTimeout(initBzWidget, 500);
+                  }
+                }
+                
+                // Check if widget loaded
+                document.addEventListener('DOMContentLoaded', function() {
+                  setTimeout(initBzWidget, 1000);
+                  
+                  // Fallback if widget fails to load
+                  setTimeout(function() {
+                    if (typeof bzWidget === 'undefined') {
+                      document.getElementById('bzWidgetContainer').innerHTML = 
+                        '<p style="text-align:center; padding:20px; color:#e74c3c;">Unable to load the comparison tool. Please refresh and try again.</p>';
+                    }
+                  }, 10000);
+                });
+              </script>
+            </body>
+            </html>
+          `);
+          iframeDoc.close();
+          
+          setWidgetLoaded(true);
+        }, 0);
+      }
+      
+      return () => {
+        // Cleanup if needed
+      };
+    }, []);
+
+
   const additionalText = "The modern business communication landscape has evolved significantly, with VoIP (Voice over Internet Protocol) systems replacing traditional PBX setups in many organizations. Today's business phone systems offer advanced features like AI-powered voicemail transcription, intelligent call routing, CRM integration, and comprehensive analytics dashboards. These tools help businesses track performance metrics, improve customer satisfaction, and streamline their communication processes. When evaluating different providers, it's important to consider factors such as scalability, reliability, security features, and total cost of ownership. Many systems now include unified communications capabilities, bringing together voice, video, messaging, and collaboration tools in a single platform.";
 
   return (
@@ -175,6 +286,14 @@ const PhoneSystemsPage = () => {
           />
         ))}
       </div>
+
+       {/* BuyerZone Widget Integration - Method 1: Custom container */}
+       <div className="widget-container bg-gray-100 p-6 rounded-lg shadow-md my-10">
+          <h2 className="widget-title text-2xl font-bold text-center mb-6 text-gray-800">Compare Phone System Providers</h2>
+          <div id="buyerzone-widget-container" className="min-h-96 w-full">
+            {/* Widget will be loaded here by useEffect */}
+          </div>
+        </div>
       <TableOfContents contents={contents} />
 
       {/* Added Business component */}
