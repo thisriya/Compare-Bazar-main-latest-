@@ -768,7 +768,7 @@ const BestCallCenterManagement = () => {
   </div>
 </div>
 
-{/* benefits  */}
+{/* benefits of call center */}
 <div className="max-w-6xl mx-auto py-12">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-semibold text-gray-900 sm:text-4xl">
@@ -882,7 +882,29 @@ const BestCallCenterManagement = () => {
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="w-full bg-[#000e54] py-8 px-4 rounded-lg mt-10">
+          <h1 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">
+            Call Center in India Advantages
+          </h1>
+          
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {advantages.map((advantage, index) => (
+                <div 
+                  key={index} 
+                  className="bg-white p-4 flex flex-col items-center text-center rounded-sm"
+                >
+                  <div className="text-[#000e54] hover:text-[#ff8633] mb-4">
+                    {advantage.icon}
+                  </div>
+                  <p className="text-gray-800 text-sm">{advantage.title}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+</div>
 
 {/* how to choose best call center service */}
 <div className="max-w-6xl mx-auto py-12">
@@ -1230,6 +1252,8 @@ const BestCallCenterManagement = () => {
           </table>
         </div>
       </section>
+
+      
     </div>
         
         {/* BuyerZone Widget Integration - Method 1: Custom container */}
@@ -1239,31 +1263,8 @@ const BestCallCenterManagement = () => {
             {/* Widget will be loaded here by useEffect */}
           </div>
         </div>
-
-        {/* Call Center Advantages section */}
-        <div className="w-full bg-[#000e54] py-8 px-4 rounded-lg">
-          <h1 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">
-            Call Center in India Advantages
-          </h1>
-          
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {advantages.map((advantage, index) => (
-                <div 
-                  key={index} 
-                  className="bg-white p-4 flex flex-col items-center text-center rounded-sm"
-                >
-                  <div className="text-[#000e54] hover:text-[#ff8633] mb-4">
-                    {advantage.icon}
-                  </div>
-                  <p className="text-gray-800 text-sm">{advantage.title}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
         
-        {/* Values section */}
+        {/* features of call center */}
         <div className="w-full py-10">
           <div className="max-w-6xl mx-auto">
             <div className="bg-white rounded-lg shadow-lg p-8 mx-4">
