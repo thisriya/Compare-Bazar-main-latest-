@@ -11,6 +11,7 @@ import  BestCRMSoftware from './components/BestCRMSoftware';
 import EmailMarketing from './components/EmailMarketing';
 import BestWebsiteBuildingPlatform from './components/BestWebsiteBuildingPlatform';
 import BestProjectManagement from './components/BestProjectManagement';
+import Advertise from './components/Advertise';
 
 
 // function App() {
@@ -42,6 +43,7 @@ function App() {
         <Route path="/contact-sales" element={<ContactPage />} />
         <Route path="/BestWebsiteBuildingPlatform" element={<BestWebsiteBuildingPlatform />} />
         <Route path="/BestProjectManagement" element={<BestProjectManagement />} />
+        <Route path="/Advertise" element={<Advertise />} />
         
       </Routes>
     </Router>

@@ -49,7 +49,7 @@ const WideDiv = () => {
             <ul className="list-none p-0">
               <li className="mb-2 text-sm"><a href="#" className="text-gray-700 no-underline transition-all duration-200 hover:text-[#ff8633] hover:font-semibold">About Us</a></li>
               <li className="mb-2 text-sm"><a href="#" className="text-gray-700 no-underline transition-all duration-200 hover:text-[#ff8633] hover:font-semibold">Careers</a></li>
-              <li className="mb-2 text-sm"><a href="#" className="text-gray-700 no-underline transition-all duration-200 hover:text-[#ff8633] hover:font-semibold">Advertise With Us</a></li>
+              <li className="mb-2 text-sm"><a href="/Advertise" className="text-gray-700 no-underline transition-all duration-200 hover:text-[#ff8633] hover:font-semibold">Advertise With Us</a></li>
               <li className="mb-2 text-sm"><a href="#" className="text-gray-700 no-underline transition-all duration-200 hover:text-[#ff8633] hover:font-semibold">Editorial Process</a></li>
             </ul>
           </div>

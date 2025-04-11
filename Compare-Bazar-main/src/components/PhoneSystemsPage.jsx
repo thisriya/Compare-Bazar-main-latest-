@@ -314,13 +314,15 @@ const PhoneSystemsPage = () => {
     <div className="flex lg:flex-row flex-col  gap-8 items-center justify-between">
         {/* Image on the left */}
         <div className="flex-shrink-0">
+        <a href="http://www.buyerzone.com/telecom-equipment/business-phone-systems/rfqz/?publisherId=59578&publisherTypeId=1789"
+        target="_self">
             <img 
                 src="http://www.buyerzone.com/telecom-equipment/business-phone-systems/banners/120x600.gif" 
                 title="Free Business Phone Systems Quotes from BuyerZone.com" 
                 alt="Free Business Phone Systems Quotes from BuyerZone.com" 
                 className="h-auto" 
-                border="0" 
-            />
+                border="0" />
+             </a>
         </div>
         
         {/* Centered paragraph in the middle */}
