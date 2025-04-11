@@ -472,7 +472,7 @@ const ProjectManagementContent = () => {
 </div>
 
 {/* how does project management software works */}
-    <div className="max-w-6xl mx-auto px-4 py-12">
+    <div id="projectmanagementsoftware-working" className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-16">
         <h1 className="text-4xl  font-semibold text-gray-900 mb-6">
           How Project Management Software Works
@@ -785,6 +785,603 @@ const ProjectManagementContent = () => {
     </div>
     </div>
     </div>
+
+{/* approach */}
+<section id="projectmanagementsoftware-approach" className="max-w-6xl mx-auto ">
+    {/* agile */}
+<div  className="max-w-6xl mx-auto  rounded-2xl">
+      <div className="text-center mb-10">
+        <h2 className="text-4xl  font-semibold text-gray-800 mb-3">The Agile Approach</h2>
+        <p className="text-lg text-gray-800 max-w-3xl mx-auto">
+          A flexible, iterative methodology that emphasizes collaboration, customer feedback, and rapid delivery in project management.
+        </p>
+      </div>
+
+      <div className="space-y-12">
+        {/* Core Principles Section */}
+        <section className="bg-white rounded-xl px-4">
+          <div className="flex items-center mb-6">
+            <div className="bg-blue-100 p-3 rounded-full mr-4">
+              <svg className="w-6 h-6 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-800">Core Principles</h3>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-blue-50 p-6 rounded-lg border border-blue-100 hover:shadow-md transition-shadow">
+              <h4 className="text-xl font-semibold text-[#000e54] mb-3 flex items-center">
+                <span className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3 text-[#000e54]">1</span>
+                Customer Collaboration
+              </h4>
+              <p className="text-gray-800 text-lg">
+                Prioritize customer satisfaction through continuous delivery of valuable software and welcome changing requirements.
+              </p>
+            </div>
+            <div className="bg-blue-50 p-6 rounded-lg border border-blue-100 hover:shadow-md transition-shadow">
+              <h4 className="text-xl font-semibold text-[#000e54] mb-3 flex items-center">
+                <span className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3 text-[#000e54]">2</span>
+                Iterative Development
+              </h4>
+              <p className="text-gray-800 text-lg">
+                Deliver working software frequently in short timescales (weeks rather than months) with a preference for shorter timescales.
+              </p>
+            </div>
+            <div className="bg-blue-50 p-6 rounded-lg border border-blue-100 hover:shadow-md transition-shadow">
+              <h4 className="text-xl font-semibold text-[#000e54] mb-3 flex items-center">
+                <span className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3 text-[#000e54]">3</span>
+                Self-Organizing Teams
+              </h4>
+              <p className="text-gray-800 text-lg">
+                Build projects around motivated individuals. Give them the environment and support they need and trust them to get the job done.
+              </p>
+            </div>
+            <div className="bg-blue-50 p-6 rounded-lg border border-blue-100 hover:shadow-md transition-shadow">
+              <h4 className="text-xl font-semibold text-[#000e54] mb-3 flex items-center">
+                <span className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3 text-[#000e54]">4</span>
+                Sustainable Pace
+              </h4>
+              <p className="text-gray-800 text-lg">
+                Agile processes promote sustainable development. Sponsors, developers, and users should be able to maintain a constant pace indefinitely.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Key Benefits Section */}
+        <section className="bg-white max-w-6xl mx-auto rounded-xl">
+          <div className="flex items-center mb-6">
+            <div className="bg-blue-100 p-3 rounded-full mr-4">
+              <svg className="w-6 h-6 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-800">Key Benefits</h3>
+          </div>
+          
+          <div className="space-y-6">
+            <div className="flex items-start p-4 hover:bg-blue-50 rounded-lg transition-colors">
+              <div className="bg-blue-100 p-3 rounded-full mr-4 mt-1 flex-shrink-0">
+                <svg className="w-6 h-6 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-gray-800 mb-2">Faster Time-to-Market</h4>
+                <p className="text-gray-800 text-lg">
+                  By delivering working software in iterations, features reach users quicker, providing early value and competitive advantage.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start p-4 hover:bg-blue-50 rounded-lg transition-colors">
+              <div className="bg-blue-100 p-3 rounded-full mr-4 mt-1 flex-shrink-0">
+                <svg className="w-6 h-6 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-gray-800 mb-2">Improved Quality</h4>
+                <p className="text-gray-800 text-lg">
+                  Continuous testing and integration throughout the development cycle results in higher quality products with fewer defects.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start p-4 hover:bg-blue-50 rounded-lg transition-colors">
+              <div className="bg-blue-100 p-3 rounded-full mr-4 mt-1 flex-shrink-0">
+                <svg className="w-6 h-6 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-gray-800 mb-2">Increased Flexibility</h4>
+                <p className="text-gray-800 text-lg">
+                  Agile teams can quickly adapt to changing requirements and priorities without derailing the entire project.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start p-4 hover:bg-blue-50 rounded-lg transition-colors">
+              <div className="bg-blue-100 p-3 rounded-full mr-4 mt-1 flex-shrink-0">
+                <svg className="w-6 h-6 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-gray-800 mb-2">Better Risk Management</h4>
+                <p className="text-gray-600">
+                  Regular reviews and iterations help identify and mitigate risks early in the development process.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Common Practices Section */}
+        <section className="bg-white rounded-xl p-6 md:p-8 ">
+          <div className="flex items-center mb-6">
+            <div className="bg-blue-100 p-3 rounded-full mr-4">
+              <svg className="w-6 h-6 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+              </svg>
+            </div>
+            <h3 className="text-4xl font-semibold text-gray-800">Common Practices</h3>
+          </div>
+          
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="border-l-4 border-[#000e54] pl-5 py-3  rounded-r-lg transition-colors">
+              <h4 className="text-xl font-semibold text-gray-800 mb-2">Sprints</h4>
+              <p className="text-gray-800 text-lg">
+                Time-boxed iterations (typically 1-4 weeks) where teams complete a set amount of work from the product backlog.
+              </p>
+            </div>
+            <div className="border-l-4 border-[#000e54] pl-5 py-3  rounded-r-lg transition-colors">
+              <h4 className="text-xl font-semibold text-gray-800 mb-2">Daily Stand-ups</h4>
+              <p className="text-gray-800 text-lg">
+                Short daily meetings where team members share progress, plans, and blockers to maintain alignment.
+              </p>
+            </div>
+            <div className="border-l-4 border-[#000e54] pl-5 py-3  rounded-r-lg transition-colors">
+              <h4 className="text-xl font-semibold text-gray-800 mb-2">Backlog Refinement</h4>
+              <p className="text-gray-800 text-lg">
+                Regular review and prioritization of the product backlog to ensure upcoming work is well-defined and estimated.
+              </p>
+            </div>
+            <div className="border-l-4 border-[#000e54] pl-5 py-3  rounded-r-lg transition-colors">
+              <h4 className="text-xl font-semibold text-gray-800 mb-2">Retrospectives</h4>
+              <p className="text-gray-800 text-lg">
+                Periodic meetings where teams reflect on their processes and identify improvements for future iterations.
+              </p>
+            </div>
+            <div className="border-l-4 border-[#000e54] pl-5 py-3  rounded-r-lg transition-colors">
+              <h4 className="text-xl font-semibold text-gray-800 mb-2">Continuous Integration</h4>
+              <p className="text-gray-800 text-lg">
+                Frequent merging of code changes into a shared repository, accompanied by automated builds and tests.
+              </p>
+            </div>
+            <div className="border-l-4 border-[#000e54] pl-5 py-3  rounded-r-lg transition-colors">
+              <h4 className="text-xl font-semibold text-gray-800 mb-2">User Stories</h4>
+              <p className="text-gray-800 text-lg">
+                Requirements expressed from the end-user perspective, focusing on the value delivered rather than technical specifications.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Implementation Section */}
+        <section className="bg-white rounded-xl p-6 md:p-8 ">
+          <div className="flex items-center mb-6">
+            <div className="bg-blue-100 p-3 rounded-full mr-4">
+              <svg className="w-6 h-6 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 className="text-4xl font-semibold text-gray-800">Implementation in Project Management</h3>
+          </div>
+          
+          <div className="space-y-8">
+            <div>
+              <h4 className="text-xl font-semibold text-gray-800 mb-4">Agile Features in Project Management Tools</h4>
+              <p className="text-gray-800 text-lg mb-6">
+                Modern project management tools support Agile methodologies through specialized features:
+              </p>
+              <ul className="grid md:grid-cols-2 gap-4">
+                <li className="flex items-start">
+                  <span className="bg-blue-100 text-[#000e54] rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">•</span>
+                  <span className="text-gray-800 text-lg">Kanban boards for visualizing workflow</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="bg-blue-100 text-[#000e54] rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">•</span>
+                  <span className="text-gray-800 text-lg">Sprint planning tools</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="bg-blue-100 text-[#000e54] rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">•</span>
+                  <span className="text-gray-800 text-lg">Burndown charts for tracking progress</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="bg-blue-100 text-[#000e54] rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">•</span>
+                  <span className="text-gray-800 text-lg">Backlog management systems</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="bg-blue-100 text-[#000e54] rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">•</span>
+                  <span className="text-gray-800 text-lg">Collaboration features for distributed teams</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="bg-blue-100 text-[#000e54] rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">•</span>
+                  <span className="text-gray-800 text-lg">Integration with development tools</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
+              <h4 className="text-xl font-semibold text-[#000e54] mb-4">Getting Started with Agile</h4>
+              <p className="text-gray-800 text-lg mb-4">
+                To implement Agile in your project management:
+              </p>
+              <ol className="list-decimal list-inside space-y-2 text-gray-800 text-lg pl-2 marker:font-semibold marker:text-[#000e54]">
+                <li className="pl-2">Start with small, cross-functional teams</li>
+                <li className="pl-2">Define clear but flexible project goals</li>
+                <li className="pl-2">Break work into small, manageable user stories</li>
+                <li className="pl-2">Establish regular feedback loops with stakeholders</li>
+                <li className="pl-2">Embrace change rather than resist it</li>
+                <li className="pl-2">Continuously measure and improve your processes</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    {/* waterfall */}
+    <div className="max-w-6xl mx-auto p-6 md:p-8  rounded-2xl shadow-xl">
+      <div className="text-center mb-10">
+        <h2 className="text-4xl font-semibold text-[#000e54] mb-3">The Waterfall Methodology</h2>
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          A linear, sequential approach to project management where each phase must be completed before the next begins.
+        </p>
+      </div>
+
+      <div className="space-y-12">
+        {/* Core Principles Section */}
+        <section className="bg-white rounded-xl p-6 md:p-8 shadow-sm">
+          <div className="flex items-center mb-6">
+            <div className="bg-blue-100 p-3 rounded-full mr-4">
+              <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 className="text-2xl font-bold text-gray-800">Core Principles</h3>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-blue-50 p-6 rounded-lg border border-blue-100 hover:shadow-md transition-shadow">
+              <h4 className="text-xl font-semibold text-blue-700 mb-3 flex items-center">
+                <span className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3 text-blue-600">1</span>
+                Sequential Phases
+              </h4>
+              <p className="text-gray-600">
+                Projects progress through clearly defined phases in strict order, with each phase building on the deliverables of the previous one.
+              </p>
+            </div>
+            <div className="bg-blue-50 p-6 rounded-lg border border-blue-100 hover:shadow-md transition-shadow">
+              <h4 className="text-xl font-semibold text-blue-700 mb-3 flex items-center">
+                <span className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3 text-blue-600">2</span>
+                Comprehensive Documentation
+              </h4>
+              <p className="text-gray-600">
+                Each phase requires complete documentation before moving forward, ensuring clear requirements and design specifications.
+              </p>
+            </div>
+            <div className="bg-blue-50 p-6 rounded-lg border border-blue-100 hover:shadow-md transition-shadow">
+              <h4 className="text-xl font-semibold text-blue-700 mb-3 flex items-center">
+                <span className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3 text-blue-600">3</span>
+                Fixed Requirements
+              </h4>
+              <p className="text-gray-600">
+                Requirements are gathered and fixed at the beginning, with changes discouraged once the project begins.
+              </p>
+            </div>
+            <div className="bg-blue-50 p-6 rounded-lg border border-blue-100 hover:shadow-md transition-shadow">
+              <h4 className="text-xl font-semibold text-blue-700 mb-3 flex items-center">
+                <span className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3 text-blue-600">4</span>
+                Emphasis on Planning
+              </h4>
+              <p className="text-gray-600">
+                Extensive upfront planning with detailed schedules, budgets, and resource allocation before execution begins.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Phases Section */}
+        <section className="bg-white rounded-xl p-6 md:p-8 shadow-sm">
+          <div className="flex items-center mb-6">
+            <div className="bg-indigo-100 p-3 rounded-full mr-4">
+              <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <h3 className="text-2xl font-bold text-gray-800">Waterfall Phases</h3>
+          </div>
+          
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="hidden md:block absolute left-1/2 h-full w-0.5 bg-blue-200 transform -translate-x-1/2"></div>
+            
+            {/* Phases */}
+            <div className="space-y-12 md:space-y-0">
+              {/* Phase 1 */}
+              <div className="relative md:flex items-center">
+                <div className="hidden md:block absolute left-1/2 w-6 h-6 bg-blue-600 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+                <div className="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
+                  <h4 className="text-xl font-semibold text-blue-700">1. Requirements</h4>
+                  <p className="text-gray-600 mt-2">
+                    All possible project requirements are gathered and documented in detail.
+                  </p>
+                </div>
+                <div className="hidden md:block md:w-1/2"></div>
+              </div>
+              
+              {/* Phase 2 */}
+              <div className="relative md:flex items-center">
+                <div className="hidden md:block absolute left-1/2 w-6 h-6 bg-blue-600 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+                <div className="hidden md:block md:w-1/2"></div>
+                <div className="md:w-1/2 md:pl-12">
+                  <h4 className="text-xl font-semibold text-blue-700">2. System Design</h4>
+                  <p className="text-gray-600 mt-2">
+                    Requirements are translated into complete system design specifications.
+                  </p>
+                </div>
+              </div>
+              
+              {/* Phase 3 */}
+              <div className="relative md:flex items-center">
+                <div className="hidden md:block absolute left-1/2 w-6 h-6 bg-blue-600 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+                <div className="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
+                  <h4 className="text-xl font-semibold text-blue-700">3. Implementation</h4>
+                  <p className="text-gray-600 mt-2">
+                    Developers write code according to the design specifications.
+                  </p>
+                </div>
+                <div className="hidden md:block md:w-1/2"></div>
+              </div>
+              
+              {/* Phase 4 */}
+              <div className="relative md:flex items-center">
+                <div className="hidden md:block absolute left-1/2 w-6 h-6 bg-blue-600 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+                <div className="hidden md:block md:w-1/2"></div>
+                <div className="md:w-1/2 md:pl-12">
+                  <h4 className="text-xl font-semibold text-blue-700">4. Testing</h4>
+                  <p className="text-gray-600 mt-2">
+                    The system is tested against requirements to identify defects.
+                  </p>
+                </div>
+              </div>
+              
+              {/* Phase 5 */}
+              <div className="relative md:flex items-center">
+                <div className="hidden md:block absolute left-1/2 w-6 h-6 bg-blue-600 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+                <div className="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
+                  <h4 className="text-xl font-semibold text-blue-700">5. Deployment</h4>
+                  <p className="text-gray-600 mt-2">
+                    The finished product is delivered to customers and deployed.
+                  </p>
+                </div>
+                <div className="hidden md:block md:w-1/2"></div>
+              </div>
+              
+              {/* Phase 6 */}
+              <div className="relative md:flex items-center">
+                <div className="hidden md:block absolute left-1/2 w-6 h-6 bg-blue-600 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+                <div className="hidden md:block md:w-1/2"></div>
+                <div className="md:w-1/2 md:pl-12">
+                  <h4 className="text-xl font-semibold text-blue-700">6. Maintenance</h4>
+                  <p className="text-gray-600 mt-2">
+                    Issues are fixed and updates are made based on user feedback.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Key Benefits Section */}
+        <section className="bg-white rounded-xl p-6 md:p-8 shadow-sm">
+          <div className="flex items-center mb-6">
+            <div className="bg-green-100 p-3 rounded-full mr-4">
+              <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+              </svg>
+            </div>
+            <h3 className="text-2xl font-bold text-gray-800">Key Benefits</h3>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="flex items-start p-4 hover:bg-green-50 rounded-lg transition-colors">
+              <div className="bg-green-100 p-3 rounded-full mr-4 mt-1 flex-shrink-0">
+                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-2">Clear Structure</h4>
+                <p className="text-gray-600">
+                  Provides a well-defined, organized framework that's easy to understand and follow.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start p-4 hover:bg-green-50 rounded-lg transition-colors">
+              <div className="bg-green-100 p-3 rounded-full mr-4 mt-1 flex-shrink-0">
+                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-2">Detailed Documentation</h4>
+                <p className="text-gray-600">
+                  Comprehensive records at each phase provide clarity and reference points.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start p-4 hover:bg-green-50 rounded-lg transition-colors">
+              <div className="bg-green-100 p-3 rounded-full mr-4 mt-1 flex-shrink-0">
+                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-2">Predictability</h4>
+                <p className="text-gray-600">
+                  Fixed requirements and timelines make budgeting and resource allocation more predictable.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start p-4 hover:bg-green-50 rounded-lg transition-colors">
+              <div className="bg-green-100 p-3 rounded-full mr-4 mt-1 flex-shrink-0">
+                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-2">Easy to Measure Progress</h4>
+                <p className="text-gray-600">
+                  Clear milestones make it simple to track progress against the plan.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* When to Use Section */}
+        <section className="bg-white rounded-xl p-6 md:p-8 shadow-sm">
+          <div className="flex items-center mb-6">
+            <div className="bg-yellow-100 p-3 rounded-full mr-4">
+              <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 className="text-2xl font-bold text-gray-800">When to Use Waterfall</h3>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-yellow-50 p-6 rounded-lg border border-yellow-100">
+              <h4 className="text-xl font-semibold text-yellow-700 mb-3">Ideal Scenarios</h4>
+              <ul className="space-y-3 text-gray-600">
+                <li className="flex items-start">
+                  <span className="bg-yellow-100 text-yellow-800 rounded-full w-5 h-5 flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
+                  <span>Projects with clear, fixed requirements</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="bg-yellow-100 text-yellow-800 rounded-full w-5 h-5 flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
+                  <span>Short duration projects with predictable outcomes</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="bg-yellow-100 text-yellow-800 rounded-full w-5 h-5 flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
+                  <span>When working with familiar technology</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="bg-yellow-100 text-yellow-800 rounded-full w-5 h-5 flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
+                  <span>When regulatory compliance requires extensive documentation</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-red-50 p-6 rounded-lg border border-red-100">
+              <h4 className="text-xl font-semibold text-red-700 mb-3">Potential Challenges</h4>
+              <ul className="space-y-3 text-gray-600">
+                <li className="flex items-start">
+                  <span className="bg-red-100 text-red-800 rounded-full w-5 h-5 flex items-center justify-center mr-3 mt-1 flex-shrink-0">!</span>
+                  <span>Difficult to accommodate changes once started</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="bg-red-100 text-red-800 rounded-full w-5 h-5 flex items-center justify-center mr-3 mt-1 flex-shrink-0">!</span>
+                  <span>Working software isn't produced until late in the cycle</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="bg-red-100 text-red-800 rounded-full w-5 h-5 flex items-center justify-center mr-3 mt-1 flex-shrink-0">!</span>
+                  <span>Higher risk of project failure if requirements are misunderstood</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="bg-red-100 text-red-800 rounded-full w-5 h-5 flex items-center justify-center mr-3 mt-1 flex-shrink-0">!</span>
+                  <span>Less flexibility for innovation during development</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Implementation Section */}
+        <section className="bg-white rounded-xl p-6 md:p-8 shadow-sm">
+          <div className="flex items-center mb-6">
+            <div className="bg-purple-100 p-3 rounded-full mr-4">
+              <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 className="text-2xl font-bold text-gray-800">Implementation in Project Management</h3>
+          </div>
+          
+          <div className="space-y-8">
+            <div>
+              <h4 className="text-xl font-semibold text-gray-800 mb-4">Waterfall Features in Project Management Tools</h4>
+              <p className="text-gray-600 mb-6">
+                Traditional project management tools support Waterfall through these features:
+              </p>
+              <ul className="grid md:grid-cols-2 gap-4">
+                <li className="flex items-start">
+                  <span className="bg-purple-100 text-purple-800 rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">•</span>
+                  <span className="text-gray-600">Gantt charts for detailed scheduling</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="bg-purple-100 text-purple-800 rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">•</span>
+                  <span className="text-gray-600">Work breakdown structures</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="bg-purple-100 text-purple-800 rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">•</span>
+                  <span className="text-gray-600">Milestone tracking</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="bg-purple-100 text-purple-800 rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">•</span>
+                  <span className="text-gray-600">Document management systems</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="bg-purple-100 text-purple-800 rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">•</span>
+                  <span className="text-gray-600">Critical path analysis</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="bg-purple-100 text-purple-800 rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">•</span>
+                  <span className="text-gray-600">Resource allocation tools</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-purple-50 p-6 rounded-lg border border-purple-200">
+              <h4 className="text-xl font-semibold text-purple-800 mb-4">Best Practices for Waterfall</h4>
+              <ol className="list-decimal list-inside space-y-2 text-gray-600 pl-2 marker:font-semibold marker:text-purple-600">
+                <li className="pl-2">Invest significant time in requirements gathering</li>
+                <li className="pl-2">Create detailed documentation at each phase</li>
+                <li className="pl-2">Establish clear approval processes between phases</li>
+                <li className="pl-2">Define measurable milestones and deliverables</li>
+                <li className="pl-2">Allocate contingency time for unexpected issues</li>
+                <li className="pl-2">Maintain strict change control procedures</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div className="mt-12 text-center">
+        <div className="inline-block bg-blue-100 px-6 py-3 rounded-full">
+          <p className="text-blue-700 font-medium">
+            Waterfall methodology provides structure and predictability for well-defined projects with stable requirements.
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+
 
 {/* Advanced Call Center Features Section */}
 
