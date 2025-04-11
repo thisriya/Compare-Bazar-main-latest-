@@ -345,7 +345,7 @@ const ProjectManagementContent = () => {
       </div>
 
       {/* Approaches Section */}
-      <div className=" p-6 rounded-xl  mb-6">
+      <div className="px-4 rounded-xl  mb-6">
         <h2 className="text-4xl font-semibold text-gray-900 mb-4 flex items-center">
           <GitBranch className="mr-2 text-[#000e54]" />
           Project Management Approaches
