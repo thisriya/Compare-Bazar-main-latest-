@@ -288,53 +288,6 @@ const valueProps = [
           />
         ))}
       </div>
-
-      {/* Added Business component */}
-      {/* first section */}
-    {/* <div className="w-full bg-[#000e54] py-8 px-4">
-      <h1 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">
-        Call Center in India Advantages
-      </h1>
-      
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {advantages.map((advantage, index) => (
-            <div 
-              key={index} 
-              className="bg-white p-4 flex flex-col items-center text-center rounded-sm"
-            >
-              <div className="text-[#000e54] hover:text-[#ff8633] mb-4">
-                {advantage.icon}
-              </div>
-              <p className="text-gray-800 text-sm">{advantage.title}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div> */}
-    
-    {/* second section */}
-    {/* <div className="w-full  py-10">
-      <div className="max-w-6xl mx-auto">
-        <div className="bg-white rounded-lg shadow-lg p-8 mx-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {valueProps.map((prop, index) => (
-              <div key={index} className="flex flex-col items-center text-center">
-                <div className="text-[#000e54] mb-4">
-                  {prop.icon}
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-700 mb-2">
-                  {prop.title}
-                </h3>
-                <p className="text-gray-700">
-                  {prop.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div> */}
       
     <Feedback 
         title="What Our Customers Say"

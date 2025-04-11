@@ -301,7 +301,7 @@ const Navbar = () => {
                     <ul className="category-items">
                       <li><a href="/BestCRMSoftware" className="category-item-link">Best CRM Software</a></li>
                       <li><a href="/Callcenter" className="category-item-link">Best Call Center Management Software</a></li>
-                      <li><a href="/ProjectManagement" className="category-item-link">Best Project Management Software</a></li>
+                      <li><a href="/BestProjectManagement" className="category-item-link">Best Project Management Software</a></li>
                      
                     </ul>
                   </div>
