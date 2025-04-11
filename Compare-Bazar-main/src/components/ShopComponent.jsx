@@ -1,38 +1,78 @@
-import React from 'react';
+// other page 
+// import React from 'react';
+
+// const ShopComponent = () => {
+//   const handleGetQuotes = () => {
+//     // Open the BuyerZone form URL in a new tab
+//     window.open('http://www.buyerzone.com/telecom-equipment/business-phone-systems/rfqz/?publisherId=59578&publisherTypeId=1789', '_blank');
+//   };
+
+//   return (
+//     <div className="bg-blue-900 text-center p-5 rounded-lg">
+//       <h1 className="text-xl font-bold text-white">Ready to Shop?</h1>
+//       <p className="mb-4 font-bold text-white">Receive up to 5 FREE price quotes from pre-qualified suppliers.</p>
+//       <button
+//         onClick={handleGetQuotes}
+//         className="px-4 py-2 text-sm bg-orange-500 text-white rounded-full shadow-lg hover:bg-white hover:text-orange-500 transition-colors duration-300"
+//       >
+//         GET FREE QUOTES
+//       </button>
+//     </div>
+//   );
+// };
+
+// export default ShopComponent;
+
+import React, { useState } from 'react';
 
 const ShopComponent = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
   const handleGetQuotes = () => {
-    // Handle the action when the button is clicked
-    alert('Redirecting to get free quotes...');
+    setShowPopup(true);
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
   };
 
   return (
-    <div className='bg-gradient-to-r from-[#000e54] to-[#203299]' style={{ textAlign: 'center', padding: '20px' }}>
-      <h1 className='text-xl font-bold text-white'>Ready to Shop?</h1>
-      <p className='mb-4 font-bold text-white'>Receive up to 5 FREE price quotes from pre-qualified suppliers.</p>
-      <button
-        onClick={handleGetQuotes}
-        style={{
-          padding: '8px 18px', // Reduced padding
-          fontSize: '14px', // Reduced font size
-          cursor: 'pointer',
-          // background: 'linear-gradient(45deg, #4CAF50, #81C784)',
-          background: '#ff8633',
-          color: '#FFF',
-          border: 'none',
-          borderRadius: '30px',
-          boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.2)',
-          transition: 'background 0.3s ease',
-        }}
-        onMouseOver={(e) => {
-          e.currentTarget.style.background = 'white';
-        }}
-        onMouseOut={(e) => {
-          e.currentTarget.style.background= '#ff8633';
-        }}
-      >
-        GET FREE QUOTES
-      </button>
+    <div className="relative">
+      {/* Main Button Component */}
+      <div className="bg-blue-900 text-center p-5 rounded-lg">
+        <h1 className="text-xl font-bold text-white">Ready to Shop?</h1>
+        <p className="mb-4 font-bold text-white">Receive up to 5 FREE price quotes from pre-qualified suppliers.</p>
+        <button
+          onClick={handleGetQuotes}
+          className="px-4 py-2 text-sm bg-orange-500 text-white rounded-full shadow-lg hover:bg-white hover:text-orange-500 transition-colors duration-300"
+        >
+          GET FREE QUOTES
+        </button>
+      </div>
+
+      {/* Popup with iFrame - transparent background */}
+      {showPopup && (
+        <div className="fixed inset-0 bg-transparent flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg shadow-xl p-4 w-full max-w-4xl mx-4 relative">
+            <button 
+              onClick={closePopup}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 z-10 bg-white p-1 rounded-full shadow-md"
+            >
+              ✕
+            </button>
+            
+            <div className="h-96 lg:h-128">
+              <iframe
+                src="http://www.buyerzone.com/telecom-equipment/business-phone-systems/rfqz/?publisherId=59578&publisherTypeId=1789"
+                title="BuyerZone Quote Request Form"
+                className="w-full h-full border-0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
