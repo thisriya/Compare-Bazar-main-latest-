@@ -203,20 +203,20 @@ const ProjectManagementContent = () => {
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
             <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-              <h4 className="font-semibold text-gray-900">27%</h4>
-              <p className="text-sm text-gray-600">Higher on-time project completion rate</p>
+              <h4 className="font-semibold text-xl text-gray-900">27%</h4>
+              <p className=" text-gray-800 text-lg">Higher on-time project completion rate</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-              <h4 className="font-semibold text-gray-900">30%</h4>
-              <p className="text-sm text-gray-600">Reduction in miscommunication</p>
+              <h4 className="font-semibold text-gray-900 text-xl">30%</h4>
+              <p className="text-gray-800 text-lg">Reduction in miscommunication</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-              <h4 className="font-semibold text-gray-900">22%</h4>
-              <p className="text-sm text-gray-600">Increase in team collaboration</p>
+              <h4 className="font-semibold text-gray-900 text-xl">22%</h4>
+              <p className="text-gray-800 text-lg">Increase in team collaboration</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-              <h4 className="font-semibold text-gray-900">$5.87</h4>
-              <p className="text-sm text-gray-600">ROI for every $1 spent on PM tools</p>
+              <h4 className="font-semibold text-gray-900 text-xl">$5.87</h4>
+              <p className="text-gray-800 text-lg">ROI for every $1 spent on PM tools</p>
             </div>
         </div>
   </div>
@@ -458,7 +458,7 @@ const ProjectManagementContent = () => {
 </div>
 
 
-{/* how does call center works */}
+{/* how does project management software works */}
 
 
 
