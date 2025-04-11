@@ -100,23 +100,33 @@ const PhoneSystemsPage = () => {
   useEffect(() => {
     // Check if the script is already loaded to prevent duplicates
     if (document.querySelector('script[src*="bzWidget.min.js"]')) return;
-
+  
     const script1 = document.createElement('script');
     script1.src = "https://cdn.buyerzone.com/apps/widget/bzWidget.min.js";
     script1.async = true;
+    script1.setAttribute('data-bzwidget', '');
     script1.setAttribute('data-bzwidget-pub-id', '59578');
     script1.setAttribute('data-bzwidget-color-palette-name', 'default');
     script1.setAttribute('data-bzwidget-category-id', '10144');
-
-    const script2 = document.createElement('script');
-    script2.text = "bzWidget.init();";
-
-    document.body.appendChild(script1);
-    document.body.appendChild(script2);
-
+  
+    // Add the script to the buyerzone-widget-container instead of body
+    const container = document.getElementById('buyerzone-widget-container');
+    if (container) {
+      container.appendChild(script1);
+      
+      // Initialize after script loads
+      script1.onload = () => {
+        if (typeof bzWidget !== 'undefined') {
+          bzWidget.init();
+        }
+      };
+    }
+  
     return () => {
-      document.body.removeChild(script1);
-      document.body.removeChild(script2);
+      // Clean up
+      if (container && container.contains(script1)) {
+        container.removeChild(script1);
+      }
     };
   }, []);
 
@@ -159,8 +169,6 @@ const PhoneSystemsPage = () => {
                   padding: 30px;
                 }
                 .spinner {
-                  border: 5px solid #f3f3f3;
-                  border-top: 5px solid #3498db;
                   border-radius: 50%;
                   width: 50px;
                   height: 50px;
@@ -288,12 +296,46 @@ const PhoneSystemsPage = () => {
       </div>
 
        {/* BuyerZone Widget Integration - Method 1: Custom container */}
-       <div className="widget-container bg-gray-100 p-6 rounded-lg shadow-md my-10">
-          <h2 className="widget-title text-2xl font-bold text-center mb-6 text-gray-800">Compare Phone System Providers</h2>
-          <div id="buyerzone-widget-container" className="min-h-96 w-full">
-            {/* Widget will be loaded here by useEffect */}
-          </div>
+       <div 
+  className="widget-container p-6 rounded-lg my-10 relative"
+  style={{
+    backgroundImage: "url('https://stabilitynetworks.com/wp-content/uploads/2019/08/5-Advantages-of-Getting-a-Cloud-Based-VoIP-Phone-System-for-Your-Small-Business.jpg')",
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'
+  }}
+>
+  {/* Semi-transparent overlay */}
+  <div className="absolute inset-0 bg-white opacity-60 rounded-lg"></div>
+  
+  {/* Content positioned on top of the overlay */}
+  <div className="relative z-10">
+    <h2 className="widget-title text-4xl font-semibold text-center mb-6 text-gray-800">Compare Phone System Providers</h2>
+    <div className="flex flex-row gap-8 items-center justify-between">
+        {/* Image on the left */}
+        <div className="flex-shrink-0">
+            <img 
+                src="http://www.buyerzone.com/telecom-equipment/business-phone-systems/banners/120x600.gif" 
+                title="Free Business Phone Systems Quotes from BuyerZone.com" 
+                alt="Free Business Phone Systems Quotes from BuyerZone.com" 
+                className="h-auto" 
+                border="0" 
+            />
         </div>
+        
+        {/* Centered paragraph in the middle */}
+        <div className="text-center text-[#ff8633] mx-4 text-4xl flex-grow-0 w-64">
+    <p className="font-medium">Just answer a few questions to help us better serve you. It takes less than a minute and is 100% free. No obligation to buy.</p>
+</div>
+        
+        {/* Form container on the right */}
+        <div id="buyerzone-widget-container" className="flex-grow min-h-96">
+            {/* Widget will be loaded by the useEffect */}
+        </div>
+    </div>
+</div>
+</div>
+
       <TableOfContents contents={contents} />
 
       {/* Added Business component */}

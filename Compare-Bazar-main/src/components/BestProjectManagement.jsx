@@ -66,7 +66,7 @@ const BestProjectManagement = () => {
     { id: 1, title: "Introduction to Best Project Management Software", slug: "intro-project" },
     { id: 2, title: "What Is Project Management Software?", slug: "what-is-projectmanagementsoftware" },
     { id: 3, title: "How Does Project Management Software Works", slug: "projectmanagementsoftware-working" },
-    { id: 4, title: "Approach of Project Management System", slug: "projectmanagementsoftware-approach" },
+    { id: 4, title: "Approach of Project Management System", slug: "projectmanagementsoftware" },
     { id: 5, title: "Key Features For Email Marketing services", slug: "email-features" },
     { id: 6, title: "How to Choose Email Marketing Service?", slug: "email-howchoose" },
     { id: 7, title: "Is Email Marketing Worthit?", slug: "email-worthit" },
