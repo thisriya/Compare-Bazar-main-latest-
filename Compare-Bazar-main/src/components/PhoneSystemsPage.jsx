@@ -311,7 +311,7 @@ const PhoneSystemsPage = () => {
   {/* Content positioned on top of the overlay */}
   <div className="relative z-10">
     <h2 className="widget-title text-4xl font-semibold text-center mb-6 text-gray-800">Compare Phone System Providers</h2>
-    <div className="flex flex-row gap-8 items-center justify-between">
+    <div className="flex lg:flex-row flex-col  gap-8 items-center justify-between">
         {/* Image on the left */}
         <div className="flex-shrink-0">
             <img 
