@@ -39,190 +39,186 @@ const ShopComponent = () => {
 
 export default ShopComponent;
 
+// other page 
+import React from 'react';
 
-<div className="max-w-4xl mx-auto my-10 bg-white rounded-lg shadow-xl overflow-hidden">
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6">
-        <h2 className="text-3xl font-bold text-white text-center">Connect with Us!</h2>
-        <p className="text-white text-center text-lg mt-2">Fill out the form below and we'll be in touch soon.</p>
-      </div>
-      
-      {formSubmitted ? (
-        <div className="p-8 text-center">
-          <svg className="w-16 h-16 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-          </svg>
-          <h3 className="text-2xl font-bold text-gray-800 mt-4">Thank You!</h3>
-          <p className="text-gray-600 mt-2">Your message has been sent. We'll contact you shortly at your provided email address.</p>
-          <button 
-            className="mt-6 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-            onClick={() => setFormSubmitted(false)}
-          >
-            Send Another Message
-          </button>
-        </div>
-      ) : (
-        <form onSubmit={handleSubmit} className="p-8 space-y-6">
-          {formError && (
-            <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-4">
-              <p className="text-red-700">{formError}</p>
-            </div>
-          )}
-          
-          {/* Web3Forms requires this hidden field with your access key */}
-          <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
-          
-          {/* Bot detection honeypot field - important for Web3Forms */}
-          <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label htmlFor="firstName" className="block text-gray-700 font-medium mb-2">
-                First Name <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="text"
-                id="firstName"
-                name="firstName"
-                accessKey="f"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                required
-                value={formData.firstName}
-                onChange={handleChange}
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="lastName" className="block text-gray-700 font-medium mb-2">
-                Last Name <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                accessKey="l"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                required
-                value={formData.lastName}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-          
-          <div>
-            <label htmlFor="company" className="block text-gray-700 font-medium mb-2">
-              Company <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="text"
-              id="company"
-              name="company"
-              accessKey="c"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              required
-              value={formData.company}
-              onChange={handleChange}
-            />
-          </div>
-          
-          <div>
-            <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
-              Email <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              accessKey="e"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              required
-              value={formData.email}
-              onChange={handleChange}
-            />
-          </div>
-          
-          <div>
-            <label htmlFor="phoneNumber" className="block text-gray-700 font-medium mb-2">
-              Phone Number <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="tel"
-              id="phoneNumber"
-              name="phoneNumber"
-              accessKey="p"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              required
-              value={formData.phoneNumber}
-              onChange={handleChange}
-            />
-          </div>
-          
-          <div>
-            <label htmlFor="website" className="block text-gray-700 font-medium mb-2">
-              Website
-            </label>
-            <input
-              type="url"
-              id="website"
-              name="website"
-              accessKey="w"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              value={formData.website}
-              onChange={handleChange}
-            />
-          </div>
-          
-          <div>
-            <label htmlFor="promoCode" className="block text-gray-700 font-medium mb-2">
-              Promo Code
-            </label>
-            <input
-              type="text"
-              id="promoCode"
-              name="promoCode"
-              accessKey="o"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              value={formData.promoCode}
-              onChange={handleChange}
-            />
-          </div>
-          
-          <div>
-            <label htmlFor="description" className="block text-gray-700 font-medium mb-2">
-              Briefly describe what your company sells
-            </label>
-            <textarea
-              id="description"
-              name="description"
-              accessKey="d"
-              rows="4"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              value={formData.description}
-              onChange={handleChange}
-            ></textarea>
-          </div>
-          
-          <div className="flex items-center">
-            <input
-              type="checkbox"
-              id="consent"
-              name="consent"
-              className="h-4 w-4 text-blue-600 focus:ring-blue-500"
-              required
-            />
-            <label htmlFor="consent" className="ml-2 block text-sm text-gray-700">
-              I agree to receive email communications from your company
-            </label>
-          </div>
-          
-          <div className="mt-4">
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-4 rounded-md transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-            >
-              {isSubmitting ? 'Sending...' : 'GET STARTED'}
-            </button>
-          </div>
-        </form>
-      )}
+const ShopComponent = () => {
+  const handleGetQuotes = () => {
+    // Navigate to the BuyerZone form URL in the same tab
+    window.location.href = 'http://www.buyerzone.com/telecom-equipment/business-phone-systems/rfqz/?publisherId=59578&publisherTypeId=1789';
+  };
+
+  return (
+    <div className="bg-blue-900 text-center p-5 rounded-lg">
+      <h1 className="text-xl font-bold text-white">Ready to Shop?</h1>
+      <p className="mb-4 font-bold text-white">Receive up to 5 FREE price quotes from pre-qualified suppliers.</p>
+      <button
+        onClick={handleGetQuotes}
+        className="px-4 py-2 text-sm bg-orange-500 text-white rounded-full shadow-lg hover:bg-white hover:text-orange-500 transition-colors duration-300"
+      >
+        GET FREE QUOTES
+      </button>
     </div>
+  );
+};
+
+export default ShopComponent;
+
+
+
+// popped on the same page with cross
+// import React, { useState } from 'react';
+// const ShopComponent = () => {
+//   const [showPopup, setShowPopup] = useState(false);
+
+//   const handleGetQuotes = () => {
+//     setShowPopup(true);
+//   };
+
+//   const closePopup = () => {
+//     setShowPopup(false);
+//   };
+
+//   return (
+//     <div className="relative">
+//       {/* Main Button Component */}
+//       <div className="bg-blue-900 text-center p-5 rounded-lg">
+//         <h1 className="text-xl font-bold text-white">Ready to Shop?</h1>
+//         <p className="mb-4 font-bold text-white">Receive up to 5 FREE price quotes from pre-qualified suppliers.</p>
+//         <button
+//           onClick={handleGetQuotes}
+//           className="px-4 py-2 text-sm bg-orange-500 text-white rounded-full shadow-lg hover:bg-white hover:text-orange-500 transition-colors duration-300"
+//         >
+//           GET FREE QUOTES
+//         </button>
+//       </div>
+
+//       {/* Popup with iFrame - transparent background */}
+//       {showPopup && (
+//         <div className="fixed inset-0 bg-transparent flex items-center justify-center z-50 mt-15">
+//           <div className="bg-white rounded-lg shadow-xl p-4 w-full max-w-4xl mx-4 relative">
+//             <button 
+//               onClick={closePopup}
+//               className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 z-10 bg-white p-1 rounded-full shadow-md"
+//             >
+//               ✕
+//             </button>
+            
+//             <div className="h-96 lg:h-128">
+//               <iframe
+//                 src="http://www.buyerzone.com/telecom-equipment/business-phone-systems/rfqz/?publisherId=59578&publisherTypeId=1789"
+//                 title="BuyerZone Quote Request Form"
+//                 className="w-full h-full border-0"
+//                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+//                 allowFullScreen
+//               ></iframe>
+//             </div>
+//           </div>
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default ShopComponent;
+
+
+
+// popped on the same page with no cross
+// import React, { useState } from 'react';
+// const ShopComponent = () => {
+//   const [showModal, setShowModal] = useState(false);
+
+//   const handleGetQuotes = () => {
+//     setShowModal(true);
+//   };
+
+//   const closeModal = () => {
+//     setShowModal(false);
+//   };
+
+//   return (
+//     <div className='bg-gradient-to-r from-[#000e54] to-[#203299]' style={{ textAlign: 'center', padding: '20px' }}>
+//       <h1 className='text-xl font-bold text-white'>Ready to Shop?</h1>
+//       <p className='mb-4 font-bold text-white'>Receive up to 5 FREE price quotes from pre-qualified suppliers.</p>
+//       <button
+//         onClick={handleGetQuotes}
+//         style={{
+//           padding: '8px 18px',
+//           fontSize: '14px',
+//           cursor: 'pointer',
+//           background: '#ff8633',
+//           color: '#FFF',
+//           border: 'none',
+//           borderRadius: '30px',
+//           boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.2)',
+//           transition: 'background 0.3s ease',
+//         }}
+//         onMouseOver={(e) => {
+//           e.currentTarget.style.background = 'white';
+//           e.currentTarget.style.color = '#ff8633';
+//         }}
+//         onMouseOut={(e) => {
+//           e.currentTarget.style.background = '#ff8633';
+//           e.currentTarget.style.color = '#FFF';
+//         }}
+//       >
+//         GET FREE QUOTES
+//       </button>
+
+//       {/* Modal/Popup */}
+//       {showModal && (
+//         <div style={{
+//           position: 'fixed',
+//           top: 0,
+//           left: 0,
+//           right: 0,
+//           bottom: 0,
+//           backgroundColor: 'rgba(0, 0, 0, 0.5)',
+//           display: 'flex',
+//           justifyContent: 'center',
+//           alignItems: 'center',
+//           zIndex: 1000,
+//         }} onClick={closeModal}>
+//           <div style={{
+//             backgroundColor: 'white',
+//             padding: '20px',
+//             borderRadius: '8px',
+//             maxWidth: '90%',
+//             maxHeight: '90vh',
+//             overflow: 'auto',
+//           }} onClick={(e) => e.stopPropagation()}>
+//             <button 
+//               onClick={closeModal}
+//               style={{
+//                 position: 'absolute',
+//                 top: '10px',
+//                 right: '10px',
+//                 background: 'none',
+//                 border: 'none',
+//                 fontSize: '20px',
+//                 cursor: 'pointer',
+//               }}
+//             >
+//               ×
+//             </button>
+//             <iframe 
+//               src="http://www.buyerzone.com/telecom-equipment/business-phone-systems/rfqz/?publisherId=59578&publisherTypeId=1789" 
+//               title="Free Business Phone Systems Quotes"
+//               style={{
+//                 width: '800px',
+//                 height: '600px',
+//                 border: 'none',
+//               }}
+//             ></iframe>
+//             <p style={{ textAlign: 'center', marginTop: '10px' }}>
+//               Can't see the form? <a href="http://www.buyerzone.com/telecom-equipment/business-phone-systems/rfqz/?publisherId=59578&publisherTypeId=1789" target="_blank" rel="noopener noreferrer">Click here</a> to open in a new tab.
+//             </p>
+//           </div>
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default ShopComponent;
