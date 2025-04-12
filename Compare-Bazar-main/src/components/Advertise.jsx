@@ -168,22 +168,6 @@ const Advertise = () => {
               Join 500+ satisfied advertisers reaching over 2 million targeted professionals monthly. Our data-driven platform delivers exceptional ROI.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <button className="px-8 py-4 bg-[#ff8633] hover:from-orange-600 hover:to-orange-700 text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg shadow-orange-500/30 flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
-                  <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
-                </svg>
-                Request Media Kit
-              </button>
-              <button className="px-8 py-4 hover:bg-white hover:text-blue-900 text-gray-800 font-semibold rounded-full transition-all duration-300 flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                </svg>
-                Schedule Consultation
-              </button>
-            </div>
-
             <div className="flex flex-wrap gap-6 items-center">
               <div className="flex items-center gap-2">
                 <div className="flex -space-x-2">
@@ -335,7 +319,7 @@ const Advertise = () => {
             <svg className="w-5 h-5 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
-            <p className="text-red-700 font-medium">{formError}</p>
+            <p className="text-red-800 font-semibold">{formError}</p>
           </div>
         </div>
       )}
@@ -346,22 +330,22 @@ const Advertise = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-1">
-          <label htmlFor="firstName" className="block text-gray-700 font-medium">
-            First Name <span className="text-red-500">*</span>
+          <label htmlFor="firstName" className="block text-gray-800 font-semibold text-lg">
+            First Name <span className="text-[#000e54]">*</span>
           </label>
           <div className="relative">
             <input
               type="text"
               id="firstName"
               name="firstName"
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
+              className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
               required
               value={formData.firstName}
               onChange={handleChange}
               placeholder="John"
             />
             <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-              <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg className="w-5 h-5 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
               </svg>
             </div>
@@ -369,22 +353,22 @@ const Advertise = () => {
         </div>
         
         <div className="space-y-1">
-          <label htmlFor="lastName" className="block text-gray-700 font-medium">
-            Last Name <span className="text-red-500">*</span>
+          <label htmlFor="lastName" className="block text-gray-800 font-semibold text-lg">
+            Last Name <span className="text-[#000e54]">*</span>
           </label>
           <div className="relative">
             <input
               type="text"
               id="lastName"
               name="lastName"
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
+              className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
               required
               value={formData.lastName}
               onChange={handleChange}
               placeholder="Doe"
             />
             <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-              <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg className="w-5 h-5 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
               </svg>
             </div>
@@ -393,22 +377,22 @@ const Advertise = () => {
       </div>
       
       <div className="space-y-1">
-        <label htmlFor="company" className="block text-gray-700 font-medium">
-          Company <span className="text-red-500">*</span>
+        <label htmlFor="company" className="block text-gray-800 font-semibold">
+          Company <span className="text-[#000e54]">*</span>
         </label>
         <div className="relative">
           <input
             type="text"
             id="company"
             name="company"
-            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
+            className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
             required
             value={formData.company}
             onChange={handleChange}
             placeholder="Acme Inc."
           />
           <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-            <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-5 h-5 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
             </svg>
           </div>
@@ -416,22 +400,22 @@ const Advertise = () => {
       </div>
       
       <div className="space-y-1">
-        <label htmlFor="email" className="block text-gray-700 font-medium">
-          Email <span className="text-red-500">*</span>
+        <label htmlFor="email" className="block text-gray-800 font-semibold">
+          Email <span className="text-[#000e54]">*</span>
         </label>
         <div className="relative">
           <input
             type="email"
             id="email"
             name="email"
-            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
+            className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
             required
             value={formData.email}
             onChange={handleChange}
             placeholder="your.email@example.com"
           />
           <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-            <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-5 h-5 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
             </svg>
           </div>
@@ -439,22 +423,22 @@ const Advertise = () => {
       </div>
       
       <div className="space-y-1">
-        <label htmlFor="phoneNumber" className="block text-gray-700 font-medium">
-          Phone Number <span className="text-red-500">*</span>
+        <label htmlFor="phoneNumber" className="block text-gray-800 font-semibold">
+          Phone Number <span className="text-[#000e54]">*</span>
         </label>
         <div className="relative">
           <input
             type="tel"
             id="phoneNumber"
             name="phoneNumber"
-            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
+            className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
             required
             value={formData.phoneNumber}
             onChange={handleChange}
             placeholder="+1 (555) 123-4567"
           />
           <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-            <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-5 h-5 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
             </svg>
           </div>
@@ -462,7 +446,7 @@ const Advertise = () => {
       </div>
       
       <div className="space-y-1">
-        <label htmlFor="website" className="block text-gray-700 font-medium">
+        <label htmlFor="website" className="block text-gray-800 font-semibold">
           Website
         </label>
         <div className="relative">
@@ -470,13 +454,13 @@ const Advertise = () => {
             type="url"
             id="website"
             name="website"
-            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
+            className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
             value={formData.website}
             onChange={handleChange}
             placeholder="https://example.com"
           />
           <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-            <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-5 h-5 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
             </svg>
           </div>
@@ -484,7 +468,7 @@ const Advertise = () => {
       </div>
       
       <div className="space-y-1">
-        <label htmlFor="promoCode" className="block text-gray-700 font-medium">
+        <label htmlFor="promoCode" className="block text-gray-800 font-semibold">
           Promo Code (if any)
         </label>
         <div className="relative">
@@ -492,13 +476,13 @@ const Advertise = () => {
             type="text"
             id="promoCode"
             name="promoCode"
-            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
+            className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
             value={formData.promoCode}
             onChange={handleChange}
             placeholder="SUMMER2023"
           />
           <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-            <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-5 h-5 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"></path>
             </svg>
           </div>
@@ -506,14 +490,14 @@ const Advertise = () => {
       </div>
       
       <div className="space-y-1">
-        <label htmlFor="description" className="block text-gray-700 font-medium">
+        <label htmlFor="description" className="block text-gray-800 font-semibold text-lg">
           Tell us about your business
         </label>
         <textarea
           id="description"
           name="description"
           rows="4"
-          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
+          className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
           value={formData.description}
           onChange={handleChange}
           placeholder="Briefly describe what products or services your company offers..."
@@ -526,11 +510,11 @@ const Advertise = () => {
             type="checkbox"
             id="consent"
             name="consent"
-            className="w-4 h-4 text-[#000e54] border-gray-300 rounded focus:ring-[#000e54]"
+            className="w-4 h-4 text-lg text-[#000e54] border-gray-300 rounded focus:ring-[#000e54]"
             required
           />
         </div>
-        <label htmlFor="consent" className="ml-3 block text-sm text-gray-700">
+        <label htmlFor="consent" className="ml-3 block text-lg text-gray-800">
           I agree to receive email communications and acknowledge the <a href="#" className="text-[#000e54] hover:underline">Privacy Policy</a> and <a href="#" className="text-[#000e54] hover:underline">Terms of Service</a>.
         </label>
       </div>
@@ -552,7 +536,7 @@ const Advertise = () => {
               Processing...
             </span>
           ) : (
-            <span className="flex items-center justify-center">
+            <span className="flex items-center justify-center text-lg">
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
               </svg>
@@ -562,7 +546,7 @@ const Advertise = () => {
         </button>
       </div>
       
-      <div className="text-center text-sm text-gray-500 pt-4">
+      <div className="text-center text-lg text-gray-800 pt-4">
         <p>We'll never share your information. Read our <a href="#" className="text-[#000e54] hover:underline">Privacy Policy</a>.</p>
       </div>
     </form>
