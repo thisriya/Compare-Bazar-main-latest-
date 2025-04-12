@@ -594,6 +594,7 @@ const Advertise = () => {
     </form>
   )}
 </div>
+<p className='text-lg text-gray-800 text-center max-w-6xl mx-auto'>Your privacy is important to us. By submitting this form, you consent to business.com emailing, texting, and calling you at the email and phone number provided. You also direct us to share your information with marketing service providers, who may email, text, or call you at the phone number provided using automated phone technology. Consent is not a condition of purchasing any products or services.</p>
 </div>
 
 
