@@ -295,7 +295,7 @@ const PhoneSystemsPage = () => {
         ))}
       </div>
 
-       {/* BuyerZone Widget Integration - Method 1: Custom container */}
+       {/* BuyerZone Widget Integration */}
        <div 
   className="widget-container p-6 rounded-lg my-10 relative"
   style={{
