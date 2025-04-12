@@ -307,7 +307,7 @@ const Advertise = () => {
           <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
           </svg>
-          Send Another Message
+          Go Back
         </span>
       </button>
     </div>
@@ -338,7 +338,7 @@ const Advertise = () => {
               type="text"
               id="firstName"
               name="firstName"
-              className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
+              className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg  focus:border-[#000e54] transition-all"
               required
               value={formData.firstName}
               onChange={handleChange}
@@ -361,7 +361,7 @@ const Advertise = () => {
               type="text"
               id="lastName"
               name="lastName"
-              className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
+              className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg  focus:border-[#000e54] transition-all"
               required
               value={formData.lastName}
               onChange={handleChange}
@@ -385,7 +385,7 @@ const Advertise = () => {
             type="text"
             id="company"
             name="company"
-            className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
+            className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg  focus:border-[#000e54] transition-all"
             required
             value={formData.company}
             onChange={handleChange}
@@ -408,7 +408,7 @@ const Advertise = () => {
             type="email"
             id="email"
             name="email"
-            className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
+            className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg  focus:border-[#000e54] transition-all"
             required
             value={formData.email}
             onChange={handleChange}
@@ -431,7 +431,7 @@ const Advertise = () => {
             type="tel"
             id="phoneNumber"
             name="phoneNumber"
-            className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
+            className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg  focus:border-[#000e54] transition-all"
             required
             value={formData.phoneNumber}
             onChange={handleChange}
@@ -454,7 +454,7 @@ const Advertise = () => {
             type="url"
             id="website"
             name="website"
-            className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
+            className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg  focus:border-[#000e54] transition-all"
             value={formData.website}
             onChange={handleChange}
             placeholder="https://example.com"
@@ -476,7 +476,7 @@ const Advertise = () => {
             type="text"
             id="promoCode"
             name="promoCode"
-            className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
+            className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg focus:border-[#000e54] transition-all"
             value={formData.promoCode}
             onChange={handleChange}
             placeholder="SUMMER2023"
@@ -497,27 +497,70 @@ const Advertise = () => {
           id="description"
           name="description"
           rows="4"
-          className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#000e54] focus:border-[#000e54] transition-all"
+          className="w-full px-4 text-lg py-3 border border-gray-200 rounded-lg  focus:border-[#000e54] transition-all"
           value={formData.description}
           onChange={handleChange}
           placeholder="Briefly describe what products or services your company offers..."
         ></textarea>
       </div>
-      
-      <div className="flex items-start">
-        <div className="flex items-center h-5">
-          <input
-            type="checkbox"
-            id="consent"
-            name="consent"
-            className="w-4 h-4 text-lg text-[#000e54] border-gray-300 rounded focus:ring-[#000e54]"
-            required
-          />
-        </div>
-        <label htmlFor="consent" className="ml-3 block text-lg text-gray-800">
-          I agree to receive email communications and acknowledge the <a href="#" className="text-[#000e54] hover:underline">Privacy Policy</a> and <a href="#" className="text-[#000e54] hover:underline">Terms of Service</a>.
-        </label>
+
+      <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+  <div className="flex items-center">
+    <div className="relative">
+      <input
+        type="checkbox"
+        id="notRobot"
+        name="notRobot"
+        className="sr-only"
+        required
+        checked={formData.notRobot}
+        onChange={() => setFormData({...formData, notRobot: !formData.notRobot})}
+      />
+      <div 
+        className={`w-8 h-8 rounded border-2 flex items-center justify-center transition-colors duration-200 cursor-pointer ${
+          formData.notRobot 
+            ? 'bg-[#000e54] ' 
+            : 'bg-white border-gray-300 hover:border-gray-400'
+        }`}
+        onClick={() => setFormData({...formData, notRobot: !formData.notRobot})}
+      >
+        {formData.notRobot && (
+          <svg 
+            className="w-4 h-4 text-white" 
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path 
+              fill="currentColor" 
+              d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" 
+            />
+          </svg>
+        )}
       </div>
+    </div>
+    <div className="ml-3">
+      <label 
+        htmlFor="notRobot" 
+        className="block text-lg font-semi text-gray-800 cursor-pointer select-none"
+        onClick={() => setFormData({...formData, notRobot: !formData.notRobot})}
+      >
+        I'm not a robot
+      </label>
+      <div className="flex items-center mt-1">
+        <img 
+          src="https://www.gstatic.com/recaptcha/api2/logo_48.png" 
+          alt="reCAPTCHA" 
+          className="h-3 mr-1"
+        />
+        <span className="text-xs text-gray-500">reCAPTCHA</span>
+        <span className="mx-1 text-gray-800">|</span>
+        <a href="https://policies.google.com/privacy" className="text-sm text-gray-800 hover:underline">Privacy</a>
+        <span className="mx-1 text-gray-800">|</span>
+        <a href="https://policies.google.com/terms" className="text-sm text-gray-800 hover:underline">Terms</a>
+      </div>
+    </div>
+  </div>
+</div>
       
       <div className="pt-4">
         <button
