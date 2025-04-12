@@ -141,93 +141,92 @@ const Advertise = () => {
     <>
     <Navbar/>
     {/* hero section */}
-    <section className="relative max-w-6xl mx-auto  text-white overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-        <div className="absolute bottom-10 right-20 w-80 h-80 bg-orange-500 rounded-full mix-blend-screen opacity-15 filter blur-3xl"></div>
+    <section className="relative max-w-6xl mx-auto text-white overflow-hidden">
+  {/* Decorative elements */}
+  <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+    <div className="absolute bottom-10 right-20 w-80 h-80 bg-orange-500 rounded-full mix-blend-screen opacity-15 filter blur-3xl"></div>
+    
+    {/* SVG patterns */}
+    <svg className="absolute top-0 left-0 w-full h-full opacity-5" xmlns="http://www.w3.org/2000/svg">
+      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="0.5"/>
+      </pattern>
+      <rect width="100%" height="100%" fill="url(#grid)" />
+    </svg>
+  </div>
+
+  <div className="container mx-auto px-4 py-10 relative z-10">
+    <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+      {/* Text content */}
+      <div className="w-full lg:w-1/2">
+        <h1 className="text-3xl md:text-4xl text-gray-800 font-semibold mb-4 md:mb-6 leading-tight">
+          Amplify Your Brand <br className="hidden lg:block"/>With Our Premium Network
+        </h1>
         
-        {/* SVG patterns */}
-        <svg className="absolute top-0 left-0 w-full h-full opacity-5" xmlns="http://www.w3.org/2000/svg">
-          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="0.5"/>
-          </pattern>
-          <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
-      </div>
+        <p className="text-lg md:text-xl mb-6 md:mb-8 text-gray-800 leading-relaxed">
+          Join 500+ satisfied advertisers reaching over 2 million targeted professionals monthly. Our data-driven platform delivers exceptional ROI.
+        </p>
 
-      <div className="container mx-auto px-4 py-10 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-          {/* Text content */}
-          <div className="lg:w-1/2">
-
-            <h1 className="text-4xl text-gray-800 font-semibold mb-6 leading-tight">
-              Amplify Your Brand <br className="hidden lg:block"/>With Our Premium Network
-            </h1>
-            
-            <p className="text-xl  mb-8 text-gray-800 max-w-2xl leading-relaxed">
-              Join 500+ satisfied advertisers reaching over 2 million targeted professionals monthly. Our data-driven platform delivers exceptional ROI.
-            </p>
-
-            <div className="flex flex-wrap gap-6 items-center">
-              <div className="flex items-center gap-2">
-                <div className="flex -space-x-2">
-                  <img className="w-8 h-8 rounded-full border-2 border-blue-900" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" />
-                  <img className="w-8 h-8 rounded-full border-2 border-blue-900" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" />
-                  <img className="w-8 h-8 rounded-full border-2 border-blue-900" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client" />
-                </div>
-                <span className="text-lg text-gray-800">Trusted by 500+ brands</span>
-              </div>
-              <div className="hidden sm:block w-px h-8 bg-blue-600/50"></div>
-              <div className="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-                <span className="text-lg text-gray-800">4.9/5 average advertiser rating</span>
-              </div>
+        <div className="flex flex-col sm:flex-row flex-wrap gap-4 md:gap-6 items-center mb-6 lg:mb-0">
+          <div className="flex items-center gap-2">
+            <div className="flex -space-x-2">
+              <img className="w-8 h-8 rounded-full border-2 border-blue-900" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" />
+              <img className="w-8 h-8 rounded-full border-2 border-blue-900" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" />
+              <img className="w-8 h-8 rounded-full border-2 border-blue-900" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client" />
             </div>
+            <span className="text-base md:text-lg text-gray-800">Trusted by 500+ brands</span>
           </div>
-
-          {/* Image/content card */}
-          <div className="lg:w-1/2 flex justify-center">
-            <div className="relative w-full max-w-lg">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.01] transition-transform duration-500">
-                <img 
-                  src="https://tse4.mm.bing.net/th?id=OIP.XCn-mxd3F6sEkGJxW-3wZQHaE8&pid=Api&P=0&h=180" 
-                  alt="Advertising Opportunities" 
-                  className="w-full h-auto object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-900/20 to-transparent"></div>
-              </div>
-              
-              {/* Stats overlay */}
-              <div className="absolute -bottom-6 -right-6 bg-white/90 backdrop-blur-sm rounded-xl shadow-xl p-6 w-3/4 border border-white/20">
-                <h3 className="text-blue-900 font-semibold text-lg mb-3">Why Advertise With Us?</h3>
-                <ul className="space-y-2 text-lg">
-                  <li className="flex items-start gap-2 ">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-orange-500 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-800">2M+ targeted visitors monthly</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-orange-500 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-800">85% average engagement rate</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-orange-500 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-800">Dedicated account manager</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div className="hidden sm:block w-px h-8 bg-blue-600/50"></div>
+          <div className="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <span className="text-base md:text-lg text-gray-800">4.9/5 average advertiser rating</span>
           </div>
         </div>
       </div>
-    </section>
+
+      {/* Image/content card */}
+      <div className="w-full lg:w-1/2 flex justify-center mt-8 lg:mt-0">
+        <div className="relative w-full max-w-md md:max-w-lg">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
+            <img 
+              src="https://tse4.mm.bing.net/th?id=OIP.XCn-mxd3F6sEkGJxW-3wZQHaE8&pid=Api&P=0&h=180" 
+              alt="Advertising Opportunities" 
+              className="w-full h-auto object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-900/20 to-transparent"></div>
+          </div>
+          
+          {/* Stats overlay */}
+          <div className="absolute -bottom-6 right-0 md:-right-6 bg-white/90 backdrop-blur-sm rounded-xl shadow-xl p-4 md:p-6 w-full md:w-3/4 border border-white/20">
+            <h3 className="text-blue-900 font-semibold text-base md:text-lg mb-2 md:mb-3">Why Advertise With Us?</h3>
+            <ul className="space-y-1 md:space-y-2 text-base md:text-lg">
+              <li className="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5 text-orange-500 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="text-gray-800">2M+ targeted visitors monthly</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5 text-orange-500 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="text-gray-800">85% average engagement rate</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5 text-orange-500 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="text-gray-800">Dedicated account manager</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     {/* cards */}
     <div className="max-w-6xl mx-auto px-4 py-12">
