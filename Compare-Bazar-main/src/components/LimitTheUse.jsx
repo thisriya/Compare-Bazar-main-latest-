@@ -763,7 +763,7 @@ const LimitTheUse = () => {
                 </button>
               </div>
               <div className="text-center text-lg text-gray-800 pt-4">
-                <p>We'll never share your information. Read our <a href="#" className="text-[#000e54] hover:underline">Privacy Policy</a>.</p>
+                <p>We'll never share your information. Read our <a href="/PrivacyPolicy" className="text-[#000e54] hover:underline">Privacy Policy</a>.</p>
               </div>
             </form>
           )}
