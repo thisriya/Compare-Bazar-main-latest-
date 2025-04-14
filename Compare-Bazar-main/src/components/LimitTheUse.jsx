@@ -519,9 +519,6 @@ const LimitTheUse = () => {
       </div>
       <div className="relative z-10 text-center p-4">
         <h2 className="text-4xl font-semibold text-white mb-3">Consumer Privacy Rights Request Form</h2>
-        <p className="text-white text-lg max-w-2xl mx-auto">
-          Not all persons are eligible for all data requests. This form will be used to determine your eligibility.
-        </p>
       </div>
     </div>
   
@@ -543,7 +540,8 @@ const LimitTheUse = () => {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <div className="border-b border-gray-200 pb-2 mb-4">
-              <p className="text-lg font-semibold text-[#000e54]">*REQUIRED FIELDS</p>
+                <p>Not all persons are eligible for all data requests. This form will be used to determine your eligibility. To protect your privacy, you will be required to verify that you either are a person about whom we collected information or are someone authorized to act on such a person’s behalf. Requests are fulfilled as soon as practical, usually within 45 days.</p>
+              <p className="text-lg mt-3 font-semibold text-[#000e54]">*REQUIRED FIELDS</p>
             </div>
           </div>
 
