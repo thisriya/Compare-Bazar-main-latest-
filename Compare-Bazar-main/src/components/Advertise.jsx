@@ -5,11 +5,13 @@ import Footer from './Footer';
 import { Zap, Users, BarChart3 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-
+import { useRef} from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Advertise = () => {
   const WEB3FORMS_ACCESS_KEY = "4e9faa02-cb51-4253-98e6-b5794f4ece3a";
-  
+  const captchaRef = useRef(null);
+const [captchaValue, setCaptchaValue] = useState(null);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -37,6 +39,12 @@ const Advertise = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setFormError(null);
+    if (!captchaValue) {
+      setSubmitError("Please complete the CAPTCHA verification");
+      return;
+    }
+    
+    setIsSubmitting(true);
     
     try {
       // Prepare data for Web3Forms
@@ -90,6 +98,10 @@ const Advertise = () => {
     } finally {
       setIsSubmitting(false);
     }
+    if (captchaRef.current) {
+      captchaRef.current.reset();
+    }
+    setCaptchaValue(null);
   };
     const solutions = [
         {
@@ -503,63 +515,15 @@ const Advertise = () => {
         ></textarea>
       </div>
 
-      <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
-  <div className="flex items-center">
-    <div className="relative">
-      <input
-        type="checkbox"
-        id="notRobot"
-        name="notRobot"
-        className="sr-only"
-        required
-        checked={formData.notRobot}
-        onChange={() => setFormData({...formData, notRobot: !formData.notRobot})}
-      />
-      <div 
-        className={`w-8 h-8 rounded border-2 flex items-center justify-center transition-colors duration-200 cursor-pointer ${
-          formData.notRobot 
-            ? 'bg-[#000e54] ' 
-            : 'bg-white border-gray-300 hover:border-gray-400'
-        }`}
-        onClick={() => setFormData({...formData, notRobot: !formData.notRobot})}
-      >
-        {formData.notRobot && (
-          <svg 
-            className="w-4 h-4 text-white" 
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path 
-              fill="currentColor" 
-              d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" 
-            />
-          </svg>
-        )}
-      </div>
-    </div>
-    <div className="ml-3">
-      <label 
-        htmlFor="notRobot" 
-        className="block text-lg font-semi text-gray-800 cursor-pointer select-none"
-        onClick={() => setFormData({...formData, notRobot: !formData.notRobot})}
-      >
-        I'm not a robot
-      </label>
-      <div className="flex items-center mt-1">
-        <img 
-          src="https://www.gstatic.com/recaptcha/api2/logo_48.png" 
-          alt="reCAPTCHA" 
-          className="h-3 mr-1"
-        />
-        <span className="text-xs text-gray-500">reCAPTCHA</span>
-        <span className="mx-1 text-gray-800">|</span>
-        <a href="https://policies.google.com/privacy" className="text-sm text-gray-800 hover:underline">Privacy</a>
-        <span className="mx-1 text-gray-800">|</span>
-        <a href="https://policies.google.com/terms" className="text-sm text-gray-800 hover:underline">Terms</a>
-      </div>
-    </div>
+      <div>
+    <h2 className="text-lg font-semibold mb-3">Please verify that you're not a robot</h2>
+    <ReCAPTCHA
+      ref={captchaRef}
+      sitekey="6Lc5JPMqAAAAANPk6zNgRNwyGzaIuSs--uwPRf4T" // Replace with your reCAPTCHA site key
+      onChange={(value) => setCaptchaValue(value)}
+    />
   </div>
-</div>
+
       
       <div className="pt-4">
         <button
