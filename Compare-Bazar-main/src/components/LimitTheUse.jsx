@@ -761,6 +761,7 @@ const LimitTheUse = () => {
   </div>
  
 </div>
+
     <WideDiv/>
     <Footer/>
     </>
