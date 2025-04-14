@@ -12,7 +12,8 @@ import EmailMarketing from './components/EmailMarketing';
 import BestWebsiteBuildingPlatform from './components/BestWebsiteBuildingPlatform';
 import BestProjectManagement from './components/BestProjectManagement';
 import Advertise from './components/Advertise';
-
+import DonotSellMyInfo from './components/DonotSellMyInfo';
+import LimitTheUse from './components/LimitTheUse';
 
 // function App() {
 //   return (
@@ -44,7 +45,8 @@ function App() {
         <Route path="/BestWebsiteBuildingPlatform" element={<BestWebsiteBuildingPlatform />} />
         <Route path="/BestProjectManagement" element={<BestProjectManagement />} />
         <Route path="/Advertise" element={<Advertise />} />
-        
+        <Route path="/DonotSellMyInfo" element={<DonotSellMyInfo/>} />
+        <Route path="/LimitTheUse" element={<LimitTheUse/>} />
       </Routes>
     </Router>
   )
