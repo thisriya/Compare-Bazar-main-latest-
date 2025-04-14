@@ -139,7 +139,7 @@ const LimitTheUse = () => {
         
         <section className="mb-8">
           <h3 className="text-xl font-semibold mb-3 text-gray-800">Legal Basis for These Rights</h3>
-          <p className="mb-4 text-lg">
+          <p className="mb-4 text-lg text-gray-800">
             These rights are granted under several privacy laws, with specific provisions for sensitive data:
           </p>
           <ul className="list-disc pl-6 mb-4 space-y-2 text-lg text-gray-800">
@@ -167,7 +167,7 @@ const LimitTheUse = () => {
           
           <div className="grid md:grid-cols-2 gap-4 mb-6">
             <div className="bg-gray-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-xl mb-2">Government Identifiers</h4>
+              <h4 className="font-semibold text-xl mb-2 text-gray-800">Government Identifiers</h4>
               <ul className="list-disc pl-5 space-y-1 text-lg text-gray-800">
                 <li>Social Security number</li>
                 <li>Driver's license number</li>
@@ -176,7 +176,7 @@ const LimitTheUse = () => {
               </ul>
             </div>
             <div className="bg-gray-50 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2 text-xl">Financial Information</h4>
+              <h4 className="font-semibold mb-2 text-xl text-gray-800">Financial Information</h4>
               <ul className="list-disc pl-5 space-y-1 text-lg text-gray-800">
                 <li>Bank account numbers</li>
                 <li>Credit/debit card numbers</li>
@@ -185,8 +185,8 @@ const LimitTheUse = () => {
               </ul>
             </div>
             <div className="bg-gray-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-xl mb-2">Health & Biometric Data</h4>
-              <ul className="list-disc pl-5 space-y-1 text-lg text-lg">
+              <h4 className="font-semibold text-xl mb-2 text-gray-800">Health & Biometric Data</h4>
+              <ul className="list-disc pl-5 space-y-1 text-lg text-gray-800">
                 <li>Medical conditions</li>
                 <li>Health insurance information</li>
                 <li>Biometric data (fingerprints, faceprints)</li>
@@ -194,7 +194,7 @@ const LimitTheUse = () => {
               </ul>
             </div>
             <div className="bg-gray-50 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2 text-xl">Demographic Characteristics</h4>
+              <h4 className="font-semibold mb-2 text-x text-gray-800">Demographic Characteristics</h4>
               <ul className="list-disc pl-5 space-y-1 text-lg text-gray-800">
                 <li>Racial or ethnic origin</li>
                 <li>Religious/philosophical beliefs</li>
@@ -203,7 +203,7 @@ const LimitTheUse = () => {
               </ul>
             </div>
             <div className="bg-gray-50 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2 text-xl">Communications & Location</h4>
+              <h4 className="font-semibold mb-2 text-xl text-gray-800">Communications & Location</h4>
               <ul className="list-disc pl-5 space-y-1 text-lg text-gray-800">
                 <li>Mail/email contents (unless we're the recipient)</li>
                 <li>Precise geolocation (within 1,750 feet)</li>
@@ -211,7 +211,7 @@ const LimitTheUse = () => {
               </ul>
             </div>
             <div className="bg-gray-50 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2 text-xl">Other Sensitive Data</h4>
+              <h4 className="font-semibold mb-2 text-xl text-gray-800">Other Sensitive Data</h4>
               <ul className="list-disc pl-5 space-y-1 text-lg text-gray-800">
                 <li>Citizenship/immigration status</li>
                 <li>Mental/physical health diagnoses</li>
@@ -233,12 +233,12 @@ const LimitTheUse = () => {
         
         <section className="mb-8">
           <h3 className="text-xl font-semibold mb-3 text-gray-800">How We Use Sensitive Information</h3>
-          <p className="mb-4 text-lg">
+          <p className="mb-4 text-lg text-gray-800">
             Without your explicit consent, we only use sensitive personal information for these permitted purposes:
           </p>
           <div className="grid md:grid-cols-2 gap-4 mb-6">
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-semibold mb-2 text-xl">Service Provision</h4>
+              <h4 className="font-semibold mb-2 text-xl text-gray-800">Service Provision</h4>
               <ul className="list-disc pl-5 space-y-1 text-lg text-gray-800">
                 <li>Processing payments for purchases</li>
                 <li>Providing healthcare services (if applicable)</li>
@@ -246,7 +246,7 @@ const LimitTheUse = () => {
               </ul>
             </div>
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-semibold mb-2 text-xl">Security & Fraud Prevention</h4>
+              <h4 className="font-semibold mb-2 text-xl text-gray-800">Security & Fraud Prevention</h4>
               <ul className="list-disc pl-5 space-y-1 text-lg text-gray-800">
                 <li>Detecting security incidents</li>
                 <li>Protecting against fraud</li>
@@ -254,7 +254,7 @@ const LimitTheUse = () => {
               </ul>
             </div>
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-semibold mb-2 text-xl">Legal Compliance</h4>
+              <h4 className="font-semibold mb-2 text-xl text-gray-800">Legal Compliance</h4>
               <ul className="list-disc pl-5 space-y-1 text-lg text-gray-800">
                 <li>Complying with federal/state laws</li>
                 <li>Responding to law enforcement</li>
@@ -262,7 +262,7 @@ const LimitTheUse = () => {
               </ul>
             </div>
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-semibold mb-2 text-xl">Internal Business Purposes</h4>
+              <h4 className="font-semibold mb-2 text-xl text-gray-800">Internal Business Purposes</h4>
               <ul className="list-disc pl-5 space-y-1 text-lg text-gray-800">
                 <li>Maintaining service quality</li>
                 <li>Short-term transient use</li>
@@ -354,7 +354,7 @@ const LimitTheUse = () => {
               <p className="mb-4 text-lg text-gray-800">
                 Our secure portal allows you to submit and track requests regarding your sensitive data:
               </p>
-              <button className="bg-[#000e54] text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-800 transition">
+              <button className="bg-[#000e54] text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition">
                 Access Sensitive Data Request Portal
               </button>
             </div>

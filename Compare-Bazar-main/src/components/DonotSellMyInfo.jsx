@@ -140,7 +140,7 @@ const DonotSellMyInfo = () => {
         
         <section className="mb-8">
           <h3 className="text-xl font-semibold mb-3 text-gray-800">Legal Basis for These Rights</h3>
-          <p className="mb-4 text-lg">
+          <p className="mb-4 text-lg text-gray-800">
             These rights are granted to you under several privacy laws, including:
           </p>
           <ul className="list-disc pl-6 mb-4 space-y-2 text-lg text-gray-800">
@@ -165,8 +165,8 @@ const DonotSellMyInfo = () => {
         <section className="mb-8">
           <h3 className="text-xl font-semibold mb-3 text-gray-800">Detailed Definitions</h3>
           <div className="mb-6">
-            <h4 className="font-semibold text-lg mb-2">What Constitutes "Selling" Personal Information?</h4>
-            <p className="mb-2 text-lg">
+            <h4 className="font-semibold text-gray-800 text-lg mb-2">What Constitutes "Selling" Personal Information?</h4>
+            <p className="mb-2 text-lg text-gray-800">
               Under privacy laws, "selling" means disclosing personal information to a third party in exchange for:
             </p>
             <ul className="list-disc pl-6 mb-4 space-y-1 text-lg text-gray-800">
@@ -181,7 +181,7 @@ const DonotSellMyInfo = () => {
           </div>
           
           <div className="mb-6">
-            <h4 className="font-semibold text-lg mb-2">What Constitutes "Sharing" Personal Information?</h4>
+            <h4 className="font-semibold teat-gray-800 text-lg mb-2">What Constitutes "Sharing" Personal Information?</h4>
             <p className="mb-2 text-lg text-gray-800">
               "Sharing" specifically refers to disclosing personal information to third parties for:
             </p>
@@ -208,12 +208,12 @@ const DonotSellMyInfo = () => {
         
         <section className="mb-8">
           <h3 className="text-xl font-semibold mb-3 text-gray-800">Scope of Personal Information Covered</h3>
-          <p className="mb-4 text-lg">
+          <p className="mb-4 text-lg text-gray-800">
             This opt-out applies to all personal information we collect about you, including:
           </p>
           <div className="grid md:grid-cols-2 gap-4 mb-6">
             <div className="bg-gray-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-xl mb-2">Identifiers</h4>
+              <h4 className="font-semibold text-xl mb-2 text-gray-800">Identifiers</h4>
               <ul className="list-disc pl-5 space-y-1 text-lg text-gray-800">
                 <li>Name, alias</li>
                 <li>Postal address</li>
@@ -225,7 +225,7 @@ const DonotSellMyInfo = () => {
               </ul>
             </div>
             <div className="bg-gray-50 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2 text-xl">Commercial Information</h4>
+              <h4 className="font-semibold mb-2 text-xl text-gray-800">Commercial Information</h4>
               <ul className="list-disc pl-5 space-y-1 text-lg text-gray-800">
                 <li>Purchase history</li>
                 <li>Products/services considered</li>
@@ -234,8 +234,8 @@ const DonotSellMyInfo = () => {
               </ul>
             </div>
             <div className="bg-gray-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-xl mb-2">Online Activity</h4>
-              <ul className="list-disc pl-5 space-y-1 text-lg text-lg">
+              <h4 className="font-semibold text-xl mb-2 text-gray-800">Online Activity</h4>
+              <ul className="list-disc pl-5 space-y-1 text-lg text-lg text-gray-800">
                 <li>Browsing history</li>
                 <li>Search history</li>
                 <li>Interactions with our website</li>
@@ -243,7 +243,7 @@ const DonotSellMyInfo = () => {
               </ul>
             </div>
             <div className="bg-gray-50 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2 text-xl">Other Information</h4>
+              <h4 className="font-semibold mb-2 text-xl text-gray-800">Other Information</h4>
               <ul className="list-disc pl-5 space-y-1 text-lg text-gray-800">
                 <li>Geolocation data</li>
                 <li>Professional/employment information</li>
@@ -322,7 +322,7 @@ const DonotSellMyInfo = () => {
         <section>
           <h3 className="text-xl font-semibold mb-3 text-gray-800">Technical Implementation Details</h3>
           <div className="mb-6">
-            <h4 className="font-semibold text-lg mb-2">How We Honor Your Request</h4>
+            <h4 className="font-semibold text-gray-800 text-lg mb-2">How We Honor Your Request</h4>
             <p className="mb-3 text-lg text-gray-800">
               When you opt-out, we implement several technical measures to ensure your preference is respected:
             </p>
@@ -398,7 +398,7 @@ const DonotSellMyInfo = () => {
             </div>
             
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-semibold mb-2 text-gray-800">Right to Non-Discrimination</h4>
+              <h4 className="font-semibold mb-2 text-gray-800 text-xl">Right to Non-Discrimination</h4>
               <p className="text-lg text-gray-800">
                 We won't discriminate against you for exercising your privacy rights.
               </p>
@@ -406,7 +406,7 @@ const DonotSellMyInfo = () => {
           </div>
           
           <div className="mt-6 shadow-lg p-4 rounded-lg">
-            <h4 className="font-semibold text-xl text-xlmb-2">How to Exercise These Rights</h4>
+            <h4 className="font-semibold text-xl text-gray-800 text-xl mb-2">How to Exercise These Rights</h4>
             <p className="mb-3 text-lg">
               To exercise any of these rights, please contact us through one of these methods:
             </p>
