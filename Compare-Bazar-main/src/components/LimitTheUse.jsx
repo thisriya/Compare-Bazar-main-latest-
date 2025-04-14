@@ -413,7 +413,7 @@ const LimitTheUse = () => {
           <div className="space-y-4">
             <div className="border border-gray-200 rounded-lg p-4">
               <div className="flex items-start">
-                <div className="bg-[#000e54] text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">1</div>
+                <div className="bg-[#000e54] text-white rounded-full lg:w-8 lg:h-8 w-20 h-6 flex items-center justify-center mr-3 mt-1">1</div>
                 <div>
                   <h4 className="font-semibold text-xl mb-2 text-gray-800">Request Submission</h4>
                   <p className="text-lg text-gray-800">
@@ -426,7 +426,7 @@ const LimitTheUse = () => {
             
             <div className="border border-gray-200 rounded-lg p-4">
               <div className="flex items-start">
-                <div className="bg-[#000e54] text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">2</div>
+                <div className="bg-[#000e54] text-white rounded-full lg:w-8 lg:h-8 w-20 h-6 flex items-center justify-center mr-3 mt-1">2</div>
                 <div>
                   <h4 className="font-semibold text-xl mb-2 text-gray-800">Verification</h4>
                   <p className="text-lg text-gray-800">
@@ -439,7 +439,7 @@ const LimitTheUse = () => {
             
             <div className="border border-gray-200 rounded-lg p-4">
               <div className="flex items-start">
-                <div className="bg-[#000e54] text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">3</div>
+                <div className="bg-[#000e54] text-white rounded-full lg:w-8 lg:h-8 w-20 h-6 flex items-center justify-center mr-3 mt-1">3</div>
                 <div>
                   <h4 className="font-semibold text-xl mb-2 text-gray-800">Processing</h4>
                   <p className="text-lg text-gray-800">
@@ -452,7 +452,7 @@ const LimitTheUse = () => {
             
             <div className="border border-gray-200 rounded-lg p-4">
               <div className="flex items-start">
-                <div className="bg-[#000e54] text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">4</div>
+                <div className="bg-[#000e54] text-white rounded-full lg:w-8 lg:h-8 w-20 h-6 flex items-center justify-center mr-3 mt-1">4</div>
                 <div>
                   <h4 className="font-semibold text-xl mb-2 text-gray-800">Completion</h4>
                   <p className="text-lg text-gray-800">
