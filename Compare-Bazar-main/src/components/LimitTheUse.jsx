@@ -130,7 +130,7 @@ const LimitTheUse = () => {
         <h2 className="text-xl font-semibold mb-4 text-gray-800">Your Rights Regarding Sensitive Personal Information</h2>
         
         <div className="bg-blue-50 p-4 rounded-lg mb-6">
-          <h3 className="text-lg font-medium text-[#000e54] mb-2">Key Information</h3>
+          <h3 className="text-lg font-semibold text-[#000e54] mb-2">Key Information</h3>
           <p className="text-[#000e54] text-lg">
             You have the right to limit our use of your sensitive personal information to only those purposes necessary
             to provide our services. This page explains what constitutes sensitive information and how to exercise your rights.
@@ -324,7 +324,7 @@ const LimitTheUse = () => {
         <h2 className="text-xl font-semibold mb-6 text-gray-800">Manage Your Sensitive Data Preferences</h2>
         
         <section className="bg-blue-50 p-5 rounded-lg">
-          <h3 className="text-lg font-medium text-[#000e54] mb-2">What Changes When You Limit Use</h3>
+          <h3 className="text-lg font-semibold text-[#000e54] mb-2">What Changes When You Limit Use</h3>
           <div className="grid md:grid-cols-2 gap-4">
             <div>
               <h4 className="font-semibold text-lg mb-1 text-[#000e54]">Immediate Effects:</h4>
@@ -730,7 +730,7 @@ const LimitTheUse = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`w-full py-4 px-6 rounded-xl font-bold text-white transition-all duration-300 transform hover:scale-[1.02] shadow-lg ${
+              className={`w-full py-4 px-6 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-[1.02] shadow-lg ${
                 isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#000e54]'
               }`}
             >
