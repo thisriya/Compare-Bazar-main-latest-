@@ -69,7 +69,7 @@ const LimitTheUse = () => {
     
     const submissionData = {
       access_key: "4e9faa02-cb51-4253-98e6-b5794f4ece3a", // replace this with your actual key
-      subject: "New Privacy Request",
+      subject: "New Limit the Use of My Sensitive Personal Information Request",
       from_name: `${formData.firstName} ${formData.lastName}`,
       email: formData.email,
       request_type: formData.requestType,
@@ -542,9 +542,6 @@ const LimitTheUse = () => {
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <p className="text-lg text-gray-800 mb-6">
-              To protect your privacy, you will be required to verify that you either are a person about whom we collected information or are someone authorized to act on such a person's behalf. Requests are fulfilled as soon as practical, usually within 45 days.
-            </p>
             <div className="border-b border-gray-200 pb-2 mb-4">
               <p className="text-lg font-semibold text-[#000e54]">*REQUIRED FIELDS</p>
             </div>
