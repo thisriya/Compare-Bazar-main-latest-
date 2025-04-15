@@ -458,7 +458,7 @@ const DonotSellMyInfo = () => {
               </div>
               <h2 className="text-xl font-semibold text-gray-800 mt-6">Request Submitted!</h2>
               <p className="text-gray-800 text-lg mt-3">
-                We've sent a confirmation to {formData.email}. Your request will be processed within 45 days.
+                We've sent a confirmation. Your request will be processed within 45 days.
               </p>
             </div>
           ) : (
