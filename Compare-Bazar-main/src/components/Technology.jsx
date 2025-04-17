@@ -7,7 +7,7 @@ import Footer from './Footer';
 import { 
     Cloud, Database, Shield, Code, Server, Cpu, BarChart2, HardDrive, 
     Lock, Key, Puzzle, GitMerge, Globe, Wifi, Phone, MapPin, LayoutGrid, 
-    Brain, RadioTower, Link2,Smartphone  } from "lucide-react";
+    Brain, RadioTower, Link2,Smartphone,Users  } from "lucide-react";
 import Article from './ArticleLayoutCommon';
 import busimage from '/images/bg2.webp';
 import FAQ from './FAQ';
@@ -49,6 +49,19 @@ const Technology = () => {
           features: ["Time & attendance", "Scheduling", "Task management", "Performance tracking", "Payroll integration"],
           icon: HardDrive,
           link: "/BestEmployeeMangementSoftware"
+        },
+        {
+          "title": "Best CRM Software",
+          "description": "Powerful Customer Relationship Management (CRM) tools to streamline sales, improve customer interactions, and boost business growth with automation and analytics.",
+          "features": [
+            "Contact & lead management",
+            "Sales pipeline tracking",
+            "Email & campaign automation",
+            "Reporting & analytics",
+            "Integration with third-party tools (e.g., email, social media)"
+          ],
+          "icon": Users,  
+          "link": "/BestCRMSoftware"
         },
       ];
     
