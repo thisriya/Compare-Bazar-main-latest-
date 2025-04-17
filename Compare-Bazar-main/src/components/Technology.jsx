@@ -179,7 +179,7 @@ const Technology = () => {
               <h1 className="text-3xl sm:text-4xl font-semibold mb-6">Advanced Technology Solutions for Modern Businesses</h1>
               <p className="text-lg sm:text-xl mb-8">We deliver cutting-edge technology services that streamline operations, enhance productivity, and drive business growth.</p>
               <div className="flex flex-wrap gap-4">
-                <a href="/contact-sales" className="bg-[#000e54]  text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                <a href="/contact-sales" className="bg-[#ff8633]  text-white font-bold py-3 px-8 rounded-lg transition duration-300">
                   Request Consultation
                 </a>
                 <a href="#services" className="bg-white hover:bg-gray-100 text-gray-800 font-bold py-3 px-8 border border-gray-300 rounded-lg transition duration-300">
@@ -383,36 +383,7 @@ const Technology = () => {
             </div>
           </div>
         </div>
-      </div>  
-
-      {/* Technology Comparison */}
-      <div className="p-6 py-20 rounded-xl max-w-6xl mx-auto px-4 bg-gray-50">
-        <h3 className="text-4xl font-semibold text-gray-900 mb-4">Technology Comparison</h3>
-        <div className="grid grid-cols-4 gap-2">
-          {/* Header */}
-          <div className="font-semibold text-lg">Feature</div>
-          <div className="text-center text-gray-800 text-lg font-semibold">Our Solution</div>
-          <div className="text-center text-gray-800 text-lg font-semibold">Basic Option</div>
-          <div className="text-center text-gray-800 text-lg font-semibold">Premium Option</div>
-          
-          {/* Rows */}
-          {['Uptime Guarantee', 'Support Response', 'Security Features', 'Integration Options'].map((metric, i) => (
-            <>
-              <div className="font-medium">{metric}</div>
-              {[
-                {value: '99.99%', highlight: true},
-                {value: '<30 min', highlight: true},
-                {value: 'Advanced', highlight: true},
-                {value: 'Unlimited', highlight: true}
-              ].map((item, j) => (
-                <div key={j} className={`p-3 text-center text-lg rounded ${item.highlight ? 'bg-blue-100 text-[#000e54] font-medium' : 'bg-white'}`}>
-                  {item.value}
-                </div>
-              ))}
-            </>
-          ))}
-        </div>
-      </div>
+      </div> 
 
       {/* Technology Stack */}
       <div className="py-20 max-w-6xl mx-auto px-4">
