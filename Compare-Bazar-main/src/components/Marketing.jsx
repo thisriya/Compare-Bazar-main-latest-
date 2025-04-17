@@ -460,7 +460,7 @@ const Marketing = () => {
     </section>
 
     {/* competitor */}
-    <div className="bg-white p-6 rounded-xl max-w-6xl mx-auto px-4">
+    <div className="bg-white p-6 py-20 rounded-xl max-w-6xl mx-auto px-4">
   <h3 className="text-4xl font-semibold text-gray-900 mb-4">How You Stack Against Competitors</h3>
   <div className="grid grid-cols-4 gap-2">
     {/* Header */}
@@ -483,22 +483,6 @@ const Marketing = () => {
       </>
     ))}
   </div>
-</div>
-
-{/* campaign timeline */}
-<div className="relative py-10 max-w-6xl mx-auto">
-  <div className="absolute left-8 top-0 bottom-0 w-1 bg-gray-200"></div>
-  {[
-    { month: 'Month 1', activity: 'Audit & Strategy Development' },
-    { month: 'Month 2', activity: 'Content & Campaign Launch' }
-  ].map((item, i) => (
-    <div key={i} className="relative pl-16 mb-8 group">
-      <div className="absolute left-0 w-6 h-6 rounded-full bg-[#000e54] border-4 border-white 
-                       group-hover:scale-125 transition-transform"></div>
-      <h4 className="font-semibold text-xl text-gray-800 text-lg">{item.month}</h4>
-      <p className="text-gray-800 text-lg">{item.activity}</p>
-    </div>
-  ))}
 </div>
 
 {/* industry leading performance */}
@@ -524,6 +508,31 @@ const Marketing = () => {
           </div>
         </div>
         <div className="text-right mt-1 font-semibold text-lg">{item.us} (Our Clients)</div>
+      </div>
+    ))}
+  </div>
+</div>
+
+{/* growth framework */}
+<div className="bg-gray-50 p-8 rounded-2xl py-20 max-w-6xl mx-auto">
+  <h3 className="text-4xl font-semibold mb-8">Our 90-Day Growth Framework</h3>
+  <div className="relative">
+    {/* Progress line */}
+    <div className="absolute left-4 top-0 bottom-0 w-1 bg-gray-300"></div>
+    
+    {[
+      { week: "Week 1-2", title: "Deep Dive Audit", content: "Competitor analysis + gap assessment" },
+      { week: "Week 3-4", title: "Strategy Development", content: "Custom playbook creation" },
+      { week: "Month 2", title: "Campaign Launch", content: "Multi-channel implementation" }
+    ].map((item, index) => (
+      <div key={index} className="relative pl-16 pb-8 group">
+        <div className="absolute left-0 w-8 h-8 rounded-full bg-white border-4 border-[#000e54] 
+                        flex items-center justify-center z-10 group-hover:scale-110 transition-transform">
+          {index + 1}
+        </div>
+        <h4 className="font-semibold text-xl mb-1">{item.week}</h4>
+        <h5 className="text-[#000e54] text-lg font-semibold mb-2">{item.title}</h5>
+        <p className="text-gray-800 text-lg">{item.content}</p>
       </div>
     ))}
   </div>
