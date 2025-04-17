@@ -459,6 +459,48 @@ const Marketing = () => {
       </div>
     </section>
 
+    {/* competitor */}
+    <div className="bg-white p-6 rounded-xl max-w-6xl mx-auto px-4">
+  <h3 className="text-4xl font-semibold text-gray-900 mb-4">How You Stack Against Competitors</h3>
+  <div className="grid grid-cols-4 gap-2">
+    {/* Header */}
+    <div></div>
+    <div className="text-center text-gray-800 text-lg font-semibold">You</div>
+    <div className="text-center text-gray-800 text-lg font-semibold">Competitor A</div>
+    <div className="text-center text-gray-800 text-lg font-semibold">Competitor B</div>
+    
+    {/* Rows */}
+    {['SEO Score', 'Social Engagement', 'Ad Spend'].map((metric, i) => (
+      <>
+        <div className="font-medium">{metric}</div>
+        {[85, 72, 68].map((score, j) => (
+          <div key={j} className={`p-2 text-center text-lg rounded 
+            ${score > 80 ? 'bg-green-100 text-green-800' : 
+              score > 70 ? 'bg-yellow-100 text-yellow-800' : 'bg-red-100 text-red-800'}`}>
+            {score}%
+          </div>
+        ))}
+      </>
+    ))}
+  </div>
+</div>
+
+{/* campaign timeline */}
+<div className="relative py-8 max-w-6xl mx-auto">
+  <div className="absolute left-8 top-0 bottom-0 w-1 bg-gray-200"></div>
+  {[
+    { month: 'Month 1', activity: 'Audit & Strategy Development' },
+    { month: 'Month 2', activity: 'Content & Campaign Launch' }
+  ].map((item, i) => (
+    <div key={i} className="relative pl-16 mb-8 group">
+      <div className="absolute left-0 w-6 h-6 rounded-full bg-[#000e54] border-4 border-white 
+                       group-hover:scale-125 transition-transform"></div>
+      <h4 className="font-semibold text-xl text-gray-800 text-lg">{item.month}</h4>
+      <p className="text-gray-800 text-lg">{item.activity}</p>
+    </div>
+  ))}
+</div>
+
     </div>       
     <Article
         title="Related Articles" 
