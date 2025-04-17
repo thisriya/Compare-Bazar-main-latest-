@@ -15,6 +15,7 @@ import Advertise from './components/Advertise';
 import DonotSellMyInfo from './components/DonotSellMyInfo';
 import LimitTheUse from './components/LimitTheUse';
 import Marketing from './components/Marketing';
+import Technology from './components/Technology';
 
 // function App() {
 //   return (
@@ -49,6 +50,7 @@ function App() {
         <Route path="/DonotSellMyInfo" element={<DonotSellMyInfo/>} />
         <Route path="/LimitTheUse" element={<LimitTheUse/>} />
         <Route path="/Marketing" element={<Marketing/>} />
+        <Route path="/Technology" element={<Technology/>} />
       </Routes>
     </Router>
   )
