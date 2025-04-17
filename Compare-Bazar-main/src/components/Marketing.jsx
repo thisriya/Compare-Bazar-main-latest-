@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Navbar from './Navbar';
 import WideDiv from './WideDiv';
 import Footer from './Footer';
-import Feedback from './Feedback';
 import { Check, Phone, Mail, MapPin, ArrowRight, Users, Award, BarChart, Target } from "lucide-react";
 import Article from './ArticleLayoutCommon';
 import busimage from '/images/bg2.webp';
@@ -73,24 +72,6 @@ const Marketing = () => {
         { name: "Resources", url: "/resources" },
         { name: "Blog", url: "/blog" },
         { name: "Contact", url: "/contact" }
-      ];
-    const homeTestimonials = [
-        {
-          avatar: "P",
-          avatarColor: "bg-purple-600",
-          name: "Pedro G.",
-          date: "06/12/2024",
-          stars: 5,
-          text: "Blake and Courtney are a powerhouse if your are new to the leads world. They kept their end of the bargain lots of quality leads."
-        },
-        {
-          avatar: "E",
-          avatarColor: "bg-blue-500",
-          name: "Eric L.",
-          date: "10/31/2023",
-          stars: 5,
-          text: "I needed a few more vendors to gather information for a lease or purchase of a copier for our church. 360Connect did just that."
-        }
       ];
        const articles1 = [
           {
@@ -486,7 +467,8 @@ const Marketing = () => {
 </div>
 
 {/* industry leading performance */}
-<div className="bg-gradient-to-r from-[#000e54] to-[#1a3a8f] text-white p-12 rounded-3xl max-w-6xl mx-auto py-10">
+<section className='px-4'>
+<div className="bg-gradient-to-r from-[#000e54] to-[#1a3a8f] text-white p-12 rounded-3xl max-w-6xl mx-auto">
   <h3 className="text-4xl font-semibold mb-2">Industry-Leading Performance</h3>
   <p className="text-white text-xl mb-12">How we compare to standard industry solutions</p>
   
@@ -512,6 +494,7 @@ const Marketing = () => {
     ))}
   </div>
 </div>
+</section>
 
 {/* growth framework */}
 <div className=" p-8 rounded-2xl py-20 max-w-6xl mx-auto">
@@ -547,9 +530,6 @@ const Marketing = () => {
       />
 
     <FAQ faqs={ marketingFAQs} />
-    <Feedback 
-        title="What Our Customers Say"
-        testimonials={homeTestimonials} />
     <WideDiv/>
     <Footer/>
     </>
