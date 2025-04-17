@@ -486,7 +486,7 @@ const Marketing = () => {
 </div>
 
 {/* campaign timeline */}
-<div className="relative py-8 max-w-6xl mx-auto">
+<div className="relative py-10 max-w-6xl mx-auto">
   <div className="absolute left-8 top-0 bottom-0 w-1 bg-gray-200"></div>
   {[
     { month: 'Month 1', activity: 'Audit & Strategy Development' },
@@ -501,7 +501,35 @@ const Marketing = () => {
   ))}
 </div>
 
-    </div>       
+{/* industry leading performance */}
+<div className="bg-gradient-to-r from-[#000e54] to-[#1a3a8f] text-white p-12 rounded-3xl max-w-6xl mx-auto py-10">
+  <h3 className="text-4xl font-semibold mb-2">Industry-Leading Performance</h3>
+  <p className="text-white text-xl mb-12">How we compare to standard industry solutions</p>
+  
+  <div className="space-y-8">
+    {[
+      { metric: "Campaign ROI", us: "4.8x", industry: "2.1x" },
+      { metric: "Lead Quality Score", us: "92%", industry: "68%" },
+      { metric: "Implementation Speed", us: "2 weeks", industry: "6 weeks" }
+    ].map((item, index) => (
+      <div key={index}>
+        <div className="flex justify-between mb-2 text-lg">
+          <span>{item.metric}</span>
+          <span className="text-white text-white text-lg">Industry Average: {item.industry}</span>
+        </div>
+        <div className="h-3 bg-white/20 rounded-full overflow-hidden">
+          <div 
+            className="h-full bg-gradient-to-r from-[#ff8633] to-yellow-300 rounded-full" 
+            style={{ width: `${index * 30 + 70}%` }}>
+          </div>
+        </div>
+        <div className="text-right mt-1 font-semibold text-lg">{item.us} (Our Clients)</div>
+      </div>
+    ))}
+  </div>
+</div>
+</div>       
+
     <Article
         title="Related Articles" 
         items={articles1} 

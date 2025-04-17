@@ -724,16 +724,27 @@ const LimitTheUse = () => {
               </div>
 
               {/* CAPTCHA */}
-              <div className="bg-gray-50 lg:p-4 sm:p-0 rounded-lg border border-gray-200">
-                <div>
-                  <h2 className="text-lg font-semibold mb-3">Please verify that you're not a robot</h2>
-                  <ReCAPTCHA
-                    ref={captchaRef}
-                    sitekey="6Lc5JPMqAAAAANPk6zNgRNwyGzaIuSs--uwPRf4T" // Replace with your reCAPTCHA site key
-                    onChange={(value) => setCaptchaValue(value)}
-                  />
-                </div>
-              </div>
+            
+
+<div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+  <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+    {/* Text - comes first in DOM order but visually adjusts based on screen size */}
+    <h2 className="text-lg text-gray-800 font-semibold sm:min-w-[200px] sm:mr-4 order-1 sm:order-none">
+      Please verify that you're not a robot
+    </h2>
+    
+    {/* reCAPTCHA - will appear below on mobile, beside on larger screens */}
+    <div className="order-2 sm:order-none transform sm:scale-100 scale-90 origin-left">
+      <ReCAPTCHA
+        ref={captchaRef}
+        sitekey="6Lc5JPMqAAAAANPk6zNgRNwyGzaIuSs--uwPRf4T"
+        onChange={(value) => setCaptchaValue(value)}
+      />
+    </div>
+  </div>
+</div>
+
+
 
               {/* Submit Button */}
               <div className="pt-4">
