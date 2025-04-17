@@ -479,7 +479,7 @@ const Technology = () => {
           <div className="lg:w-1/2">
             <svg className="w-full h-auto" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
               {/* Background */}
-              <rect x="0" y="0" width="800" height="400" fill="#f8f9fa" />
+              <rect x="0" y="0" width="800" height="400" fill="white" />
               
               {/* Cloud platforms */}
               <g id="cloud-platforms">
@@ -531,7 +531,7 @@ const Technology = () => {
       </section>
       
       {/* Advanced Data Analytics Section */}
-      <section className="mb-16 bg-gray-50 rounded-lg">
+      <section className="mb-16 rounded-lg">
         <div className="flex flex-col lg:flex-row-reverse items-center gap-8">
           <div className="lg:w-1/2">
             <h2 className="text-4xl font-semibold text-gray-900 mb-4">Advanced Data Analytics</h2>
@@ -572,7 +572,7 @@ const Technology = () => {
           <div className="lg:w-1/2">
             <svg className="w-full h-auto" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
               {/* Background */}
-              <rect x="0" y="0" width="800" height="400" fill="#f5f5f5" />
+              <rect x="0" y="0" width="800" height="400" fill="white" />
               
               {/* Data flow pipeline */}
               <g id="data-pipeline">
@@ -694,7 +694,7 @@ const Technology = () => {
           <div className="lg:w-1/2">
             <svg className="w-full h-auto" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
               {/* Background */}
-              <rect x="0" y="0" width="800" height="400" fill="#fafafa" />
+              <rect x="0" y="0" width="800" height="400" fill="white" />
               
               {/* Central shield */}
               <g id="shield">
