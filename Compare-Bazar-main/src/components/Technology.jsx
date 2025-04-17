@@ -443,7 +443,7 @@ const Technology = () => {
 
     <div className="container mx-auto px-4 py-8 max-w-6xl mx-auto">
       {/* Enterprise-Grade Infrastructure Section */}
-      <section className="mb-16">
+      <section className="mb-16 max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-8">
           <div className="lg:w-1/2">
             <h2 className="text-4xl font-semibold text-gray-900 mb-4">Enterprise-Grade Infrastructure</h2>
@@ -535,7 +535,7 @@ const Technology = () => {
       </section>
       
       {/* Advanced Data Analytics Section */}
-      <section className="mb-16 rounded-lg">
+      <section className="mb-16 rounded-lg max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row-reverse items-center gap-8">
           <div className="lg:w-1/2">
             <h2 className="text-4xl font-semibold text-gray-900 mb-4">Advanced Data Analytics</h2>
@@ -653,7 +653,7 @@ const Technology = () => {
       </section>
       
       {/* Enterprise-Level Cybersecurity Section */}
-      <section className="mb-16">
+      <section className="mb-16 max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-8">
           <div className="lg:w-1/2">
             <h2 className="text-4xl font-semibold text-gray-900 mb-4">Enterprise-Level Cybersecurity</h2>
