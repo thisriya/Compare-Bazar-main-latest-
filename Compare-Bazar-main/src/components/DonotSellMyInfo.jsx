@@ -638,7 +638,7 @@ const DonotSellMyInfo = () => {
               </div>
 
               {/* CAPTCHA */}
-              <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+              <div className="bg-gray-50 lg:p-4 sm:p-0 rounded-lg border border-gray-200">
                 <div>
                   <h2 className="text-lg font-semibold mb-3">Please verify that you're not a robot</h2>
                   <ReCAPTCHA
