@@ -251,15 +251,6 @@ const Technology = () => {
                     <p className="text-gray-800 text-lg mb-6">{service.description}</p>
                     
                     <div className="flex justify-between items-center">
-                      <button 
-                        className="flex items-center text-[#ff8633] font-semibold text-lg"
-                        onClick={() => toggleService(index)}
-                      >
-                        {expandedService === index ? "Hide Features" : "View Features"}
-                        <svg className={`ml-2 w-4 h-4 transition-transform duration-300 ${expandedService === index ? 'rotate-90' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </button>
                       
                       <a 
                         href={service.link} 
