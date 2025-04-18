@@ -267,7 +267,6 @@ export default function HumanResource() {
   return (
     <>
     <Navbar/>
-    <div className=" min-h-screen text-gray-800">
       {/* Header */}
       <div class="bg-[#000e54]  py-16 px-4">
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
@@ -282,7 +281,7 @@ export default function HumanResource() {
     <div class="md:w-1/2 mt-8 md:mt-0">
       <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm border border-white border-opacity-20">
         <div class="grid grid-cols-2 gap-4">
-          <a href="#" class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center gap-3 hover:bg-opacity-30 transition-all">
+          <a href="#company-policy" class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center gap-3 hover:bg-opacity-30 transition-all">
             <div class="bg-[#000e54] p-2 rounded-md">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="white" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -290,15 +289,15 @@ export default function HumanResource() {
             </div>
             <span className='text-lg text-gray-800'>Company Policies</span>
           </a>
-          <a href="#" class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center gap-3 hover:bg-opacity-30 transition-all">
+          <a href="#announcements" class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center gap-3 hover:bg-opacity-30 transition-all">
             <div class="bg-[#000e54] p-2 rounded-md">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="white" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
             </div>
-            <span className='text-lg text-gray-800'>Time Off</span>
+            <span className='text-lg text-gray-800'>Announcements</span>
           </a>
-          <a href="#" class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center gap-3 hover:bg-opacity-30 transition-all">
+          <a href="#employee-benefits" class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center gap-3 hover:bg-opacity-30 transition-all">
             <div class="bg-[#000e54] p-2 rounded-md">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="white" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -306,24 +305,21 @@ export default function HumanResource() {
             </div>
             <span className='text-lg text-gray-800'>Benefits</span>
           </a>
-          <a href="#" class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center gap-3 hover:bg-opacity-30 transition-all">
+          <a href="#contact-hr" class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center gap-3 hover:bg-opacity-30 transition-all">
             <div class="bg-[#000e54] p-2 rounded-md">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="white" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
               </svg>
             </div>
-            <span className='text-gray-800 text-lg'>Directory</span>
+            <span className='text-gray-800 text-lg'>Contact HR</span>
           </a>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-      {/* Main Content */}
-      <main className="max-w-6xl mx-auto py-8 px-4">
         {/* Welcome Message */}
-        <div className="bg-white p-6 rounded-lg shadow-md mb-8">
+        <div className="bg-white max-w-6xl mx-auto p-6 rounded-lg text-center mb-8">
           <h2 className="text-4xl font-semibold text-blue-gray-900 mb-4">Welcome to the HR Portal</h2>
           <p className="text-gray-800 text-lg">
             Find all the resources you need related to your employment, benefits, company policies, and career development. 
@@ -332,7 +328,7 @@ export default function HumanResource() {
         </div>
 
         {/* features */}
-        <section className="mb-12">
+        <section className="max-w-6xl mx-auto mb-12">
       <h2 className="text-4xl text-center font-semibold mb-6 text-gray-800">Features</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <QuickLinkCard
@@ -369,7 +365,7 @@ export default function HumanResource() {
     </section>
 
     {/* benefits for employee */}
-    <section id="employee-benefits" className="py-16 px-4 ">
+    <section id="employee-benefits" className="max-w-6xl mx-auto py-20 px-4 ">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-semibold mb-4 text-gray-900">Comprehensive Employee Benefits</h2>
@@ -401,11 +397,11 @@ export default function HumanResource() {
     </section>
 
     {/* company policies */}
-    <section className="py-10">
+    <section id="company-policy" className="py-20 max-w-6xl mx-auto">
       <div className="max-w-6xl mx-auto px-4">
         <div className="mb-12">
            <h2 className="text-4xl font-semibold text-center text-gray-900 mb-3">Company Policies</h2>
-          <p className="text-gray-800 text-center  text-lg max-w-3xl">
+          <p className="text-gray-800 text-center text-lg ">
             Our policies are designed to ensure a safe, productive, and inclusive workplace. 
             Familiarize yourself with these guidelines to understand your rights and responsibilities as a team member.
           </p>
@@ -433,7 +429,7 @@ export default function HumanResource() {
     </section>
 
         {/* Announcements */}
-        <section className="max-w-6xl mx-auto mb-12">
+        <section id="announcements" className="max-w-6xl py-20 mx-auto mb-12">
           <h2 className="text-4xl font-semibold mb-6 text-center text-gray-900">Announcements</h2>
           <div className="bg-white rounded-lg shadow-xl overflow-hidden">
             <div className="p-6 border-b">
@@ -471,8 +467,8 @@ export default function HumanResource() {
         </section>
 
         {/* Contact HR */}
-        <section id="contact-hr" className=" p-6 rounded-lg shadow-xl">
-          <h2 className="text-xl font-semibold mb-4 text-center text-gray-800">Contact HR</h2>
+        <section id="contact-hr" className=" p-6 py-20 max-w-6xl mx-auto rounded-lg ">
+          <h2 className="text-4xl font-semibold mb-4 text-center text-gray-800">Contact HR</h2>
           <div className="flex flex-col md:flex-row md:space-x-12">
             <div className="mb-6 md:mb-0">
               <div className="flex items-center mb-3">
@@ -517,8 +513,6 @@ export default function HumanResource() {
             </div>
           </div>
         </section>
-      </main>
-    </div>
     <FAQ faqs={humanresourcesFAQs} />
     <WideDiv/>
     <Footer/>
