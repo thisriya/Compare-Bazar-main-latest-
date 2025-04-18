@@ -319,7 +319,7 @@ const BusinessPlanning = () => {
         </svg>
       </div>
 
-      <div className="relative max-w-6xl mx-auto px-4 py-20 md:py-28">
+      <div className="relative max-w-6xl mx-auto px-4 y-20 md:py-28">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Text content */}
           <div className="text-center md:text-left">
