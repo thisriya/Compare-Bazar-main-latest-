@@ -519,19 +519,3 @@ export default function HumanResource() {
     </>
   );
 }
-
-// Component for Quick Link Cards
-function QuickLinkCard({ icon, title, description }) {
-  return (
-    <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
-      <div className="flex items-center mb-4">
-        {icon}
-        <h3 className="ml-3 font-medium text-lg">{title}</h3>
-      </div>
-      <p className="text-gray-600">{description}</p>
-      <a href="#" className="mt-4 inline-block text-blue-600 hover:text-[#000e54] font-medium">
-        View Details →
-      </a>
-    </div>
-  );
-}
