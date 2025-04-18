@@ -500,7 +500,7 @@ const BusinessPlanning = () => {
             {tools.map((tool, index) => (
               <div key={index} className="relative">
                 <dt className="flex items-center">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-[#000e54] text-white">
+                  <div className="flex items-center justify-center h-8 w-8 rounded-md bg-[#000e54] text-white">
                     <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
