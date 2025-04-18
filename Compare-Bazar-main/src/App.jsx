@@ -16,6 +16,7 @@ import DonotSellMyInfo from './components/DonotSellMyInfo';
 import LimitTheUse from './components/LimitTheUse';
 import Marketing from './components/Marketing';
 import Technology from './components/Technology';
+import HumanResources from './components/HumanResources';
 
 // function App() {
 //   return (
@@ -51,6 +52,7 @@ function App() {
         <Route path="/LimitTheUse" element={<LimitTheUse/>} />
         <Route path="/Marketing" element={<Marketing/>} />
         <Route path="/Technology" element={<Technology/>} />
+        <Route path="/HumanResources" element={<HumanResources/>} />
       </Routes>
     </Router>
   )
