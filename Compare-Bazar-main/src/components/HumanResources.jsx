@@ -145,6 +145,91 @@ export default function HumanResource() {
     }
   ];
 
+  const policies = [
+    {
+      id: "workplace-conduct",
+      title: "Workplace Conduct",
+      description: "Guidelines for professional behavior, anti-harassment policies, and maintaining a respectful environment.",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-[#000e54]">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+      ),
+      bgColor: "bg-blue-50",
+      borderColor: "border-[#000e54]"
+    },
+    {
+      id: "data-security",
+      title: "Data Security & Privacy",
+      description: "Protocols for handling sensitive information, data protection requirements, and security procedures.",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-[#000e54]">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+      ),
+      bgColor: "bg-blue-50",
+      borderColor: "border-[#000e54]"
+    },
+    {
+      id: "remote-work",
+      title: "Remote Work",
+      description: "Guidelines for working remotely, equipment policies, communication expectations, and home office setup.",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-[#000e54]">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+          <line x1="8" y1="21" x2="16" y2="21"></line>
+          <line x1="12" y1="17" x2="12" y2="21"></line>
+        </svg>
+      ),
+      bgColor: "bg-blue-50",
+      borderColor: "border-[#000e54]"
+    },
+    {
+      id: "attendance",
+      title: "Attendance & Leave",
+      description: "Policies regarding work hours, attendance tracking, time off requests, and leave management.",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-[#000e54]">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+      ),
+      bgColor: "bg-blue-50",
+      borderColor: "border-[#000e54]"
+    },
+    {
+      id: "expense",
+      title: "Expense & Reimbursement",
+      description: "Procedures for submitting expenses, eligible reimbursements, and corporate card usage guidelines.",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-[#000e54]">
+          <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+          <line x1="2" y1="10" x2="22" y2="10"></line>
+        </svg>
+      ),
+      bgColor: "bg-blue-50",
+      borderColor: "border-[#000e54]"
+    },
+    {
+      id: "health-safety",
+      title: "Health & Safety",
+      description: "Workplace safety protocols, emergency procedures, and health-related accommodations and resources.",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-[#000e54]">
+          <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"></path>
+          <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"></path>
+          <circle cx="20" cy="8" r="2"></circle>
+        </svg>
+      ),
+      bgColor: "bg-blue-50",
+      borderColor: "border-[#000e54]"
+    }
+  ];
+
   const BenefitCard = ({ svg, title, description, color }) => {
     return (
       <div className="bg-white rounded-lg shadow-md overflow-hidden transition-all hover:shadow-lg">
@@ -196,7 +281,6 @@ export default function HumanResource() {
     </div>
     <div class="md:w-1/2 mt-8 md:mt-0">
       <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm border border-white border-opacity-20">
-        <h3 class="text-xl text-gray-800 font-semibold mb-4">Quick Access</h3>
         <div class="grid grid-cols-2 gap-4">
           <a href="#" class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center gap-3 hover:bg-opacity-30 transition-all">
             <div class="bg-[#000e54] p-2 rounded-md">
@@ -247,9 +331,9 @@ export default function HumanResource() {
           </p>
         </div>
 
-        {/* Quick Links Section */}
+        {/* features */}
         <section className="mb-12">
-      <h2 className="text-xl font-semibold mb-6 text-gray-800">Features</h2>
+      <h2 className="text-4xl text-center font-semibold mb-6 text-gray-800">Features</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <QuickLinkCard
           icon={<FileText className="h-6 w-6 text-[#000e54]" />}
@@ -316,13 +400,45 @@ export default function HumanResource() {
       </div>
     </section>
 
+    {/* company policies */}
+    <section className="py-10">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="mb-12">
+           <h2 className="text-4xl font-semibold text-center text-gray-900 mb-3">Company Policies</h2>
+          <p className="text-gray-800 text-center  text-lg max-w-3xl">
+            Our policies are designed to ensure a safe, productive, and inclusive workplace. 
+            Familiarize yourself with these guidelines to understand your rights and responsibilities as a team member.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {policies.map((policy) => (
+            <div 
+              key={policy.id}
+              className={`rounded-xl p-6 shadow-sm border ${policy.borderColor} ${policy.bgColor} hover:shadow-md transition-all`}
+            >
+              <div className="flex items-start mb-4">
+                <div className="bg-white p-3 rounded-lg shadow-sm">
+                  {policy.icon}
+                </div>
+                <h3 className="text-xl font-semibold ml-4 pt-2 text-gray-800">{policy.title}</h3>
+              </div>
+              <p className="text-gray-800 text-lg mb-4">{policy.description}</p>
+              <div className="mt-auto pt-2">
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
         {/* Announcements */}
-        <section className="mb-12">
-          <h2 className="text-xl font-semibold mb-6 text-gray-800">Announcements</h2>
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+        <section className="max-w-6xl mx-auto mb-12">
+          <h2 className="text-4xl font-semibold mb-6 text-center text-gray-900">Announcements</h2>
+          <div className="bg-white rounded-lg shadow-xl overflow-hidden">
             <div className="p-6 border-b">
               <div className="flex justify-between items-start">
-                <h3 className="font-semibold text-lg text-[#000e54]">Open Enrollment Coming Soon</h3>
+                <h3 className="font-semibold text-xl text-[#000e54]">Open Enrollment Coming Soon</h3>
                 <span className="text-lg text-gray-800 text-lg">April 5, 2025</span>
               </div>
               <p className="mt-2 text-gray-800 text-lg">
@@ -333,7 +449,7 @@ export default function HumanResource() {
             
             <div className="p-6 border-b">
               <div className="flex justify-between items-start">
-                <h3 className="font-medium text-lg text-[#000e54]">Updated Remote Work Policy</h3>
+                <h3 className="font-medium text-xl text-[#000e54]">Updated Remote Work Policy</h3>
                 <span className="text-lg text-gray-800">March 28, 2025</span>
               </div>
               <p className="mt-2 text-gray-800 text-lg">
@@ -343,7 +459,7 @@ export default function HumanResource() {
             
             <div className="p-6">
               <div className="flex justify-between items-start">
-                <h3 className="font-medium text-lg text-[#000e54]">Q2 Town Hall Schedule</h3>
+                <h3 className="font-medium text-xl text-[#000e54]">Q2 Town Hall Schedule</h3>
                 <span className="text-lg text-gray-800">March 15, 2025</span>
               </div>
               <p className="mt-2 text-gray-800 text-lg">
@@ -356,7 +472,7 @@ export default function HumanResource() {
 
         {/* Contact HR */}
         <section id="contact-hr" className=" p-6 rounded-lg shadow-xl">
-          <h2 className="text-xl font-semibold mb-4 text-gray-800">Contact HR</h2>
+          <h2 className="text-xl font-semibold mb-4 text-center text-gray-800">Contact HR</h2>
           <div className="flex flex-col md:flex-row md:space-x-12">
             <div className="mb-6 md:mb-0">
               <div className="flex items-center mb-3">
@@ -419,7 +535,7 @@ function QuickLinkCard({ icon, title, description }) {
         <h3 className="ml-3 font-medium text-lg">{title}</h3>
       </div>
       <p className="text-gray-600">{description}</p>
-      <a href="#" className="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium">
+      <a href="#" className="mt-4 inline-block text-blue-600 hover:text-[#000e54] font-medium">
         View Details →
       </a>
     </div>
