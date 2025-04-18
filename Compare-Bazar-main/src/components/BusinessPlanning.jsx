@@ -412,49 +412,49 @@ const BusinessPlanning = () => {
     </div>
 
 {/* steps */}
-<div className="py-16 justify-center">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center">
-          <h2 className="text-4xl font-semibold text-gray-900">
-            Your Planning Journey
-          </h2>
-          <p className="mt-4 text-xl text-gray-800">
-            Clear roadmap from concept to execution
-          </p>
-        </div>
-
-        <div className="mt-16 flow-root">
-          <ul className="-mb-8">
-            {steps.map((step, stepIdx) => (
-              <li key={step.id}>
-                <div className="relative pb-8">
-                  {stepIdx !== steps.length - 1 ? (
-                    <span className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true" />
-                  ) : null}
-                  <div className="relative flex space-x-3">
-                    <div>
-                      <span className={`h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-gray-50 ${
-                        stepIdx % 2 === 0 ? 'bg-indigo-600 text-white' : 'bg-green-500 text-white'
-                      }`}>
-                        {step.id}
-                      </span>
-                    </div>
-                    <div className="flex min-w-0 flex-1 justify-between pt-1.5">
-                      <div>
-                        <p className="text-lg font-semibold text-gray-900">
-                          {step.name} <span className="text-lg text-gray-800 ml-2">({step.duration})</span>
-                        </p>
-                        <p className="text-gray-800 text-lg">{step.description}</p>
-                      </div>
-                    </div>
+<div className="flex justify-center items-center w-full py-16">
+  <div className="max-w-6xl w-full px-4">
+    <div className="text-center">
+      <h2 className="text-4xl font-semibold text-gray-900">
+        Your Planning Journey
+      </h2>
+      <p className="mt-4 text-xl text-gray-800">
+        Clear roadmap from concept to execution
+      </p>
+    </div>
+    
+    <div className="mt-16 flow-root">
+      <ul className="-mb-8">
+        {steps.map((step, stepIdx) => (
+          <li key={step.id}>
+            <div className="relative pb-8">
+              {stepIdx !== steps.length - 1 ? (
+                <span className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true" />
+              ) : null}
+              <div className="relative flex space-x-3">
+                <div>
+                  <span className={`h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-gray-50 ${
+                    stepIdx % 2 === 0 ? 'bg-indigo-600 text-white' : 'bg-green-500 text-white'
+                  }`}>
+                    {step.id}
+                  </span>
+                </div>
+                <div className="flex min-w-0 flex-1 justify-between pt-1.5">
+                  <div>
+                    <p className="text-lg font-semibold text-gray-900">
+                      {step.name} <span className="text-lg text-gray-800 ml-2">({step.duration})</span>
+                    </p>
+                    <p className="text-gray-800 text-lg">{step.description}</p>
                   </div>
                 </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
+  </div>
+</div>
 
     {/*industries  */}
     <div className="py-10 max-w-6xl mx-auto">
