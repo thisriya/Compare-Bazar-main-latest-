@@ -273,6 +273,33 @@ const BusinessPlanning = () => {
         }
       ];
 
+      const stats = [
+        { name: 'Gender Balance', value: '52% / 48%', description: 'Women to Men ratio' },
+        { name: 'Ethnic Diversity', value: '43%', description: 'Team members from underrepresented groups' },
+        { name: 'Leadership Diversity', value: '38%', description: 'Diverse representation in leadership' },
+        { name: 'Pay Equity', value: '100%', description: 'Equal pay for equal work' }
+      ];
+
+      const levels = [
+        {
+          name: 'Individual Contributor',
+          skills: ['Role-specific training', 'Mentorship program', 'Skill certifications']
+        },
+        {
+          name: 'Team Lead',
+          skills: ['Leadership fundamentals', 'Project management', 'Peer coaching']
+        },
+        {
+          name: 'Manager',
+          skills: ['People management', 'Strategic thinking', 'Budget oversight']
+        },
+        {
+          name: 'Executive',
+          skills: ['Enterprise leadership', 'Board communication', 'M&A strategy']
+        }
+      ];
+    
+
   return (
     <>
     <Navbar/>
@@ -331,7 +358,7 @@ const BusinessPlanning = () => {
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}
-                  <span className="ml-1 text-sm text-gray-500">5.0 (200+ reviews)</span>
+                  <span className="ml-1 text-sm text-gray-800">5.0 (200+ reviews)</span>
                 </div>
               </div>
             </div>
@@ -543,62 +570,224 @@ const BusinessPlanning = () => {
       </div>
     </div>
 
+
     {/* why choose us */}
     <div className="py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center">
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="text-center">
+      <h2 className="text-4xl font-semibold text-gray-900 sm:text-3xl md:text-4xl">
+        Why Choose Our Business Planning?
+      </h2>
+      <p className="mt-4 text-xl text-gray-800">
+        Differentiated approach for superior results
+      </p>
+    </div>
+    
+    {/* Desktop Table (hidden on small screens) */}
+    <div className="mt-12 hidden md:block">
+      <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 rounded-lg">
+        <table className="min-w-full divide-y divide-gray-300">
+          <thead className="bg-gray-50">
+            <tr>
+              <th scope="col" className="py-3.5 pl-4 pr-3 text-left text-lg font-semibold text-gray-800 sm:pl-6">
+                Key Features
+              </th>
+              <th scope="col" className="px-3 py-3.5 text-center text-lg font-semibold text-[#000e54]">
+                Our Service
+              </th>
+              <th scope="col" className="px-3 py-3.5 text-center text-lg font-semibold text-gray-800">
+                Typical Competitors
+              </th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-gray-200 bg-white">
+            {features.map((feature, index) => (
+              <tr key={index}>
+                <td className="py-4 pl-4 pr-3 text-lg font-medium text-gray-900 sm:pl-6">
+                  {feature.name}
+                </td>
+                <td className="px-3 py-4 text-lg text-gray-800 text-center">
+                  {feature.us === true ? (
+                    <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-sm md:text-base font-medium text-green-800">
+                      Included
+                    </span>
+                  ) : (
+                    <span>{feature.us}</span>
+                  )}
+                </td>
+                <td className="px-3 py-4 text-lg text-center text-gray-800">
+                  {feature.competitors === true ? (
+                    <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-sm md:text-base font-medium text-green-800">
+                      Included
+                    </span>
+                  ) : (
+                    <span>{feature.competitors}</span>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    {/* Mobile Cards (shown only on small screens) */}
+    <div className="mt-12 md:hidden space-y-6">
+      {features.map((feature, index) => (
+        <div key={index} className="bg-white shadow rounded-lg overflow-hidden border border-gray-200">
+          <div className="bg-gray-50 px-4 py-3 border-b border-gray-200">
+            <h3 className="text-lg font-medium text-gray-900">{feature.name}</h3>
+          </div>
+          <div className="px-4 py-4 grid grid-cols-2 gap-4">
+            <div>
+              <p className="text-sm font-medium text-[#000e54]">Our Service</p>
+              <div className="mt-2">
+                {feature.us === true ? (
+                  <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-sm font-medium text-green-800">
+                    Included
+                  </span>
+                ) : (
+                  <span className="text-sm text-gray-800">{feature.us}</span>
+                )}
+              </div>
+            </div>
+            <div>
+              <p className="text-sm font-medium text-gray-800">Typical Competitors</p>
+              <div className="mt-2">
+                {feature.competitors === true ? (
+                  <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-sm font-medium text-green-800">
+                    Included
+                  </span>
+                ) : (
+                  <span className="text-sm text-gray-800">{feature.competitors}</span>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+    {/* diversity */}
+    <div className=" bg-white py-10">
+      <div className="max-w-6xl mx-auto px-4 ">
+        <div className="lg:text-center">
           <h2 className="text-4xl font-semibold text-gray-900">
-            Why Choose Our Business Planning?
+            Our Commitment to Diversity
           </h2>
-          <p className="mt-4 text-xl text-gray-800">
-            Differentiated approach for superior results
+          <p className="mt-4 max-w-2xl text-xl text-gray-800 mx-auto">
+            Building a workplace that reflects the world around us
           </p>
         </div>
 
-        <div className="mt-12">
-          <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 rounded-lg">
-            <table className="min-w-full divide-y divide-gray-300">
-              <thead className="bg-gray-50">
-                <tr>
-                  <th scope="col" className="py-3.5 pl-4 pr-3 text-left text-lg font-semibold text-gray-800 sm:pl-6">
-                    Key Features
-                  </th>
-                  <th scope="col" className="px-3 py-3.5 text-center text-lg font-semibold text-[#000e54]">
-                    Our Service
-                  </th>
-                  <th scope="col" className="px-3 py-3.5 text-center text-lg font-semibold text-gray-800">
-                    Typical Competitors
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200 bg-white">
-                {features.map((feature, index) => (
-                  <tr key={index}>
-                    <td className="whitespace-nowrap py-4 pl-4 pr-3 text-lg font-medium text-gray-900 sm:pl-6">
-                      {feature.name}
-                    </td>
-                    <td className="whitespace-nowrap px-3 py-4 text-lg text-gray-800 text-center">
-                      {feature.us === true ? (
-                        <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-lg font-medium text-green-800">
-                          Included
-                        </span>
-                      ) : (
-                        <span>{feature.us}</span>
-                      )}
-                    </td>
-                    <td className="whitespace-nowrap px-3 py-4 text-lg text-center text-gray-800">
-                      {feature.competitors === true ? (
-                        <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-lg font-semibold text-green-800">
-                          Included
-                        </span>
-                      ) : (
-                        <span className='text-lg'>{feature.competitors}</span>
-                      )}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {stats.map((stat, index) => (
+            <div key={index} className="shadow-xl p-6 rounded-lg text-center">
+              <p className="text-sm font-semibold text-gray-800">{stat.name}</p>
+              <p className="mt-2 text-4xl font-semibold text-[#000e54]">{stat.value}</p>
+              <p className="mt-1 text-lg text-gray-800">{stat.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900">Employee Resource Groups</h3>
+            <div className="mt-4 grid grid-cols-2 gap-4">
+              {['Women@Work', 'Pride Alliance', 'BIPOC Network', 'Veterans Group', 'Disability Alliance', 'Parents Network'].map((group) => (
+                <div key={group} className="bg-indigo-50 px-4 py-3 rounded-md">
+                  <p className="text-lg font-semibold text-[#000e54]">{group}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900">Recent Initiatives</h3>
+            <div className="mt-4 space-y-4">
+              {[
+                'Unconscious Bias Training for all managers',
+                'Diverse hiring panels requirement',
+                'Inclusive leadership development program',
+                'Supplier diversity program launched'
+              ].map((initiative, i) => (
+                <div key={i} className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <div className="h-2 w-2 bg-[#000e54] rounded-full"></div>
+                  </div>
+                  <p className="ml-3 text-gray-800 text-lg">{initiative}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* levels */}
+    <div className="py-16">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center">
+          <h2 className="text-4xl font-semibold text-gray-900">
+            Career Growth Framework
+          </h2>
+          <p className="mt-4 text-xl text-gray-800">
+            Clear pathways for professional development at every level
+          </p>
+        </div>
+
+        <div className="mt-12 space-y-8">
+          {levels.map((level, index) => (
+            <div key={index} className="bg-white shadow overflow-hidden rounded-lg">
+              <div className={`px-6 py-5 ${index % 2 === 0 ? 'bg-[#000e54]' : 'bg-[#000e54]'} flex items-center justify-between`}>
+                <h3 className="text-lg font-semibold text-white">
+                  {level.name}
+                </h3>
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-lg font-semibold bg-white text-[#000e54]">
+                  Level {index + 1}
+                </span>
+              </div>
+              <div className="px-6 py-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {level.skills.map((skill, i) => (
+                    <div key={i} className="flex items-start">
+                      <svg className="flex-shrink-0 h-5 w-5 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <p className="ml-3 text-gray-800 text-lg">{skill}</p>
+                    </div>
+                  ))}
+                </div>
+                
+                {index === 1 && (
+                  <div className="mt-6 p-4 bg-indigo-50 rounded-lg border border-indigo-100">
+                    <p className="text-lg text-[#000e54]">
+                      <span className="font-semibold">Example path:</span> Complete 3 leadership trainings → Lead a cross-functional project → Mentor a junior team member → Promotion eligibility
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 bg-white shadow rounded-lg overflow-hidden">
+          <div className="px-6 py-5 bg-gray-50 border-b border-gray-200">
+            <h3 className="text-xl font-semibold text-gray-900">
+              Learning Resources
+            </h3>
+          </div>
+          <div className="px-6 py-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {['LinkedIn Learning', 'Internal Mentorship', 'Conference Budget', 'Tuition Reimbursement'].map((resource) => (
+              <div key={resource} className="flex items-center">
+                <svg className="flex-shrink-0 h-5 w-5 text-[#000e54]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                <p className="ml-3 text-gray-800 text-lg">{resource}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
