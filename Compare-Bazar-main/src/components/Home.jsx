@@ -2,6 +2,8 @@ import React, { useState, useEffect,useRef } from 'react';
 import backgroundImage from "../assets/images/bg.webp";
 import "./Home.css";
 import haha from "/images/design.png";
+import WhitePaperForm from './form';
+
 import { 
   Phone, 
   FileText, 
@@ -762,6 +764,7 @@ const Home = () => {
             {/* Widget will be loaded here by useEffect */}
           </div>
         </div>
+        <WhitePaperForm/>
         <Feedback/>
         <WideDiv/>
         <Footer/>
